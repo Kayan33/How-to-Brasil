@@ -1,0 +1,80 @@
+.cadastro{
+  background-image: url(../../public/thay-pellerin.png);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-size: 100%;
+    background-position: cover;
+    background-repeat: no-repeat;
+    width: 70%;
+  }
+  
+  .cadastrar-se{
+    text-align: center;
+    flex: auto;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    size-adjust: 50px;
+  }
+  
+  .cadastro1{
+  font-size: 60px;
+  text-align: center;
+  flex-direction: column;
+  justify-content: right;
+  align-items: center;
+  background-color: white;
+  background-position: 100%;
+  width: 30%;
+  height: 100vh;
+  size-adjust: 50px;
+  
+  }
+
+  
+  
+  
+  .cadastro-bg{
+    background-image: url(../../public/thay-pellerin.png);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-size: 100%;
+    background-position: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    max-height: max-content;
+
+  }
+
+  .headercadastro{
+    margin-bottom: 20px;
+  }
+
+  .ofertas{
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: black;
+  }
+
+  .aceite{
+    color: black;
+    font-size: 15px;
+  }
+  input{
+    background-color: #817D75;
+    padding: 0%;
+    margin-top: 5px;
+    border: 2px solid black;
+  }
+
+  .digite{
+    color: #09A599;
+    font-size: 15px;
+  }
