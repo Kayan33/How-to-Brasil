@@ -1,4 +1,5 @@
 import "../../style/style.css";
+import { Link } from "react-router-dom";
 
 function Corpo04() {
   return (
@@ -14,7 +15,9 @@ function Corpo04() {
           úteis para facilitar a integração dos imigrantes.
         </p>
         <div className="saiba-mais-bg">
-        <a className="saiba-mais" href="/">SAIBA MAIS</a>
+        <Link className="saiba-mais" to="Cadastrar">
+          SAIBA MAIS
+        </Link>
         </div>
       </div>
 

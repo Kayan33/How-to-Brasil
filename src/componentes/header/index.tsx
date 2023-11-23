@@ -23,10 +23,14 @@ function Header() {
             <a href="/">Instrutore</a>
           </li>
           <li>
-            <a href="/">Login</a>
+          <Link to="Login">
+          Login
+        </Link>
           </li>
           <li className="comece">
-            <a href="/">COMECE JÁ!</a>
+          <Link to="Cadastrar">
+          COMECE JÁ
+        </Link>
           </li>
         </ul>
       </nav>

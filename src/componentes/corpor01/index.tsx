@@ -1,4 +1,5 @@
 import "../../style/style.css";
+import { Link } from "react-router-dom";
 
 function Corpo01() {
   return (
@@ -17,10 +18,9 @@ function Corpo01() {
           informações úteis para facilitar a integração dos imigrantes.
         </p>
         
-          <a className="saiba-mais" href="/">
-            SAIBA MAIS
-          </a>
-        
+        <Link className="saiba-mais" to="Cadastrar">
+          SAIBA MAIS
+        </Link>
       </div>
     </section>
   );

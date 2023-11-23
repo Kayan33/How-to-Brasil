@@ -1,4 +1,5 @@
 import "../../style/style.css";
+import { Link } from "react-router-dom";
 
 function Rodape() {
   return (
@@ -21,13 +22,11 @@ function Rodape() {
           <li>
             <a href="/">Inicio</a>
           </li>
-          <a className="saiba-mais" href="/">
-            Inicio
-          </a>
         </ul>
       </nav>
-      <button>dsdsds</button>
-      
+      <Link className="saiba-mais" to="Cadastrar">
+          SAIBA MAIS
+        </Link>
     </div>
   );
 }
