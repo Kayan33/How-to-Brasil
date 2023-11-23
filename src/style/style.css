@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Luckiest+Guy&family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Luckiest+Guy&family=Poppins:wght@400;600&family=Roboto:wght@400;500;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+
+.header {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  background: no-repeat center/cover url("/public/rio.jpg");
+  height: calc(100vh - 60px);
+}
+
+.header-introdução {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: rgba(224, 224, 224, 0.15);
+  padding: 10px 100px 10px 100px;
+}
+
+.logo {
+  color: #3b6aa4;
+  font-size: 32px;
+  font-family: "Luckiest Guy", cursive;
+}
+
+.header-link a {
+  color: #000000;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+.header-link {
+  display: flex;
+  gap: 50px;
+  font-size: 18px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.instrutore {
+  margin-right: 70px;
+}
+
+.comece a {
+  display: inline-block;
+  padding: 7px 13px;
+  background: #3b6aa4;
+  color: #f6f6f6;
+}
+
+.header-texto h1 {
+  color: #f6f6f6;
+  font-size: 45px;
+  max-width: 600px;
+  margin: 40px auto;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+/* corpo01 */
+
+.informacao-bg {
+  display: flex;
+  margin: 54px 100px 100px 100px;
+}
+.informacao-bg::before {
+  content: "";
+  display: block;
+  width: 730px;
+  height: 286px;
+  background: url("/public/mundo.png");
+  position: absolute;
+  right: 1px;
+  z-index: 1;
+}
+
+.informacao {
+  z-index: 2;
+}
+
+.informacao h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 45px;
+  max-width: 25ch;
+  margin-top: 86px;
+  margin-bottom: 30px;
+  z-index: 2;
+  position: relative;
+}
+
+.informacao h1 span {
+  color: #09a599;
+}
+
+.informacao h1::before {
+  content: "";
+  display: block;
+  width: 260px;
+  height: 41px;
+  background: no-repeat url("/public/linha.svg");
+  position: absolute;
+  top: 47px;
+  left: 180px;
+  z-index: 1;
+}
+
+.informacao p {
+  color: #545252;
+  font-size: 17px;
+  max-width: 53ch;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin-bottom: 52px;
+}
+
+.informacao a {
+  margin-left: 150px;
+}
+
+.saiba-mais {
+  color: #f6f6f6;
+  border-radius: 20px;
+  border: 1px solid #000;
+  padding: 11px 32px;
+  background: #1684a7;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  display: inline-block;
+}
+
+/* corpo02 */
+
+.guia-bg {
+  padding: 80px 100px 94px 100px;
+  background: #edfdf2;
+}
+
+.guia-bg h1 {
+  font-size: 45px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #1a1c19;
+  margin-bottom: 46px;
+  /* max-width: 20ch; */
+}
+
+.guia {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  row-gap: 5rem;
+  column-gap: 6rem;
+  justify-items: center;
+}
+
+.guia-img {
+  height: 60px;
+  width: 60px;
+  background: no-repeat url("../../public/fundo.svg");
+  margin-bottom: 16px;
+}
+.guia-img img {
+  margin: 16px;
+}
+.guia-bg h3 {
+  color: #1a1c19;
+  font-size: 19px;
+  margin-bottom: 12px;
+}
+
+.guia p {
+  color: #454843;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  max-width: 35ch;
+}
+
+/* corpo04 */
+
+.sobre-bg {
+  display: flex;
+  padding: 43px 100px 43px 100px;
+  justify-content: space-between;
+}
+
+.sobre h1 {
+  color: #1a1c19;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 45px;
+  margin-top: 132px;
+  margin-bottom: 32px;
+}
+
+.sobre h1 span {
+  color: #3b6aa4;
+  font-family: "Luckiest Guy", cursive;
+  font-weight: 400;
+}
+
+.sobre p {
+  color: #545252;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  margin-bottom: 85px;
+  max-width: 52ch;
+}
+
+.saiba-mais-bg {
+  display: flex;
+  justify-content: center;
+}
+
+/* RODAPÉ */
+.rodape-bg{
+  background: #EDFDF2;
+  padding: 43px 100px 43px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rodape-link{
+  display: flex;
+  align-items: center;
+}
