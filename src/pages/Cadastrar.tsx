@@ -1,10 +1,11 @@
+import Cadastro from "../componentes/cadastrar/cadastrar";
 import "../style/style.css";
 
 function Cadastrar() {
     return (
   <div>
 
-  <h1>Cadastrar</h1>
+<Cadastro/>
   
   
   </div>

@@ -11,12 +11,11 @@
 background-image: url(../../public/thay-pellerin.png);
 display: flex;
 flex-direction: column;
-justify-content: flex-start;
 align-items: flex-end;
-background-size: 100%;
-background-position: cover;
+background-position: center bottom;
 background-repeat: no-repeat;
 height: 100vh;
+overflow: hidden;
    
 }
    

@@ -1,7 +1,7 @@
 import '../../style/stylelogin.css'
 import '../../style/style.css'
  
-function Login() {
+function LogiN() {
     return (
        
         <div className="divlogin">
@@ -36,4 +36,4 @@ function Login() {
  
     )
 }
- export default Login;
+ export default LogiN;

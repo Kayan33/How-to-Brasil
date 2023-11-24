@@ -1,9 +1,10 @@
+import LogiN from "../componentes/login";
 import "../style/style.css";
 
 function Login() {
     return (
   <div>
-<h1>Login</h1>
+<LogiN/>
   
   
   
