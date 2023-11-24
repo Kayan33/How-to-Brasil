@@ -28,11 +28,13 @@ function Rodape() {
         <Link className="saiba-mais" to="Cadastrar">
           Comece gratuitamente!
         </Link>
-
       </div>
-        <div className="rodape-baixo">
-          <p>©2023 Tecnologia Ltda. CNPJ 00.000.000/0000-00</p>
-        </div>
+      <div className="rodape-baixo">
+        <p>©2023 Tecnologia Ltda. CNPJ 00.000.000/0000-00</p>
+
+        <Link to="Cadastrar">política de privacidade</Link>
+        <Link to="Cadastrar">Termos de Serviço</Link>
+      </div>
     </div>
   );
 }

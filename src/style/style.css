@@ -232,13 +232,14 @@ img {
 /* RODAPÉ */
 .rodape-bg {
   background: #edfdf2;
-  padding: 43px 100px 43px 100px;
+  padding: 20px 100px 20px 100px;
 }
 .rodape-introducao {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-bottom: 25px;
 }
 
 .rodape-link {
@@ -249,6 +250,9 @@ img {
 
 .rodape-link li a {
   color: #454843;
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 400;
 }
 
 .rodape-link li {
@@ -257,4 +261,17 @@ img {
 
 .rodape-link .blog {
   margin-right: 0px;
+}
+
+.rodape-baixo {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.rodape-baixo a {
+  color: #000000;
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 400;
 }
