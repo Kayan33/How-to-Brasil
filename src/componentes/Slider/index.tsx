@@ -1,8 +1,8 @@
 import { register } from "swiper/element/bundle";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { EffectCoverflow, Pagination } from "swiper/modules";
 
-import 'swiper/css/effect-coverflow';
+import "swiper/css/effect-coverflow";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -11,51 +11,91 @@ import "../../style/style.css";
 
 register();
 function Slider() {
-
   return (
     <>
       <Swiper
-        effect={'coverflow'}
+        
+        navigation
+        effect={"coverflow"}
+        loop={true}
         grabCursor={true}
         centeredSlides={true}
         slidesPerView={2}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        pagination={true}
+        coverflowEffect={
+          {
+            // rotate: 50,
+            // stretch: 0,
+            // depth: 100,
+            // modifier: 1,
+            // slideShadows: true,
+          }
+        }
+        pagination={{ clickable: true }}
         modules={[EffectCoverflow, Pagination]}
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+          <div className="slide-img">
+            <img src="Slider/saude.svg" alt="" />
+          </div>
+          <p>SAÚDE</p>
+          <img src="/Slider/Slider1.png" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+          <div className="slide-img">
+            <img src="Slider/trabalho.svg" alt="" />
+          </div>
+          <p>TRABALHO</p>
+          <img src="/Slider/Slider2.png" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+          <div className="slide-img">
+            <img src="Slider/apoio.svg" alt="" />
+          </div>
+          <p>COMUNIDADE DE APOIO</p>
+          <img src="/Slider/Slider3.png" />
         </SwiperSlide>
         <SwiperSlide>
-          <img  src="https://swiperjs.com/demos/images/nature-4.jpg" />
+          <div className="slide-img">
+            <img src="Slider/saude.svg" alt="" />
+          </div>
+          <p>dsdsa</p>
+          <img src="/Slider/Slider1.png" />
         </SwiperSlide>
         <SwiperSlide>
-          <img  src="https://swiperjs.com/demos/images/nature-5.jpg" />
+          <div className="slide-img">
+            <img src="Slider/saude.svg" alt="" />
+          </div>
+          <p>dsdsa</p>
+          <img src="/Slider/Slider1.png" />
         </SwiperSlide>
         <SwiperSlide>
-          <img  src="https://swiperjs.com/demos/images/nature-6.jpg" />
+          <div className="slide-img">
+            <img src="Slider/saude.svg" alt="" />
+          </div>
+          <p>dsdsa</p>
+          <img src="/Slider/Slider1.png" />
         </SwiperSlide>
         <SwiperSlide>
-          <img  src="https://swiperjs.com/demos/images/nature-7.jpg" />
+          <div className="slide-img">
+            <img src="Slider/saude.svg" alt="" />
+          </div>
+          <p>dsdsa</p>
+          <img src="/Slider/Slider1.png" />
         </SwiperSlide>
         <SwiperSlide>
-          <img  src="https://swiperjs.com/demos/images/nature-8.jpg" />
+          <div className="slide-img">
+            <img src="Slider/saude.svg" alt="" />
+          </div>
+          <p>dsdsa</p>
+          <img src="/Slider/Slider1.png" />
         </SwiperSlide>
         <SwiperSlide>
-          <img  src="https://swiperjs.com/demos/images/nature-9.jpg" />
+          <div className="slide-img">
+            <img src="Slider/saude.svg" alt="" />
+          </div>
+          <p>dsdsa</p>
+          <img src="/Slider/Slider1.png" />
         </SwiperSlide>
       </Swiper>
     </>

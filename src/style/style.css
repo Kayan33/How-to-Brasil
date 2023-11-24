@@ -277,10 +277,21 @@ img {
 }
 
 .swiper {
+  display: flex;
   width: 80%;
   padding-top: 50px;
   padding-bottom: 50px;
 }
+.swiper p{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+  color: #545252;
+  font-family: Poppins;
+  font-size: 25px;
+  font-weight: 600;
+}
+
 
 .swiper-slide {
   background-position: center;
@@ -292,4 +303,18 @@ img {
 .swiper-slide img {
   display: block;
   width: 100%;
+}
+.slide-img{
+  align-items: center;
+  width: 90px;
+  height: 90px;
+  background: no-repeat url("../../public/Slider/Ellipse1.svg");
+  margin-bottom: 16px;
+  margin-left: 260px;
+}
+
+.slide-img img {
+  width: 70px;
+  height: 70px;
+  padding: 10px 10px;
 }
