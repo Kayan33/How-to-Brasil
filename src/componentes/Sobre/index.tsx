@@ -1,7 +1,7 @@
 import "../../style/style.css";
 import { Link } from "react-router-dom";
 
-function Corpo04() {
+function Sobre() {
   return (
     <div className="sobre-bg">
       <div className="sobre">
@@ -28,4 +28,4 @@ function Corpo04() {
   );
 }
 
-export default Corpo04;
+export default Sobre;
