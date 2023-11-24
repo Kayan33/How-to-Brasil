@@ -1,5 +1,6 @@
 import '../../style/stylelogin.css'
 import '../../style/style.css'
+import { Link } from "react-router-dom";
  
 function LogiN() {
     return (
@@ -18,7 +19,8 @@ function LogiN() {
                         <br/>
                     <input type="password" placeholder='Senha' />
                         <br/>
-                    <input className="entrar" type="submit" value="Entrar" />
+                    <Link className="entrar" to="Cadastrar">Entrar</Link>
+                    
 
                 <div className="conectado_esqueci">
 

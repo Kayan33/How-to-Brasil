@@ -75,12 +75,30 @@ line-height: normal;
 }
 
 input{
-width: 428px;
+width: 397px;
 height: 50px;
 border-radius: 5px;
-border: 1px solid #817D75;
-background: #F2F2F2;
 }
+
+input[type="email"] {
+    background: #F2F2F2;
+    
+}
+
+input[type="email"]::placeholder {
+    color: #CACACA; 
+    
+  }
+
+  input[type="password"] {
+    background: #F2F2F2;
+    
+}
+
+input[type="password"]::placeholder {
+    color: #CACACA; 
+    
+  }
 
 .conectado_esqueci{
     text-decoration:underline;
@@ -98,18 +116,12 @@ background: #F2F2F2;
 }
 
 .entrar{
-    text-align: center;
     color: white;
     background-color: #09A599;
-    padding-left: 193.38px;
-    padding-right: 193.19px;
-    padding-top: 17px;
-    padding-bottom: 17px;
+    padding: 17px 180px 17px 180px;
     border-radius: 5px;
     border: 1px solid #000;
-    
-    
-}
+    }
 
 .check{
     border: green;
