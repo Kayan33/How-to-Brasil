@@ -5,7 +5,7 @@ function Corpo02() {
     <div className="guia-bg">
       <h1>O guia para voçê que está chegado no Brasil</h1>
       <div className="guia">
-        <div>
+        <div className="guia-tudo">
           <div className="guia-img">
             <img src="/documentacao.svg" alt="" />
           </div>
@@ -17,7 +17,7 @@ function Corpo02() {
           </p>
         </div>
 
-        <div>
+        <div className="guia-tudo">
           <div className="guia-img">
             <img src="/casa.svg" alt="" />
           </div>
@@ -29,7 +29,7 @@ function Corpo02() {
           </p>
         </div>
 
-        <div>
+        <div className="guia-tudo">
           <div className="guia-img">
             <img src="/trabalho.svg" alt="" />
           </div>
@@ -40,7 +40,7 @@ function Corpo02() {
           </p>
         </div>
 
-        <div>
+        <div className="guia-tudo">
           <div className="guia-img">
             <img src="/saude.svg" alt="" />
           </div>
@@ -52,7 +52,7 @@ function Corpo02() {
           </p>
         </div>
 
-        <div>
+        <div className="guia-tudo">
           <div className="guia-img">
             <img src="/apoio.svg" alt="" />
           </div>
@@ -64,7 +64,7 @@ function Corpo02() {
           </p>
         </div>
 
-        <div>
+        <div className="guia-tudo">
           <div className="guia-img">
             <img src="/educacao.svg" alt="" />
           </div>

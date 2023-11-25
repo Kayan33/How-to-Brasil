@@ -1,6 +1,6 @@
 import { register } from "swiper/element/bundle";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Pagination } from "swiper/modules";
+import { EffectFlip,EffectCoverflow, Pagination } from "swiper/modules";
 
 import "swiper/css/effect-coverflow";
 import "swiper/css";
@@ -13,7 +13,7 @@ register();
 function Slider() {
   return (
     <>
-      <Swiper
+      <Swiper 
         
         navigation
         effect={"coverflow"}
@@ -23,17 +23,19 @@ function Slider() {
         slidesPerView={2}
         coverflowEffect={
           {
-            // rotate: 50,
-            // stretch: 0,
-            // depth: 100,
-            // modifier: 1,
-            // slideShadows: true,
+             rotate: 50,
+             stretch: 0,
+             depth: 100,
+             modifier: 1,
+             slideShadows: false,
           }
         }
         pagination={{ clickable: true }}
         modules={[EffectCoverflow, Pagination]}
-        className="mySwiper"
+        
+        
       >
+        
         <SwiperSlide>
           <div className="slide-img">
             <img src="Slider/saude.svg" alt="" />
