@@ -16,11 +16,11 @@ function Slider() {
       <Swiper 
         
         navigation
-        effect={"coverflow"}
+        
         loop={true}
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={2}
+        slidesPerView={1}
         coverflowEffect={
           {
              rotate: 50,
@@ -36,68 +36,35 @@ function Slider() {
         
       >
         
-        <SwiperSlide>
-          <div className="slide-img">
-            <img src="Slider/saude.svg" alt="" />
-          </div>
-          <p>SAÚDE</p>
+        <SwiperSlide className="flip">
+          <div className="front-card">
           <img src="/Slider/Slider1.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="slide-img">
-            <img src="Slider/trabalho.svg" alt="" />
           </div>
-          <p>TRABALHO</p>
+            
+          <div className="back-card">
+            <h1>Saúde</h1>
+            <p></p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="flip">
+          <div className="front-card">
           <img src="/Slider/Slider2.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="slide-img">
-            <img src="Slider/apoio.svg" alt="" />
           </div>
-          <p>COMUNIDADE DE APOIO</p>
+            
+          <div className="back-card">
+            <h1>Trabalho</h1>
+            <p></p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="flip">
+          <div className="front-card">
           <img src="/Slider/Slider3.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="slide-img">
-            <img src="Slider/saude.svg" alt="" />
           </div>
-          <p>dsdsa</p>
-          <img src="/Slider/Slider1.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="slide-img">
-            <img src="Slider/saude.svg" alt="" />
+            
+          <div className="back-card">
+            <h1>Apoio</h1>
+            <p></p>
           </div>
-          <p>dsdsa</p>
-          <img src="/Slider/Slider1.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="slide-img">
-            <img src="Slider/saude.svg" alt="" />
-          </div>
-          <p>dsdsa</p>
-          <img src="/Slider/Slider1.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="slide-img">
-            <img src="Slider/saude.svg" alt="" />
-          </div>
-          <p>dsdsa</p>
-          <img src="/Slider/Slider1.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="slide-img">
-            <img src="Slider/saude.svg" alt="" />
-          </div>
-          <p>dsdsa</p>
-          <img src="/Slider/Slider1.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="slide-img">
-            <img src="Slider/saude.svg" alt="" />
-          </div>
-          <p>dsdsa</p>
-          <img src="/Slider/Slider1.png" />
         </SwiperSlide>
       </Swiper>
     </>
