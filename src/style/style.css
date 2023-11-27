@@ -158,7 +158,6 @@ img {
   font-weight: 600;
   color: #1a1c19;
   margin-bottom: 46px;
-  /* max-width: 20ch; */
 }
 
 .guia {
@@ -198,7 +197,7 @@ img {
   font-size: 15px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  max-width: 35ch;
+  max-width: 50ch;
 }
 
 /* corpo04 */
@@ -286,51 +285,35 @@ img {
 }
 
 .swiper {
-  display: flex;
+  width: 85%;
+  margin: 50px;
+  margin-bottom: 50px;
+  
 }
-.swiper p {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 24px;
-  color: #545252;
-  font-family: Poppins;
-  font-size: 25px;
-  font-weight: 600;
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
 }
 
 .swiper-slide img {
   display: block;
-  width: 700px;
-  height: 466px;
-}
-.swiper {
-  width: 700px;
-  height: 464px;
+border-radius: 10px 10px 0px 0px;
 }
 
-.flip {
-  perspective: 1000px;
-  position: relative;
-  text-align: center;
-}
-.swiper .flip {
-  transition: transform 0.5s;
-  transform-style: preserve-3d;
-}
-
-.swiper:hover .flip {
-  transform: rotateY(180deg);
+.slide-texto{
+  display: grid;
+  justify-items: center;
+  background: #EDFDF2;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 14px 30px 50px 30px;
+  border-radius: 0px 0px 10px 10px;
 }
 
-.front-card,
-.back-card {
-  position: absolute;
-  backface-visibility: hidden;
+.slide-texto h3{
+margin-bottom: 14px;
 }
 
-.back-card {
-  width: 700px;
-  height: 464px;
-  background: #edfdf2;
-  transform: rotatey(180deg);
-}
