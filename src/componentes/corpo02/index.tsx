@@ -1,11 +1,45 @@
+import { gsap, } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useLayoutEffect, useRef } from "react";
+
 import "../../style/style.css";
 
 function Corpo02() {
+  
+  const el = useRef<HTMLDivElement | null>(null);
+  const tl = useRef<gsap.core.Timeline | null>(null);
+  
+
+  useLayoutEffect(()=>{
+    gsap.registerPlugin(ScrollTrigger)
+    const ctx = gsap.context(()=>{
+      tl.current = gsap.timeline({
+        scrollTrigger:{
+          trigger:".guia-tudo",
+          scrub:true,
+          markers:true,
+          start:"top 700px"
+        }
+      })
+      .fromTo("#model-1",{
+        opacity:0,
+        y:160,
+      },{
+        opacity:1,
+        y:0
+      })
+    },el)
+
+
+    return () =>{
+      gsap.killTweensOf(".guia-tudo")
+    }
+  }, [])
   return (
     <div className="guia-bg">
       <h1>O guia para voçê que está chegado no Brasil</h1>
-      <div className="guia">
-        <div className="guia-tudo">
+      <div className="guia" ref={el} >
+        <div className="guia-tudo" id="model-1">
           <div className="guia-img">
             <img src="/documentacao.svg" alt="" />
           </div>
@@ -17,7 +51,7 @@ function Corpo02() {
           </p>
         </div>
 
-        <div className="guia-tudo">
+        <div className="guia-tudo" id="model-1">
           <div className="guia-img">
             <img src="/casa.svg" alt="" />
           </div>
@@ -29,7 +63,7 @@ function Corpo02() {
           </p>
         </div>
 
-        <div className="guia-tudo">
+        <div className="guia-tudo" id="model-1">
           <div className="guia-img">
             <img src="/trabalho.svg" alt="" />
           </div>
