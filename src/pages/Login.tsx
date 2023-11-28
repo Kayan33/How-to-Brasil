@@ -4,10 +4,10 @@ import "../style/style.css";
 function Login() {
     return (
   <div>
-<LogiN/>
+     <LogiN titulo='Você está na página:Home/Login' />
   
   
-  
+   
   </div>
     );
   }

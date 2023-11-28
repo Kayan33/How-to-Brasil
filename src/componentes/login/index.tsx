@@ -1,8 +1,18 @@
 import '../../style/stylelogin.css'
 import '../../style/style.css'
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
  
-function LogiN() {
+type Props={
+    titulo: string;
+}
+
+function LogiN(Propriedades: Props) {
+    const  navigate = useNavigate();
+    const  params = useParams();
+    function handleClick(){
+        navigate('/Cadastrar')
+    }
     return (
        
         <div className="divlogin">
@@ -19,7 +29,7 @@ function LogiN() {
                         <br/>
                     <input type="password" placeholder='Senha' />
                         <br/>
-                    <Link className="entrar" to="Cadastrar">Entrar</Link>
+                    <Link className="entrar" to="/Cadastrar">Entrar</Link>
                     
 
                 <div className="conectado_esqueci">
@@ -31,7 +41,12 @@ function LogiN() {
                 <a className="esqueci">Esqueci minha senha</a>
 
             
-                    <a className="cadastre">Não é cadastrado?  Cadastre-se</a> 
+                    <Link className="cadastre" to="/Cadastrar">Não é cadastrado?  Cadastre-se</Link> 
+                 
+                    {Propriedades.titulo}
+
+                    <button onClick={handleClick}> Voltar </button>
+                    
                     
         </div>
     </div>

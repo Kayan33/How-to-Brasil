@@ -127,3 +127,13 @@ input[type="password"]::placeholder {
     border: green;
 }
 
+.cadastre{
+    text-decoration: underline;
+    color: #5731FF;
+
+
+}
+
+.cadastre:hover{
+    color: #000;
+}
