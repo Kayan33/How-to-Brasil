@@ -4,7 +4,7 @@ import Login from "./pages/Login";
 import Home from "./pages/home";
 import Saiba from "./pages/Saiba-mais";
 import Notfound from "./pages/notfound";
-import Cadastro from "./componentes/cadastrar/cadastrar";
+import Cadastrar from "./pages/Cadastrar";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <Route path='*' element={<Notfound/>}></Route>
         <Route path='/' element={<Home/>}></Route>
         <Route path='/Login' element={<Login/>}></Route>
-        <Route path='/Cadastrar' element={<Cadastro/>}></Route>
+        <Route path='/Cadastrar' element={<Cadastrar/>}></Route>
         <Route path='/Saiba Mais' element={<Saiba/>}></Route>
         
       </Routes>

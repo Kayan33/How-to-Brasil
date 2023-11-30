@@ -1,39 +1,52 @@
-import "../../style/stylecadastro.css"
-import "../../style/style.css"
+import "../../style/stylelogin.css";
+import "../../style/stylecadastro.css";
+import "../../style/style.css";
 
-function Cadastro(){
-
-    return(
-    <div className="cadastro-bg">
-    <div className="cadastro">
-        <a href=""></a> </div>
-        <div className="cadastro1">
-            <input type="text" value="Digite seu email" />
-<br />
-            <input type="text" value="Primeiro Nome" />
-<br /> 
-            <input type="text" value="Último Nome" />
-<br />         
-            <input type="text" value="Digite sua senha" />
-<br />
-            <input type="text" value="Confirmar sua senha" />
-<br />
+import { Link, } from "react-router-dom";
 
 
-<p className="ofertas">Deseja receber ofertas e promoções por e-mail?</p>
-         <div className="ofertas">
-            <input type="checkbox" name="sim" id="sim" />
-            <p>Sim</p>
-            <input type="checkbox" name="não" id="não" />
-            <p>Não</p>
-            <br /><br />
-            </div>
-            <p className="aceite">Ao clicar no botão abaixo estará concordando com os termos e regras de uso de nossa plataforma</p>
-            <input type="button" value="Cadastrar-se" form="" />
-<br />
-         </div>
+
+
+function Cadastro() {
+  
+  return (
+    <div className="divlogin">
+      <div className="divlogin1">
+        <Link className="logo" to="/">
+          How to brasil
+        </Link>
+
+        <p className="acesso">
+          
+          <strong>cadastre-se</strong>
+        </p>
+        <p className="acesso1">Insira seu e-mail e senha para fazer login. </p>
+
+        <input type="email" placeholder="email@email.com.br" />
+        <input type="text" placeholder="Primeiro nome" />
+        <input type="text" placeholder="Último nome" />
+
+        <input type="password" placeholder="Senha" />
+
+        <input type="password" placeholder="Confirmação de senha" />
+
+
+        <Link className="entrar" to="/Cadastrar">
+          Entrar
+        </Link>
+
+        <div className="ou">
+          <hr />  <p>ou</p>   <hr />
+        </div>
+        <div className="entrar-google">
+        <a id="google" href="">Entrar com google</a>
+        <br />
+        <a id="facebook" href="">Entrar com facebook</a>
+        </div>
+
+        
+      </div>
     </div>
-    )
+  );
 }
-
-export default Cadastro
+export default Cadastro;

@@ -15,7 +15,7 @@ align-items: flex-end;
 background-position: center bottom;
 background-repeat: no-repeat;
 height: 100vh;
-overflow: hidden;
+overflow-x: hidden;
 
 }
 
@@ -31,6 +31,7 @@ overflow: hidden;
 }
 .divlogin1 .logo{
     margin-bottom: 45px;
+    align-self: center;
 }
 
 .acesso{
@@ -52,23 +53,22 @@ margin-bottom: 32px;
 
 
 
-input[type="email"], [type="password"]{
+input[type="email"], [type="password"],[type="text"]{
     background: #F2F2F2;
     margin-bottom: 16px;
     border: 1px solid #817D75;
-    width: 397px;
-    height: 50px;
+    padding: 25px 236px 9px 0px;
     border-radius: 5px;
 
 }
 
 input[type="email"]::placeholder {
     color: #888888; 
-    transform: translateY(15px) translateX(10px);
+    transform: translateY(10px) translateX(10px);
    
     
   }
-
+  
   input[type="password"] {
 
     margin-bottom: 22px;
@@ -77,7 +77,7 @@ input[type="email"]::placeholder {
 
 input[type="password"]::placeholder {
     color: #888888; 
-    transform: translateY(15px) translateX(10px);
+    transform: translateY(10px) translateX(10px);
 }
 
 input[type="checkbox"] {
@@ -105,50 +105,57 @@ margin-right: 5px;
    
 }
 
-.esqueci{
-    text-decoration:underline;
-    color: #5731FF;
- 
-   
-}
-  
-
-
- 
-
-.outroacesso{
-    display: flex;
-    flex-direction: column;
-    width: 428px;
-    height: 40px;
-    padding: 11px 134.22px 12px 134.42px;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-
-}
-
-
-
-
-
 .entrar{
-    color: white;
-    background-color: #09A599;
-    padding: 17px 180px 17px 180px;
+    color: #FFF;
+    padding: 17px 178px 17px 178px;
     border-radius: 5px;
     border: 1px solid #000;
+    background-color: #09A599;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.25);
+    margin-bottom: 16px;
     }
 
-
-
-.cadastre{
-    text-decoration: underline;
-    color: #5731FF;
-
-
+.cadastre-se{
+    display: flex;
+    align-self: center;
+    gap: 12px;
+    margin-bottom: 46px;
 }
 
-.cadastre:hover{
+.cadastre-se a{
+    text-decoration: underline;
+    color: #5731FF;
+}
+
+.cadastre-se a:hover{
     color: #000;
+}
+.ou{
+    display: flex;
+    align-self: center;
+    align-items: baseline;
+    margin-bottom: 50px;
+}
+hr{
+    width: 170px;
+    height: 0px;
+    margin-left: 15px;
+    margin-right:15px ;
+    
+}
+
+.entrar-google #google, #facebook{
+    display: inline-block;
+    color: #5731FF;
+    padding: 17px 128px 17px 128px;
+    border-radius: 5px;
+    border: 1px solid #5731FF;
+    font-size: 16px;
+    font-family: Arial;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+#facebook{
+    padding: 17px 111px 17px 128px;
 }
