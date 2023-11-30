@@ -18,7 +18,8 @@ function Corpo02() {
           trigger:".guia-tudo",
           scrub:true,
           markers:true,
-          start:"top 700px"
+          start:"top 1000px",
+          end:"bottom 250px"
         }
       })
       .fromTo("#model-1",{
@@ -28,7 +29,45 @@ function Corpo02() {
         opacity:1,
         y:0
       })
+
+      .fromTo("#model-2",{
+        opacity:0,
+        y:160,
+      },{
+        opacity:1,
+        y:0
+      })
+
+      .fromTo("#model-3",{
+        opacity:0,
+        y:160,
+      },{
+        opacity:1,
+        y:0
+      })
+      .fromTo("#model-4",{
+        opacity:0,
+        y:160,
+      },{
+        opacity:1,
+        y:0
+      })
+      .fromTo("#model-5",{
+        opacity:0,
+        y:160,
+      },{
+        opacity:1,
+        y:0
+      })
+      .fromTo("#model-6",{
+        opacity:0,
+        y:160,
+      },{
+        opacity:1,
+        y:0
+      })
     },el)
+    
 
 
     return () =>{
@@ -51,7 +90,7 @@ function Corpo02() {
           </p>
         </div>
 
-        <div className="guia-tudo" id="model-1">
+        <div className="guia-tudo" id="model-2">
           <div className="guia-img">
             <img src="/casa.svg" alt="" />
           </div>
@@ -63,7 +102,7 @@ function Corpo02() {
           </p>
         </div>
 
-        <div className="guia-tudo" id="model-1">
+        <div className="guia-tudo" id="model-3">
           <div className="guia-img">
             <img src="/trabalho.svg" alt="" />
           </div>
@@ -74,7 +113,7 @@ function Corpo02() {
           </p>
         </div>
 
-        <div className="guia-tudo">
+        <div className="guia-tudo" id="model-4">
           <div className="guia-img">
             <img src="/saude.svg" alt="" />
           </div>
@@ -86,7 +125,7 @@ function Corpo02() {
           </p>
         </div>
 
-        <div className="guia-tudo">
+        <div className="guia-tudo" id="model-5">
           <div className="guia-img">
             <img src="/apoio.svg" alt="" />
           </div>
@@ -98,7 +137,7 @@ function Corpo02() {
           </p>
         </div>
 
-        <div className="guia-tudo">
+        <div className="guia-tudo" id="model-6">
           <div className="guia-img">
             <img src="/educacao.svg" alt="" />
           </div>
