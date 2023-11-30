@@ -18,27 +18,27 @@ function LogiN(Propriedades: Props) {
         <div className="divlogin">
 
             <div className="divlogin1">
-                <a className="logo" href="/">
-                    How to Brazil
-                </a>
+
+            <Link className="logo" to="/">How to brasil</Link>
+                
                     <p className="acesso"> <strong>Acesso</strong></p>
                     <p className="acesso1">Insira seu e-mail e senha para fazer login. </p>
            
 
-                    <input type="email" placeholder='Email' />
-                        <br/>
+                    <input type="email" placeholder='email@email.com.br' />
+                       
                     <input type="password" placeholder='Senha' />
-                        <br/>
+                       
+                <div className="conectado_esqueci">
+
+                    <input  type="checkbox" />
+                    <label>Mantenha-me conectado</label>
+                <a href="">Esqueci minha senha</a>
+
+                </div>
                     <Link className="entrar" to="/Cadastrar">Entrar</Link>
                     
 
-                <div className="conectado_esqueci">
-
-                    <label>Mantenha-me conectado</label><input className="check" type="checkbox" />
-                   
-
-                </div>
-                <a className="esqueci">Esqueci minha senha</a>
 
             
                     <Link className="cadastre" to="/Cadastrar">Não é cadastrado?  Cadastre-se</Link> 

@@ -200,7 +200,40 @@ img {
   max-width: 50ch;
 }
 
-/* corpo04 */
+.swiper {
+  width: 85%;
+  margin: 50px;
+  margin-bottom: 50px;
+  
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+border-radius: 10px 10px 0px 0px;
+}
+
+.slide-texto{
+  display: grid;
+  justify-items: center;
+  background: #EDFDF2;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 14px 30px 50px 30px;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.slide-texto h3{
+margin-bottom: 14px;
+}
+
+/* SOBRE */
 
 .sobre-bg {
   display: flex;
@@ -284,36 +317,4 @@ img {
   font-weight: 400;
 }
 
-.swiper {
-  width: 85%;
-  margin: 50px;
-  margin-bottom: 50px;
-  
-}
-
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px;
-  height: 300px;
-}
-
-.swiper-slide img {
-  display: block;
-border-radius: 10px 10px 0px 0px;
-}
-
-.slide-texto{
-  display: grid;
-  justify-items: center;
-  background: #EDFDF2;
-  max-width: 100%;
-  max-height: 100%;
-  padding: 14px 30px 50px 30px;
-  border-radius: 0px 0px 10px 10px;
-}
-
-.slide-texto h3{
-margin-bottom: 14px;
-}
 

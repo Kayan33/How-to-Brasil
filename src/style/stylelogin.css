@@ -16,40 +16,29 @@ background-position: center bottom;
 background-repeat: no-repeat;
 height: 100vh;
 overflow: hidden;
-   
+
 }
-   
+
 .divlogin1{
-display: flex;
-flex-direction: column;
-justify-content: flex-start;
-background-color: white;
-align-items: center;
-width: 500px;
-height: 1024px;
-
-
-
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: baseline;
+    background-color: white;
+    padding: 45px;
+    max-width: 400px;
+    height: 1024px;
 }
- 
-.cadastro_esqueci{
-display: flex;
-flex-direction: column;
-text-align: center;
-flex: auto;
-justify-content: center;
-align-items: center;
-size-adjust: 80px
- 
+.divlogin1 .logo{
+    margin-bottom: 45px;
 }
 
 .acesso{
-color: #262420;
-font-family: Arial;
-font-size: 24px;
-font-style: normal;
+    color: #262420;
+    font-family: Arial;
+    font-size: 24px;
 font-weight: 700;
-line-height: normal;
+margin-bottom: 17px;
 
 }
 
@@ -57,10 +46,75 @@ line-height: normal;
 color: #262420;
 font-family: Arial;
 font-size: 14px;
-font-style: normal;
 font-weight: 400;
-line-height: normal;
+margin-bottom: 32px;
 }
+
+
+
+input[type="email"], [type="password"]{
+    background: #F2F2F2;
+    margin-bottom: 16px;
+    border: 1px solid #817D75;
+    width: 397px;
+    height: 50px;
+    border-radius: 5px;
+
+}
+
+input[type="email"]::placeholder {
+    color: #888888; 
+    transform: translateY(15px) translateX(10px);
+   
+    
+  }
+
+  input[type="password"] {
+
+    margin-bottom: 22px;
+
+}
+
+input[type="password"]::placeholder {
+    color: #888888; 
+    transform: translateY(15px) translateX(10px);
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+margin-right: 5px;
+
+}
+.conectado_esqueci{
+    display: flex;
+    align-items: center;
+    margin-bottom: 28px;
+    
+}
+.conectado_esqueci label{
+    color: #262420;
+    font-size: 14px;
+    margin-right: 90px;
+}
+
+.conectado_esqueci a{
+    color: #5731FF;
+    font-size: 14px;
+    text-decoration:underline;
+   
+}
+
+.esqueci{
+    text-decoration:underline;
+    color: #5731FF;
+ 
+   
+}
+  
+
+
+ 
 
 .outroacesso{
     display: flex;
@@ -74,46 +128,9 @@ line-height: normal;
 
 }
 
-input{
-width: 397px;
-height: 50px;
-border-radius: 5px;
-}
 
-input[type="email"] {
-    background: #F2F2F2;
-    
-}
 
-input[type="email"]::placeholder {
-    color: #CACACA; 
-    
-  }
 
-  input[type="password"] {
-    background: #F2F2F2;
-    
-}
-
-input[type="password"]::placeholder {
-    color: #CACACA; 
-    
-  }
-
-.conectado_esqueci{
-    text-decoration:underline;
-    color: #5731FF;
-    display:flex;
-    justify-content:space-between;
-    
-}
-
-.esqueci{
-    text-decoration:underline;
-    color: #5731FF;
- 
-   
-}
 
 .entrar{
     color: white;
@@ -123,9 +140,7 @@ input[type="password"]::placeholder {
     border: 1px solid #000;
     }
 
-.check{
-    border: green;
-}
+
 
 .cadastre{
     text-decoration: underline;

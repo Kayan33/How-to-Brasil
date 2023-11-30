@@ -17,7 +17,7 @@ function Corpo02() {
         scrollTrigger:{
           trigger:".guia-tudo",
           scrub:true,
-          markers:true,
+          
           start:"top 1000px",
           end:"bottom 250px"
         }
