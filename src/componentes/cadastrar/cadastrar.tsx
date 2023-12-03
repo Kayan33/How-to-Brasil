@@ -34,7 +34,10 @@ function Cadastro() {
         <Link className="entrar" to="/Cadastrar">
           Entrar
         </Link>
-
+        <div className="cadastre-se">
+          <p>Já tem conta? Faça seu </p>
+          <Link to="/Login">login.</Link>
+        </div>
         <div className="ou">
           <hr />  <p>ou</p>   <hr />
         </div>
