@@ -2,12 +2,30 @@ import "../../style/stylelogin.css";
 import "../../style/style.css";
 import { Link, useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import React from 'react';
+import {useState} from 'react';
 
-type Props = {
-  titulo: string;
-};
 
-function LogiN(Propriedades: Props) {
+function LogiN() {
+const [password, SetPassword] = useState('');
+const [email, SetEmail] = useState('');
+
+
+function handleInputPassword (event: React.ChangeEvent< HTMLInputElement >) {
+  
+  SetPassword(event.target.value);
+
+}
+
+function handleInputEmail (event: React.ChangeEvent< HTMLInputElement >) {
+
+  SetEmail(event.target.value);
+  
+}
+
+
+
+
   const navigate = useNavigate();
   const params = useParams();
   function handleClick() {
@@ -26,14 +44,14 @@ function LogiN(Propriedades: Props) {
         </p>
         <p className="acesso1">Insira seu e-mail e senha para fazer login. </p>
 
-        <input type="email" placeholder="email@email.com.br" />
+        <input type="email" placeholder="email@email.com.br"  value={email} onChange={handleInputEmail} />
 
-        <input type="password" placeholder="Senha" />
+        <input type="password" placeholder="Senha" value={password} onChange={handleInputPassword} />
 
         <div className="conectado_esqueci">
           <input type="checkbox" />
           <label>Mantenha-me conectado</label>
-          <a href="">Esqueci minha senha</a>
+          <Link to="/EsqueciSenha">Esqueci minha senha</Link>
         </div>
 
         <Link className="entrar" to="/Cadastrar">

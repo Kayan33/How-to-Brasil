@@ -1,15 +1,15 @@
 import LogiN from "../componentes/login";
 import "../style/style.css";
 
-function Login() {
+function EsqueciSenha() {
     return (
   <div>
-     <LogiN />
+
+     <EsqueciSenha />
   
   
-   
   </div>
     );
   }
   
-  export default Login;
+  export default EsqueciSenha;
