@@ -1,1 +1,57 @@
+.container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(253, 253, 253, 0.63);
+}
+.container-bg {
+  position: absolute;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  border-radius: 30px;
+  box-shadow: 8px 8px 5px 8px rgba(0, 0, 0, 0.25);
+  padding: 2rem;
+  max-width: 1000px;
+  height: 480px;
+}
 
+.teste{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.texto {
+  display: grid;
+  align-items: center;
+  
+}
+
+
+.texto button {
+  align-self: end;
+  justify-self: end;
+}
+
+.container-bolinha{
+  margin-top: 35px;
+  display: flex;
+  gap: 24px;
+  justify-content: center
+}
+.bolinha-colorida {
+  width: 15px;
+  height: 15px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background: #1684a7;
+}
+.bolinha {
+  width: 15px;
+  height: 15px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
