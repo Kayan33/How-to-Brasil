@@ -6,6 +6,7 @@ import Saiba from "./pages/Saiba-mais";
 import Notfound from "./pages/notfound";
 import Cadastrar from "./pages/Cadastrar";
 import EsqueciSenha from "./componentes/esqueciSenha";
+import BemVindo from "./componentes/Bemvindo";
 
 function App() {
   return (
@@ -15,8 +16,9 @@ function App() {
         <Route path='/' element={<Home/>}></Route>
         <Route path='/Login' element={<Login/>}></Route>
         <Route path='/Cadastrar' element={<Cadastrar/>}></Route>
-        <Route path='/EsqueciSenha' element={<EsqueciSenha/>}></Route>
+        <Route path='/Esqueci-Senha' element={<EsqueciSenha/>}></Route>
         <Route path='/Saiba Mais' element={<Saiba/>}></Route>
+        <Route path='/Bem-vindo' element={<BemVindo/>}></Route>
         
         
       </Routes>
