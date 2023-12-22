@@ -271,13 +271,64 @@ img {
 
 /* PERGUNTAS FREQUENTES */
 .container-perguntas {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 922px;
+  margin: 0 auto;
 }
-.container-perguntas h1 {
+.container-perguntas h1{
+  text-align: center;
   margin-bottom: 40px;
 }
+
+.pergunta {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  background: #FFF;
+  padding: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  border-radius: 8px;
+  border: 1px solid #D1D3D5;
+}
+
+.pergunta div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Garantindo que a largura seja 100% */
+}
+
+.pergunta img {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+.resposta {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #454843;
+  padding-top: 20px;
+}
+
+.pergunta-expandida, .resposta {
+  background-color: #EDFDF2; 
+  margin-bottom: 5px;
+  border: none;
+  border-radius: 8;
+  
+}
+
+.pergunta:hover {
+  background-color: #f5f5f5;
+}
+
+.pergunta-expandida:hover {
+  background-color: #EDFDF2;
+}
+
 
 /* RODAPÉ */
 .rodape-bg {
