@@ -5,6 +5,7 @@
   left: 0;
   right: 0;
   background: rgba(253, 253, 253, 0.63);
+  
 }
 .container-bg {
   position: absolute;
@@ -20,27 +21,28 @@
   height: 480px;
 }
 
-.teste{
+.teste {
   display: grid;
   grid-template-columns: 1fr 1fr;
-}
-.texto {
-  display: grid;
-  align-items: center;
+  height: 450px;
   
 }
-
+.texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
 
 .texto button {
   align-self: end;
-  justify-self: end;
+  float: right;
 }
 
-.container-bolinha{
+.container-bolinha {
   margin-top: 35px;
   display: flex;
   gap: 24px;
-  justify-content: center
+  justify-content: center;
 }
 .bolinha-colorida {
   width: 15px;
@@ -54,4 +56,31 @@
   height: 15px;
   border: 1px solid black;
   border-radius: 50%;
+}
+.modeel-button{
+  display: grid;
+  justify-items: center;
+  align-content: space-evenly;
+  grid-template-columns: 1fr 1fr;
+  
+}
+.f-button {
+  color: #000;
+  font-family: Roboto;
+  font-weight: 700;
+  padding: 15px 40px ;
+  border-radius: 25px;
+  border: 1px solid #000;
+}
+.f-button:hover{
+  border: 1px solid #1684a7;
+  color: #1684a7;
+  transition: 0.3s;
+}
+
+.f-button-selected {
+  background-color: #1684a7; 
+  color: #fff; 
+  padding: 15px 40px ;
+  border-radius: 25px;
 }

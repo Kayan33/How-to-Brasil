@@ -297,7 +297,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%; /* Garantindo que a largura seja 100% */
+  width: 100%; 
 }
 
 .pergunta img {

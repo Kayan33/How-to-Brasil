@@ -57,7 +57,7 @@ const Perguntas: React.FC = () => {
           <li
             key={id}
             className={`pergunta ${
-              perguntaExpandida === index ? "pergunta-expandida" : ""
+              perguntaExpandida === index && "pergunta-expandida" 
             }`}
             onClick={() => handlePerguntaClick(index)}
           >
