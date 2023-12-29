@@ -7,10 +7,12 @@ interface Modal {
   content: string;
   isFirst: boolean;
   buttons?: string[];
+  
 }
 
 function BemVindo() {
   const [modalIndex, setModalIndex] = useState<number>(0);
+  const [selectedButtons, setSelectedButtons] = useState<string[]>([]);
 
   const modals: Modal[] = [
     {
@@ -50,11 +52,21 @@ function BemVindo() {
       isFirst: false,
     },
 
+    // Adicione os outros modals aqui...
   ];
 
   const handleNextModal = () => {
     if (modalIndex < modals.length - 1) {
       setModalIndex((prevIndex) => prevIndex + 1);
+      setSelectedButtons([]); // Reset selectedButtons when moving to the next modal
+    }
+  };
+
+  const handleButtonClick = (button: string) => {
+    if (modalIndex === 2 && selectedButtons.length < 3) {
+      setSelectedButtons((prevSelected) => [...prevSelected, button]);
+    } else {
+      setSelectedButtons([button]);
     }
   };
 
@@ -79,9 +91,15 @@ function BemVindo() {
           <div className="teste">
             <div className="modeel-button">
               {modals[modalIndex].buttons?.map((button, index) => (
-                <button className="f-button" key={index}>
-                  {button}
-                </button>
+                <button
+                className={`f-button${
+                  selectedButtons.includes(button) ? "-selected" : ""
+                }`}
+                key={index}
+                onClick={() => handleButtonClick(button)}
+              >
+                {button}
+              </button>
               ))}
             </div>
 
