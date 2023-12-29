@@ -7,7 +7,6 @@ interface Modal {
   content: string;
   isFirst: boolean;
   buttons?: string[];
-  
 }
 
 function BemVindo() {
@@ -42,23 +41,26 @@ function BemVindo() {
       content:
         "Entender as necessidades imediatas do usuário, como encontrar emprego...",
       buttons: [
-        "emprego",
-        "assistência médica",
-        "educacional",
-        " Moradia",
-        " Documentação",
         " ONG",
+        "emprego",
+        " Moradia",
+        "educacional",
+        " Documentação",
+        "assistência médica",
       ],
       isFirst: false,
     },
-
-    // Adicione os outros modals aqui...
   ];
 
   const handleNextModal = () => {
-    if (modalIndex < modals.length - 1) {
+    if (modalIndex === 0) {
       setModalIndex((prevIndex) => prevIndex + 1);
-      setSelectedButtons([]); // Reset selectedButtons when moving to the next modal
+      setSelectedButtons([]);
+    } else if (modalIndex === 1 && selectedButtons.length === 1) {
+      setModalIndex((prevIndex) => prevIndex + 1);
+      setSelectedButtons([]);
+    } else {
+      console.log("Por favor, escolha pelo menos  1 .");
     }
   };
 
@@ -92,14 +94,14 @@ function BemVindo() {
             <div className="modeel-button">
               {modals[modalIndex].buttons?.map((button, index) => (
                 <button
-                className={`f-button${
-                  selectedButtons.includes(button) ? "-selected" : ""
-                }`}
-                key={index}
-                onClick={() => handleButtonClick(button)}
-              >
-                {button}
-              </button>
+                  className={`f-button${
+                    selectedButtons.includes(button) ? "-selected" : ""
+                  }`}
+                  key={index}
+                  onClick={() => handleButtonClick(button)}
+                >
+                  {button}
+                </button>
               ))}
             </div>
 
@@ -107,7 +109,7 @@ function BemVindo() {
               <h1>{modals[modalIndex].title}</h1>
               <p>{modals[modalIndex].content}</p>
 
-              {modalIndex === modals.length - 1 ? (
+              {modalIndex === 2 && selectedButtons.length >= 1 ? (
                 <Link to="/">
                   <button className="saiba-mais">VAMOS LÁ!</button>
                 </Link>

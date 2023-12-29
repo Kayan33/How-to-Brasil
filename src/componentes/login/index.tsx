@@ -54,7 +54,7 @@ function handleInputEmail (event: React.ChangeEvent< HTMLInputElement >) {
           <Link to="/EsqueciSenha">Esqueci minha senha</Link>
         </div>
 
-        <Link className="entrar" to="/Cadastrar">
+        <Link className="entrar" to="/Bem-Vindo">
           Entrar
         </Link>
 

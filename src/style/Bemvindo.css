@@ -63,6 +63,8 @@
   align-content: space-evenly;
   grid-template-columns: 1fr 1fr;
   
+  
+  
 }
 .f-button {
   color: #000;
@@ -71,11 +73,14 @@
   padding: 15px 40px ;
   border-radius: 25px;
   border: 1px solid #000;
+  cursor: pointer;
+  
 }
 .f-button:hover{
   border: 1px solid #1684a7;
   color: #1684a7;
   transition: 0.3s;
+  
 }
 
 .f-button-selected {
@@ -83,4 +88,6 @@
   color: #fff; 
   padding: 15px 40px ;
   border-radius: 25px;
+  
 }
+

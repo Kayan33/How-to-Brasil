@@ -135,6 +135,7 @@ img {
 
 .saiba-mais {
   color: #f6f6f6;
+  cursor: pointer;
   border-radius: 20px;
   border: 1px solid #000;
   padding: 11px 32px;
