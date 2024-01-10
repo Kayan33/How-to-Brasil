@@ -1,7 +1,5 @@
 import "../../style/stylelogin.css";
-import "../../style/stylecadastro.css";
 import "../../style/style.css";
-
 import { Link, } from "react-router-dom";
 import React from 'react';
 import {useState} from 'react';

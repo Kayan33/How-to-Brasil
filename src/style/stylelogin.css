@@ -57,29 +57,17 @@ input[type="email"], [type="password"],[type="text"]{
     background: #F2F2F2;
     margin-bottom: 16px;
     border: 1px solid #817D75;
-    padding: 25px 236px 9px 0px;
+    padding: 20px 182px 15px 10px;
     border-radius: 5px;
+    font-size: 17px;
 
 }
 
-input[type="email"]::placeholder {
+::placeholder {
     color: #888888; 
-    transform: translateY(10px) translateX(10px);
-   
-    
+    font-size: 17px;  
   }
   
-  input[type="password"] {
-
-    margin-bottom: 22px;
-
-}
-
-input[type="password"]::placeholder {
-    color: #888888; 
-    transform: translateY(10px) translateX(10px);
-}
-
 input[type="checkbox"] {
     width: 20px;
     height: 20px;
@@ -143,18 +131,4 @@ hr{
     
 }
 
-.entrar-google #google, #facebook{
-    display: inline-block;
-    color: #5731FF;
-    padding: 17px 128px 17px 128px;
-    border-radius: 5px;
-    border: 1px solid #5731FF;
-    font-size: 16px;
-    font-family: Arial;
-    margin-bottom: 16px;
-    font-weight: 700;
-}
 
-#facebook{
-    padding: 17px 111px 17px 128px;
-}
