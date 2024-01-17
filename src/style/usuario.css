@@ -2,6 +2,7 @@
   background: #edf3fb;
 }
 .bg-Dashboard {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,18 +12,67 @@
 }
 
 .perfl img {
-  margin-top: 40px;
+  margin-top: 30px;
   width: 50px;
   height: 50px;
 }
-.imagem-svg{
+
+.botao-menu {
+  position: absolute;
+  top: 80px;
+  right: -12px;
+}
+
+.botao-menu img {
+  background: #fff;
+  padding: 6px;
+  border-radius: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.botao-menu img:hover {
+  background: #f6f6f6;
+}
+
+.imagem-svg {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
-
 .imagem-svg img {
-  margin-top: 25px;
+  margin: 10px 33px 10px 33px;
+}
+.imagem-svg.visible img {
+  margin: 10px 0px 10px 15px;
 }
 
+.menu-item {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.menu-item.visible{
+  margin-top: 30px;
+}
+
+.menu-item:hover {
+  transition: background 0.9s ease;
+  background: #D7D7D7 url('/public/Dashboard/linha.svg') no-repeat center left;
+}
+.menu-item:active {
+  background: var(--C5, rgba(9, 165, 153, 0.5)) url('/public/Dashboard/linha.svg') no-repeat center left;
+  
+  
+}
+
+
+.menu-hamburger {
+  margin-left: 15px;
+}
+.menu-hamburger p{
+  color: #1A1C19;
+  margin: 10px 22px 10px 0px;
+}
 

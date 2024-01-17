@@ -1,11 +1,9 @@
-import "../style/style.css";
-import "../style/usuario.css";
-import Dashboard from "../componentes/dashboard";
+import Menu from "../componentes/menu";
 
 function Usuario() {
   return (
     <div>
-      <Dashboard />
+      <Menu />
     </div>
   );
 }
