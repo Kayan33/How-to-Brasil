@@ -23,7 +23,7 @@ function Menu() {
   };
 
   return (
-    <div className="container-Dashboard">
+    
       <div
         className="bg-Dashboard"
         style={{
@@ -57,7 +57,7 @@ function Menu() {
           ))}
         </ul>
       </div>
-    </div>
+    
   );
 }
 

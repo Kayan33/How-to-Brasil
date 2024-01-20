@@ -26,11 +26,7 @@ function handleInputEmail (event: React.ChangeEvent< HTMLInputElement >) {
 
 
 
-  const navigate = useNavigate();
-  const params = useParams();
-  function handleClick() {
-    navigate("/Cadastrar");
-  }
+ 
   return (
     <div className="divlogin">
       <div className="divlogin1">
@@ -71,9 +67,7 @@ function handleInputEmail (event: React.ChangeEvent< HTMLInputElement >) {
         <a id="facebook" href="">Entrar com facebook</a>
         </div>
 
-        {/* {Propriedades.titulo} */}
-
-        {/* <button onClick={handleClick}> Voltar </button> */}
+    
       </div>
     </div>
   );
