@@ -11,7 +11,7 @@
   flex-direction: column;
   align-items: center;
   background: #ffffff;
-  max-width: 100px;
+  width: 100px;
   height: 100vh
 }
 

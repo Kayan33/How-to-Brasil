@@ -25,11 +25,11 @@ function Menu() {
   return (
     
       <div
-        className="bg-Dashboard"
-        style={{
-          maxWidth: isModalOpen ? "180px" : "100px",
-          transition: "max-width 0.7s ease-in-out",
-        }}
+      className="bg-Dashboard"
+      style={{
+        width: isModalOpen ? "180px" : "100px",
+        transition: "width 0.7s ease-in-out",
+      }}
       >
         <header className="perfl">
           <img src="perfil.svg" alt="" />
