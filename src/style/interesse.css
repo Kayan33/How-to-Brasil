@@ -1,5 +1,5 @@
 .interesse-container {
-  padding: 80px 100px 94px 100px;
+  padding: 80px 50px 94px 50px;
   background: #EDF3FB;
 }
 .interesse-container h1 {
@@ -15,7 +15,7 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   row-gap: 2rem;
-  column-gap: 1rem;
+  column-gap: 3rem;
 }
 
 .interesse-img {
