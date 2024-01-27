@@ -25,7 +25,7 @@ function Interesses() {
         <div className="interesse-img">
           <img src="/slider/Slider2.png" alt="" />
 
-          <h3>SAÚDE</h3>
+          <h3>TRABLHO</h3>
           <p>
             Conecte-se com a comunidade local e outros imigrantes, seja através
             de grupos online, eventos locais ou instituições de apoio a
@@ -40,7 +40,7 @@ function Interesses() {
         <div className="interesse-img">
           <img src="/slider/Slider3.png" alt="" />
 
-          <h3>SAÚDE</h3>
+          <h3>APOIO COMUNITARIO</h3>
           <p>
             Conecte-se com a comunidade local e outros imigrantes, seja através
             de grupos online, eventos locais ou instituições de apoio a
