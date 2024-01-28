@@ -12,9 +12,9 @@ function Interesses() {
 
           <h3>SAÚDE</h3>
           <p>
-            Conecte-se com a comunidade local e outros imigrantes, seja através
-            de grupos online, eventos locais ou instituições de apoio a
-            imigrantes.
+            No Brasil temos acesso ao sistema único de saúde gratuito conhecido como SUS, 
+            nesta página você poderá ter mais informações sobre como utilizá-lo de forma prática com informações e 
+            locais mais próximos.
           </p>
           <hr />
           <Link className="saiba-mais" to="">
@@ -25,11 +25,10 @@ function Interesses() {
         <div className="interesse-img">
           <img src="/slider/Slider2.png" alt="" />
 
-          <h3>TRABLHO</h3>
+          <h3>TRABALHO</h3>
           <p>
-            Conecte-se com a comunidade local e outros imigrantes, seja através
-            de grupos online, eventos locais ou instituições de apoio a
-            imigrantes.
+            Aqui nós iremos mostrar as possibilidades de trabalho em território nacional, 
+            com enfase em empresas apoiadoras de imigrantes, garantido a você um bom início em nosso país.
           </p>
           <hr />
           <Link className="saiba-mais" to="">
@@ -40,10 +39,10 @@ function Interesses() {
         <div className="interesse-img">
           <img src="/slider/Slider3.png" alt="" />
 
-          <h3>APOIO COMUNITARIO</h3>
+          <h3>APOIO COMUNITÁRIO</h3>
           <p>
             Conecte-se com a comunidade local e outros imigrantes, seja através
-            de grupos online, eventos locais ou instituições de apoio a
+            de grupos online, eventos locais, ou instituições de apoio a
             imigrantes.
           </p>
           <hr />
