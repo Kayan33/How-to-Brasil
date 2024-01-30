@@ -1,0 +1,74 @@
+.trabalho-container {
+  padding: 80px 50px 94px 50px;
+  background: #EDF3FB;
+  
+}
+.trabalho-filtro{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.trabalho-filtro h1 {
+  font-size: 35px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #1a1c19;
+  margin-bottom: 46px;
+}
+  
+
+  .trabalho-bg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+  }
+  
+  .trabalho-texto{
+    display: flex;
+    align-items: baseline;
+  }
+  .trabalho-img {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.25) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    border-radius: 24px;
+    margin-bottom: 50px;
+  }
+  
+  .trabalho-img h3 {
+    color: #1a1c19;
+    font-size: 19px;
+    margin-top: 15px;
+    margin-left: 10px;
+    text-align: center;
+  }
+
+  
+  .trabalho-img p {
+    color: #454843;
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    max-width: 30ch;
+    margin: 5px;
+  }
+  
+  .trabalho-img hr {
+    background: #1a1c19;
+    width: 100%;
+    height: 1px;
+    margin-top: 15px;
+  }
+  
+  .trabalho-img img {
+    border-radius: 7px;
+  }
+  
+  .trabalho-img .saiba-mais {
+    margin-top: 15px;
+  }
+
+  

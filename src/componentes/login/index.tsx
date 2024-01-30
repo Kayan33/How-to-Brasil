@@ -79,14 +79,7 @@ function Requisicoes (){
           <p>Não é cadastrado? </p>
           <Link to="/Cadastrar">Cadastre-se</Link>
         </div>
-        <div className="ou">
-          <hr />  <p>ou</p>   <hr />
-        </div>
-        <div className="entrar-google">
-        <a id="google" href="">Entrar com google</a>
-        <br />
-        <a id="facebook" href="">Entrar com facebook</a>
-        </div>
+        
 
     
       </div>
