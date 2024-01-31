@@ -4,7 +4,6 @@ import { Link, useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import {useState} from 'react';
 import React from 'react';
-import BemVindo from "../Bemvindo";
 
 
 
@@ -59,7 +58,6 @@ function handleInputEmail (event: React.ChangeEvent< HTMLInputElement >) {
         </div>
 
       </div>
-      <BemVindo/>
     </div>
   );
 }

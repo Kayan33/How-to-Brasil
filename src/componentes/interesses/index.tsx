@@ -17,7 +17,7 @@ function Interesses() {
             locais mais próximos.
           </p>
           <hr />
-          <Link className="saiba-mais" to="">
+          <Link className="saiba-mais" to="/saude">
             VER MAIS
           </Link>
         </div>
@@ -31,7 +31,7 @@ function Interesses() {
             com enfase em empresas apoiadoras de imigrantes, garantido a você um bom início em nosso país.
           </p>
           <hr />
-          <Link className="saiba-mais" to="">
+          <Link className="saiba-mais" to="/trabalho">
             VER MAIS
           </Link>
         </div>
@@ -46,7 +46,7 @@ function Interesses() {
             imigrantes.
           </p>
           <hr />
-          <Link className="saiba-mais" to="">
+          <Link className="saiba-mais" to="/Apio">
             VER MAIS
           </Link>
         </div>
@@ -54,14 +54,14 @@ function Interesses() {
         <div className="interesse-img">
           <img src="/slider/Slider1.png" alt="" />
 
-          <h3>SAÚDE</h3>
+          <h3>EDUCAÇÃO</h3>
           <p>
             Conecte-se com a comunidade local e outros imigrantes, seja através
             de grupos online, eventos locais ou instituições de apoio a
             imigrantes.
           </p>
           <hr />
-          <Link className="saiba-mais" to="">
+          <Link className="saiba-mais" to="/Educação">
             VER MAIS
           </Link>
         </div>
@@ -69,14 +69,14 @@ function Interesses() {
         <div className="interesse-img">
           <img src="/slider/Slider1.png" alt="" />
 
-          <h3>SAÚDE</h3>
+          <h3>CASA</h3>
           <p>
             Conecte-se com a comunidade local e outros imigrantes, seja através
             de grupos online, eventos locais ou instituições de apoio a
             imigrantes.
           </p>
           <hr />
-          <Link className="saiba-mais" to="">
+          <Link className="saiba-mais" to="Casa">
             VER MAIS
           </Link>
         </div>
@@ -84,14 +84,14 @@ function Interesses() {
         <div className="interesse-img">
           <img src="/slider/Slider1.png" alt="" />
 
-          <h3>SAÚDE</h3>
+          <h3>DOCUMENTAÇÃO</h3>
           <p>
             Conecte-se com a comunidade local e outros imigrantes, seja através
             de grupos online, eventos locais ou instituições de apoio a
             imigrantes.
           </p>
           <hr />
-          <Link className="saiba-mais" to="">
+          <Link className="saiba-mais" to="/Documentação">
             VER MAIS
           </Link>
         </div>

@@ -12,6 +12,7 @@ function Cadastro() {
   const [ultimonome, SetUltimoNome] = useState('');
   const [senha, SetSenha] = useState('');
   const [confirmacaosenha, SetConfirmacaoSenha] = useState('');
+  const [selectedOption, setSelectedOption] = useState('');
 
 
 function handleInputEmail (event: React.ChangeEvent< HTMLInputElement >) {
@@ -45,6 +46,11 @@ function handleInputConfirmacaoSenha (event: React.ChangeEvent< HTMLInputElement
   
 }
 
+function handleSelectChange(event: React.ChangeEvent<HTMLSelectElement>) {
+  setSelectedOption(event.target.value);
+}
+
+
 
   return (
     <div className="divlogin">
@@ -66,7 +72,29 @@ function handleInputConfirmacaoSenha (event: React.ChangeEvent< HTMLInputElement
         <input type="password" placeholder="Senha" value={senha} onChange={handleInputSenha} />
 
         <input type="password" placeholder="Confirmação de senha" value={confirmacaosenha} onChange={handleInputConfirmacaoSenha}/>
+<div className="select">
+        <select value={selectedOption} onChange={handleSelectChange}  >
+          <option value="" disabled>Status Migratório</option>
+          <option value="option1">Turista</option>
+          <option value="option2">Estudante</option>
+          <option value="option2">Refugiado</option>
+          <option value="option2">Asilado</option>
+          <option value="option2">Trabalhador Temporrário</option>
+          <option value="option2">Residente Permanente</option>
+          
+        </select>
 
+        <select value={selectedOption} onChange={handleSelectChange} multiple >
+          <option value="" disabled>Status Migratório</option>
+          <option value="option1">Turista</option>
+          <option value="option2">Estudante</option>
+          <option value="option2">Refugiado</option>
+          <option value="option2">Asilado</option>
+          <option value="option2">Trabalhador Temporrário</option>
+          <option value="option2">Residente Permanente</option>
+          
+        </select>
+</div>
 
         <Link className="entrar" to="/Cadastrar">
           Entrar
@@ -75,16 +103,6 @@ function handleInputConfirmacaoSenha (event: React.ChangeEvent< HTMLInputElement
           <p>Já tem conta? Faça seu </p>
           <Link to="/Login">login.</Link>
         </div>
-        <div className="ou">
-          <hr />  <p>ou</p>   <hr />
-        </div>
-        <div className="entrar-google">
-        <a id="google" href="">Entrar com google</a>
-        <br />
-        <a id="facebook" href="">Entrar com facebook</a>
-        </div>
-
-        
       </div>
     </div>
   );

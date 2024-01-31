@@ -1,7 +1,6 @@
 import "../../style/stylelogin.css";
 import "../../style/style.css";
 import { Link, useParams } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 import React from 'react';
 import {useState} from 'react';
 import { tyUsuario } from "../../types/login"
@@ -71,7 +70,7 @@ function Requisicoes (){
           <Link to="/EsqueciSenha">Esqueci minha senha</Link>
         </div>
 
-        <Link className="entrar" to="/Bem-Vindo">
+        <Link className="entrar" to="/usuario">
           Entrar
         </Link>
 
