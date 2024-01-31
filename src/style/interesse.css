@@ -1,5 +1,5 @@
 .interesse-container {
-  padding: 80px 50px 94px 50px;
+  padding: 80px 25px 94px 25px;
   background: #EDF3FB;
 }
 .interesse-container h1 {
@@ -12,10 +12,10 @@
 }
 
 .interesse-bg {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   row-gap: 2rem;
-  column-gap: 3rem;
 }
 
 .interesse-img {
@@ -41,7 +41,7 @@
   font-size: 15px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  max-width: 50ch;
+  max-width: 45ch;
   margin-top: 15px;
 }
 
@@ -54,6 +54,7 @@
 
 .interesse-img img {
   border-radius: 7px;
+  height: 255px;
 }
 
 .interesse-img .saiba-mais {

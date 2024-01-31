@@ -9,6 +9,11 @@ import EsqueciSenha from "./componentes/esqueciSenha";
 import BemVindo from "./componentes/Bemvindo";
 import Usuario from "./pages/usuario";
 import Pgtrabalho from "./pages/trabalho";
+import Pgsaude from "./pages/saude";
+import Pgeducacao from "./pages/educacao";
+import Pgecasa from "./pages/casa";
+import Pgeapoio from "./pages/Apoio";
+import Pgedocumentacao from "./pages/documentacao";
 
 function App() {
   return (
@@ -23,6 +28,11 @@ function App() {
         <Route path='/Saiba Mais' element={<Saiba/>}></Route>
         <Route path='/Usuario' element={<Usuario/>}></Route>
         <Route path='/Trabalho' element={<Pgtrabalho/>}></Route>
+        <Route path='/Saude' element={<Pgsaude/>}></Route>
+        <Route path='/Educação' element={<Pgeducacao/>}></Route>
+        <Route path='/Documentação' element={<Pgedocumentacao/>}></Route>
+        <Route path='/Casa' element={<Pgecasa/>}></Route>
+        <Route path='/Apio' element={<Pgeapoio/>}></Route>
         
       </Routes>
     </div>

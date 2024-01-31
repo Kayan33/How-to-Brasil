@@ -1,5 +1,5 @@
 .trabalho-container {
-  padding: 80px 50px 94px 50px;
+  padding: 80px 25px 94px 25px;
   background: #EDF3FB;
   
 }
@@ -17,12 +17,13 @@
 }
   
 
-  .trabalho-bg {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    
-  }
+.trabalho-bg {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  row-gap: 2rem;
+  flex-direction: row-reverse;
+}
   
   .trabalho-texto{
     display: flex;
@@ -35,7 +36,6 @@
       rgba(0, 0, 0, 0) 100%
     );
     border-radius: 24px;
-    margin-bottom: 50px;
   }
   
   .trabalho-img h3 {

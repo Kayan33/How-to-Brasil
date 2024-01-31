@@ -7,11 +7,11 @@ function Menu() {
 
   const menuItems = [
     { icon: "/dashboard/trabalho.svg", label: "Trabalho", link: "/trabalho" },
-    { icon: "/dashboard/educacao.svg", label: "Educação", link: "/educacao" },
-    { icon: "/dashboard/documentacao.svg", label: "Documentação", link: "/documentacao" },
-    { icon: "/dashboard/casa.svg", label: "Casa", link: "/casa" },
-    { icon: "/dashboard/apoio.svg", label: "Apoio", link: "/apoio" },
-    { icon: "/dashboard/saude.svg", label: "Saúde", link: "/saude" },
+    { icon: "/dashboard/educacao.svg", label: "Educação", link: "/Educação" },
+    { icon: "/dashboard/documentacao.svg", label: "Documentação", link: "/Documentação" },
+    { icon: "/dashboard/casa.svg", label: "Casa", link: "/Casa" },
+    { icon: "/dashboard/apoio.svg", label: "Apoio", link: "/Apio" },
+    { icon: "/dashboard/saude.svg", label: "Saúde", link: "/Saude" },
   ];
 
   const openModal = () => {

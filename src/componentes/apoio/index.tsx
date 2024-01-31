@@ -63,46 +63,14 @@ const locaisDeTrabalho = [
     },
     linkMapa: "https://www.google.com/",
   },
-
-  {
-    nome: "UBS Bela Vista",
-    endereco: "R. Marçal de Arruda Campos, Quadra 4 - Centro, Bauru - SP, 17063-060",
-    telefone: "(14) 99683-9244",
-    horarioFuncionamento: {
-      segunda: "12:00 - 22:00",
-      terca: "12:00 - 22:00",
-      quarta: "12:00 - 22:00",
-      quinta: "12:00 - 22:00",
-      sexta: "12:00 - 22:00",
-      sabado: "12:00 - 16:00",
-      domingo: "12:00 - 16:00",
-    },
-    linkMapa: "https://www.google.com/",
-  },
-
-  {
-    nome: "UBS Bela Vista",
-    endereco: "R. Marçal de Arruda Campos, Quadra 4 - Centro, Bauru - SP, 17063-060",
-    telefone: "(14) 99683-9244",
-    horarioFuncionamento: {
-      segunda: "12:00 - 22:00",
-      terca: "12:00 - 22:00",
-      quarta: "12:00 - 22:00",
-      quinta: "12:00 - 22:00",
-      sexta: "12:00 - 22:00",
-      sabado: "12:00 - 16:00",
-      domingo: "12:00 - 16:00",
-    },
-    linkMapa: "https://www.google.com/",
-  },
   
 ];
 
-function Trabalho() {
+function Apoio() {
   return (
     <div className="trabalho-container">
       <div className="trabalho-filtro">
-        <h1>TRABALHO</h1>
+        <h1>APOIO</h1>
         <p>tudo</p>
       </div>
       <div className="trabalho-bg">
@@ -139,4 +107,4 @@ function Trabalho() {
   );
 }
 
-export default Trabalho;
+export default Apoio;
