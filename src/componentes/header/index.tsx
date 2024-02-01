@@ -11,16 +11,13 @@ function Header() {
         </Link>
         <ul className="header-link">
           <li>
-            <a href="/">Home</a>
+            <a href="#Inicio">Inicio</a>
           </li>
           <li>
-            <a href="/">Sobre</a>
-          </li>
-          <li>
-            <a href="/">Cursos</a>
+            <a href="#Guia">Guia</a>
           </li>
           <li className="instrutore">
-            <a href="/">Instrutore</a>
+            <a href="#Sobre">Sobre</a>
           </li>
           <li>
           <Link to="Login">

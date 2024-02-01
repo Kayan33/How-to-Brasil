@@ -75,7 +75,7 @@ function Corpo02() {
     }
   }, [])
   return (
-    <div className="guia-bg">
+    <div className="guia-bg" id="Guia">
       <h1>O guia para voçê que está chegado no Brasil</h1>
       <div className="guia" ref={el} >
         <div className="guia-tudo" id="model-1">
@@ -113,7 +113,7 @@ function Corpo02() {
           </p>
         </div>
 
-        <div className="guia-tudo" id="model-4">
+        <div className="guia-tudo" id="model-4"  >
           <div className="guia-img">
             <img src="/saude.svg" alt="" />
           </div>

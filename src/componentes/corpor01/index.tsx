@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Corpo01() {
   return (
-    <section className="informacao-bg">
+    <section className="informacao-bg" id="Inicio">
       <div className="informacao">
         <h1>
           Toda a <span>praticidade</span> de <span>informações</span> na sua

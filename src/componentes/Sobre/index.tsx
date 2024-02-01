@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Sobre() {
   return (
-    <div className="sobre-bg">
+    <div className="sobre-bg" id="Sobre">
       <div className="sobre">
         <h1>Sobre <span>HOW TO BRASIL</span></h1>
         <p>

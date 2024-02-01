@@ -56,9 +56,9 @@ function Interesses() {
 
           <h3>EDUCAÇÃO</h3>
           <p>
-            Conecte-se com a comunidade local e outros imigrantes, seja através
-            de grupos online, eventos locais ou instituições de apoio a
-            imigrantes.
+            Assim como em outros países, no Brasil temos acesso a educação gratuita para crianças e jovens 
+            até a idade de 18 anos, dividas na esfera municipal, sendo mais focada em educação de base, esfera estadual, 
+            focada em ensino médio e técnico, e por fim a esfera federal, normalmente voltada para ensino superior.
           </p>
           <hr />
           <Link className="saiba-mais" to="/Educação">
@@ -71,9 +71,9 @@ function Interesses() {
 
           <h3>CASA</h3>
           <p>
-            Conecte-se com a comunidade local e outros imigrantes, seja através
-            de grupos online, eventos locais ou instituições de apoio a
-            imigrantes.
+            Em nosso país possuimos acesso a alguns métodos alternativos para conquistar a sua moradia de forma mais acessível,
+            sendo o mais comum o auxilio da COHAB, instrumento governamental que permite acesso a terrenos
+             pré-determinados com custo abaixo da média de mercado.
           </p>
           <hr />
           <Link className="saiba-mais" to="Casa">
@@ -86,9 +86,10 @@ function Interesses() {
 
           <h3>DOCUMENTAÇÃO</h3>
           <p>
-            Conecte-se com a comunidade local e outros imigrantes, seja através
-            de grupos online, eventos locais ou instituições de apoio a
-            imigrantes.
+            Sendo este provavelmente o tema mais importante a ser apresentado, no tópico em questão daremos o passo a passo 
+            sobre a documentação necessaria para continuar em território nacional de forma legalizada, evitando possíveis problemas
+             para com a justiça, além de também informarmos localizações onde você deverá comparecer com os documentos, e postos onde será possível 
+             tirar duvidas a respeito deste assunto.
           </p>
           <hr />
           <Link className="saiba-mais" to="/Documentação">
