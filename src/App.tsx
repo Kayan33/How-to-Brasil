@@ -25,12 +25,12 @@ function App() {
         <Route path='/Esqueci-Senha' element={<EsqueciSenha/>}></Route>
         <Route path='/Saiba Mais' element={<Saiba/>}></Route>
         <Route path='/Usuario' element={<Usuario/>}></Route>
-        <Route path='/Trabalho' element={<Pgtrabalho/>}></Route>
-        <Route path='/Saude' element={<Pgsaude/>}></Route>
-        <Route path='/Educação' element={<Pgeducacao/>}></Route>
-        <Route path='/Documentação' element={<Pgedocumentacao/>}></Route>
-        <Route path='/Casa' element={<Pgecasa/>}></Route>
-        <Route path='/Apio' element={<Pgeapoio/>}></Route>
+        <Route path='/trabalho' element={<Pgtrabalho/>}></Route>
+        <Route path='/saude' element={<Pgsaude/>}></Route>
+        <Route path='/educacao' element={<Pgeducacao/>}></Route>
+        <Route path='/documentacao' element={<Pgedocumentacao/>}></Route>
+        <Route path='/casa' element={<Pgecasa/>}></Route>
+        <Route path='/apoio' element={<Pgeapoio/>}></Route>
         
       </Routes>
     </div>

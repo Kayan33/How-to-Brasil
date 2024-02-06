@@ -9,7 +9,7 @@ function Pgtrabalho() {
       <div>
         <Menu />
       </div>
-      <div >
+      <div className="usuario-interesses" >
         <Trabalho/>
       </div>
       

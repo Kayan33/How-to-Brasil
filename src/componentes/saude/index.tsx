@@ -1,11 +1,44 @@
-import React from "react";
 import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import "../../style/trabalho.css";
 
 const locaisDeTrabalho = [
   {
     nome: "UBS Bela Vista",
-    endereco: "R. Marçal de Arruda Campos, Quadra 4 - Centro, Bauru - SP, 17063-060",
+    endereco:
+      "R. Marçal de Arruda Campos, Quadra 4 - Centro, Bauru - SP, 17063-060",
+    telefone: "(14) 99683-9244",
+    horarioFuncionamento: {
+      segunda: "12:00 - 22:00",
+      terca: "12:00 - 22:00",
+      quarta: "12:00 - 22:00",
+      quinta: "12:00 - 22:00",
+      sexta: "12:00 - 22:00",
+      sabado: "12:00 - 16:00",
+      domingo: "12:00 - 16:00",
+    },
+    linkMapa: "https://www.google.com/",
+  },
+  {
+    nome: "Farmacia",
+    endereco:
+      "R. Marçal de Arruda Campos, Quadra 4 - Centro, Bauru - SP, 17063-060",
+    telefone: "(14) 99683-9244",
+    horarioFuncionamento: {
+      segunda: "12:00 - 22:00",
+      terca: "12:00 - 22:00",
+      quarta: "12:00 - 22:00",
+      quinta: "12:00 - 22:00",
+      sexta: "12:00 - 22:00",
+      sabado: "12:00 - 16:00",
+      domingo: "12:00 - 16:00",
+    },
+    linkMapa: "https://www.google.com/",
+  },
+  {
+    nome: "Posto de Saude",
+    endereco:
+      "R. Marçal de Arruda Campos, Quadra 4 - Centro, Bauru - SP, 17063-060",
     telefone: "(14) 99683-9244",
     horarioFuncionamento: {
       segunda: "12:00 - 22:00",
@@ -20,53 +53,8 @@ const locaisDeTrabalho = [
   },
   {
     nome: "UBS Bela Vista",
-    endereco: "R. Marçal de Arruda Campos, Quadra 4 - Centro, Bauru - SP, 17063-060",
-    telefone: "(14) 99683-9244",
-    horarioFuncionamento: {
-      segunda: "12:00 - 22:00",
-      terca: "12:00 - 22:00",
-      quarta: "12:00 - 22:00",
-      quinta: "12:00 - 22:00",
-      sexta: "12:00 - 22:00",
-      sabado: "12:00 - 16:00",
-      domingo: "12:00 - 16:00",
-    },
-    linkMapa: "https://www.google.com/",
-  },
-  {
-    nome: "UBS Bela Vista",
-    endereco: "R. Marçal de Arruda Campos, Quadra 4 - Centro, Bauru - SP, 17063-060",
-    telefone: "(14) 99683-9244",
-    horarioFuncionamento: {
-      segunda: "12:00 - 22:00",
-      terca: "12:00 - 22:00",
-      quarta: "12:00 - 22:00",
-      quinta: "12:00 - 22:00",
-      sexta: "12:00 - 22:00",
-      sabado: "12:00 - 16:00",
-      domingo: "12:00 - 16:00",
-    },
-    linkMapa: "https://www.google.com/",
-  },
-  {
-    nome: "UBS Bela Vista",
-    endereco: "R. Marçal de Arruda Campos, Quadra 4 - Centro, Bauru - SP, 17063-060",
-    telefone: "(14) 99683-9244",
-    horarioFuncionamento: {
-      segunda: "12:00 - 22:00",
-      terca: "12:00 - 22:00",
-      quarta: "12:00 - 22:00",
-      quinta: "12:00 - 22:00",
-      sexta: "12:00 - 22:00",
-      sabado: "12:00 - 16:00",
-      domingo: "12:00 - 16:00",
-    },
-    linkMapa: "https://www.google.com/",
-  },
-  
-  {
-    nome: "UBS Bela Vista",
-    endereco: "R. Marçal de Arruda Campos, Quadra 4 - Centro, Bauru - SP, 17063-060",
+    endereco:
+      "R. Marçal de Arruda Campos, Quadra 4 - Centro, Bauru - SP, 17063-060",
     telefone: "(14) 99683-9244",
     horarioFuncionamento: {
       segunda: "12:00 - 22:00",
@@ -82,7 +70,25 @@ const locaisDeTrabalho = [
 
   {
     nome: "UBS Bela Vista",
-    endereco: "R. Marçal de Arruda Campos, Quadra 4 - Centro, Bauru - SP, 17063-060",
+    endereco:
+      "R. Marçal de Arruda Campos, Quadra 4 - Centro, Bauru - SP, 17063-060",
+    telefone: "(14) 99683-9244",
+    horarioFuncionamento: {
+      segunda: "12:00 - 22:00",
+      terca: "12:00 - 22:00",
+      quarta: "12:00 - 22:00",
+      quinta: "12:00 - 22:00",
+      sexta: "12:00 - 22:00",
+      sabado: "12:00 - 16:00",
+      domingo: "12:00 - 16:00",
+    },
+    linkMapa: "https://www.google.com/",
+  },
+
+  {
+    nome: "UBS Bela Vista",
+    endereco:
+      "R. Marçal de Arruda Campos, Quadra 4 - Centro, Bauru - SP, 17063-060",
     telefone: "(14) 99683-9244",
     horarioFuncionamento: {
       segunda: "12:00 - 22:00",
@@ -97,45 +103,62 @@ const locaisDeTrabalho = [
   },
 ];
 
-function Saude() {
+function Trabalho() {
+  const [termoBusca, setTermoBusca] = useState<string>("");
+
+  const locaisFiltrados = locaisDeTrabalho.filter((local) =>
+    local.nome.toLowerCase().includes(termoBusca.toLowerCase())
+  );
   return (
     <div className="trabalho-container">
-      <div className="trabalho-filtro">
-        <h1>SAUDE</h1>
-        <p>tudo</p>
+    <header className="header-input">
+      <h1>TRABALHO</h1>
+      <div className="input-wrapper">
+      <input
+          type="text"
+          value={termoBusca}
+          onChange={(ev) => setTermoBusca(ev.target.value)}
+          placeholder="Digite o nome do local"
+        />
       </div>
-      <div className="trabalho-bg">
-        {locaisDeTrabalho.map((local, index) => (
-          <div className="trabalho-img" key={index}>
+    </header>
+
+    <main className="trabalho-bg">
+        {locaisFiltrados.map((local, index) => (
+          <ul className="card" key={index}>
             <h3>{local.nome}</h3>
-            <div className="trabalho-texto">
+            <li className="header-card">
               <h3>Endereço :</h3>
               <p>{local.endereco}</p>
-            </div>
-            <div className="trabalho-texto">
+            </li>
+            <li className="header-card">
               <h3>Telefone :</h3>
               <p>{local.telefone}</p>
-            </div>
-            <div className="trabalho-texto">
+            </li>
+            <li className="header-card">
               <h3>Horário de funcionamento :</h3>
               <p>
-                {Object.entries(local.horarioFuncionamento).map(([dia, horario]) => (
-                  <React.Fragment key={dia}>
-                    {`${dia}: ${horario}`}
-                    <br />
-                  </React.Fragment>
-                ))}
+                {Object.entries(local.horarioFuncionamento).map(
+                  ([dia, horario]) => (
+                    <React.Fragment key={dia}>
+                      {`${dia}: ${horario}`}
+                      <br />
+                    </React.Fragment>
+                  )
+                )}
               </p>
-            </div>
+            </li>
             <hr />
             <a href={local.linkMapa}>
               <img src="maps.svg" alt="" />
             </a>
-          </div>
+          </ul>
         ))}
-      </div>
-    </div>
+      </main>
+  </div>
+
+    
   );
 }
 
-export default Saude;
+export default Trabalho;

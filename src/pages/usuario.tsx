@@ -5,10 +5,10 @@ import "../style/usuario.css";
 function Usuario() {
   return (
     <div className="divusuario">
-      <div>
+      <div className="usuario-menu">
         <Menu />
       </div>
-      <div >
+      <div className="usuario-interesses" >
         <Interesses/>
       </div>
       
