@@ -1,23 +1,16 @@
 import { useState } from "react"
-import { tyUsuario } from "../types/login"
+
+    const handleADDclick = async () =>{
+        if(addTitleText && addBodyText){
+
+        }
+    }
 
 
-const [usuario, setUsuarios] = useState<tyUsuario[]>([])
-
-function Requisicoes (){
-
+function  LoginPost () {
+return(
     
+);
+}
+export default LoginPost
 
-    const usuario = () => {
-
-        fetch ("")
-
-        .then((response) => {
-            return response.json()
-        } )
-
-        .then ((json) => {
-            setUsuarios(json)
-        })
-        
-    }}
