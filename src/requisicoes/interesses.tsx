@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { api } from "../api";
-import { tyInteresses } from "../types/Interesses";
-import { tyUsuario } from "../types/login";
+import { typesInteresses } from "../types/Interesses";
 
 function InteressesBg() {
-  const [usuarios, setUsuarios] = useState<tyUsuario[]>([]);
+  const [usuarios, setUsuarios] = useState<typesInteresses[]>([]);
 
   useEffect(() => {
     carregarInteresses();
@@ -23,19 +22,7 @@ function InteressesBg() {
 
   return (
     <div>
-      <h1>Interesses dos Usuários</h1>
-      <ul>
-        {usuarios.map((usuario, index) => (
-          <li key={index}>
-            <h2>{usuario.title}</h2>
-            <p>Interesses:</p>
-            <ul>
-              
-              
-            </ul>
-          </li>
-        ))}
-      </ul>
+    
     </div>
   );
 }

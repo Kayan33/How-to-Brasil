@@ -1,7 +1,7 @@
 import { useState } from "react"
-import { tyCadUsuario } from "../types/cadastro"
+import { typeUsuario } from "../types/usuarios"
 
-const [cadUsuario, setCadUsuarios] = useState<tyCadUsuario[]>([])
+const [cadUsuario, setCadUsuarios] = useState<typeUsuario[]>([])
 
 function Requisicoes (){
 

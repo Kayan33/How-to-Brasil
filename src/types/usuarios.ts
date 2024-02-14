@@ -1,5 +1,4 @@
-export type tyCadUsuario = {
-    id: String;
+export type typeUsuario = {
     nome: String;
     ultimoNome: String;
     statusMigratorio: String;

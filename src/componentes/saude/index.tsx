@@ -17,7 +17,7 @@ const locaisDeTrabalho = [
       sabado: "12:00 - 16:00",
       domingo: "12:00 - 16:00",
     },
-    linkMapa: "https://www.google.com/",
+    linkMaps: "https://www.google.com/",
   },
   {
     nome: "Farmacia",

@@ -3,13 +3,11 @@ import "../../style/style.css";
 import { Link, useParams } from "react-router-dom";
 import React from 'react';
 import {useState} from 'react';
-import { tyUsuario } from "../../types/login"
 
 
 function LogiN() {
 const [password, SetPassword] = useState('');
 const [email, SetEmail] = useState('');
-const [usuario, setUsuarios] = useState<tyUsuario[]>([]);
 
 
 function handleInputPassword (event: React.ChangeEvent< HTMLInputElement >) {
@@ -26,23 +24,7 @@ function handleInputEmail (event: React.ChangeEvent< HTMLInputElement >) {
 
 
 
-function Requisicoes (){
 
-    
-
-  const usuario = () => {
-
-      fetch ("")
-
-      .then((response) => {
-          return response.json()
-      } )
-
-      .then ((json) => {
-          setUsuarios(json)
-      })
-      
-  }}
 
 
 
