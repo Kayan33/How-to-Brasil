@@ -1,13 +1,16 @@
 import { Link } from "react-router-dom";
-import React, { useState } from "react";
+
+import React, { useState, useEffect } from "react";
 import "../../style/trabalho.css";
+import { typesInteresses } from "../../types/Interesses";
+import { api } from "../../api";
 
 const locaisDeTrabalho = [
   {
     nome: "UBS Bela Vista",
     endereco:
       "R. Marçal de Arruda Campos, Quadra 4 - Centro, Bauru - SP, 17063-060",
-    telefone: "(14) 99683-9244",
+    contato: "(14) 99683-9244",
     horarioFuncionamento: {
       segunda: "12:00 - 22:00",
       terca: "12:00 - 22:00",
@@ -23,7 +26,7 @@ const locaisDeTrabalho = [
     nome: "Farmacia",
     endereco:
       "R. Marçal de Arruda Campos, Quadra 4 - Centro, Bauru - SP, 17063-060",
-    telefone: "(14) 99683-9244",
+    contato: "(14) 99683-9244",
     horarioFuncionamento: {
       segunda: "12:00 - 22:00",
       terca: "12:00 - 22:00",
@@ -39,7 +42,7 @@ const locaisDeTrabalho = [
     nome: "Posto de Saude",
     endereco:
       "R. Marçal de Arruda Campos, Quadra 4 - Centro, Bauru - SP, 17063-060",
-    telefone: "(14) 99683-9244",
+    contato: "(14) 99683-9244",
     horarioFuncionamento: {
       segunda: "12:00 - 22:00",
       terca: "12:00 - 22:00",
@@ -55,24 +58,7 @@ const locaisDeTrabalho = [
     nome: "UBS Bela Vista",
     endereco:
       "R. Marçal de Arruda Campos, Quadra 4 - Centro, Bauru - SP, 17063-060",
-    telefone: "(14) 99683-9244",
-    horarioFuncionamento: {
-      segunda: "12:00 - 22:00",
-      terca: "12:00 - 22:00",
-      quarta: "12:00 - 22:00",
-      quinta: "12:00 - 22:00",
-      sexta: "12:00 - 22:00",
-      sabado: "12:00 - 16:00",
-      domingo: "12:00 - 16:00",
-    },
-    linkMapa: "https://www.google.com/",
-  },
-
-  {
-    nome: "UBS Bela Vista",
-    endereco:
-      "R. Marçal de Arruda Campos, Quadra 4 - Centro, Bauru - SP, 17063-060",
-    telefone: "(14) 99683-9244",
+    contato: "(14) 99683-9244",
     horarioFuncionamento: {
       segunda: "12:00 - 22:00",
       terca: "12:00 - 22:00",
@@ -89,7 +75,24 @@ const locaisDeTrabalho = [
     nome: "UBS Bela Vista",
     endereco:
       "R. Marçal de Arruda Campos, Quadra 4 - Centro, Bauru - SP, 17063-060",
-    telefone: "(14) 99683-9244",
+    contato: "(14) 99683-9244",
+    horarioFuncionamento: {
+      segunda: "12:00 - 22:00",
+      terca: "12:00 - 22:00",
+      quarta: "12:00 - 22:00",
+      quinta: "12:00 - 22:00",
+      sexta: "12:00 - 22:00",
+      sabado: "12:00 - 16:00",
+      domingo: "12:00 - 16:00",
+    },
+    linkMapa: "https://www.google.com/",
+  },
+
+  {
+    nome: "UBS Bela Vista",
+    endereco:
+      "R. Marçal de Arruda Campos, Quadra 4 - Centro, Bauru - SP, 17063-060",
+    contato: "(14) 99683-9244",
     horarioFuncionamento: {
       segunda: "12:00 - 22:00",
       terca: "12:00 - 22:00",
@@ -105,6 +108,24 @@ const locaisDeTrabalho = [
 
 function Trabalho() {
   const [termoBusca, setTermoBusca] = useState<string>("");
+
+  const [usuarios, setUsuarios] = useState<typesInteresses[]>([]);
+
+  useEffect(() => {
+    carregarInteresses();
+  }, []);
+
+  const carregarInteresses = async () => {
+    try {
+      const json = await api.carregarInterreses();
+      const dataAraay = Array.isArray(json) ? json : [json];
+
+      setUsuarios(dataAraay);
+    } catch (error) {
+      console.error("Erro ao carregar interesses:", error);
+    }
+  };
+
 
   const locaisFiltrados = locaisDeTrabalho.filter((local) =>
     local.nome.toLowerCase().includes(termoBusca.toLowerCase())
@@ -132,8 +153,8 @@ function Trabalho() {
               <p>{local.endereco}</p>
             </li>
             <li className="header-card">
-              <h3>Telefone :</h3>
-              <p>{local.telefone}</p>
+              <h3>contato :</h3>
+              <p>{local.contato}</p>
             </li>
             <li className="header-card">
               <h3>Horário de funcionamento :</h3>

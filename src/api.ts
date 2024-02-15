@@ -2,32 +2,40 @@ import { title } from "process";
 
 export const api = {
   carregarInterreses: async () => {
-    let response = await fetch("https://fakestoreapi.com/products");
+    let response = await fetch("http://localhost:3001/usuarios/");
     let json = await response.json();
 
     return json;
   },
-};
+ 
+  adicionarUsuario: async (nome: String,ultimoNome: String, statusMigratorio: String,interesses: String,email: String,senha: String,) => {
+    try {
+      const response = await fetch("http://localhost:3001/usuarios", {
+        method: 'POST',
+        body: JSON.stringify({
+          nome,
+          ultimoNome,
+          statusMigratorio,
+          interesses,
+          email,
+          senha,
 
-const adicionarUsuario = async (title: string, body: string, useId: number) => {
-  try {
-      const response = await fetch("https://fakestoreapi.com/products", {
-          method: 'POST',
-          body: JSON.stringify({
-              title,
-              body,
-              userId: useId 
-          }),
-          headers: {
-              'Content-Type': 'application/json' 
-          }
+        }),
+        headers: {
+          'Content-Type': 'application/json' 
+        }
       });
-
+      
       const json = await response.json();
       return json;
-  } catch (error) {
+    } catch (error) {
       console.error('Erro ao adicionar usuário:', error);
       throw error;
+    }
+    
   }
-};
 
+
+
+};
+ 

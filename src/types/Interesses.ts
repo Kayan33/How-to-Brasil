@@ -5,5 +5,4 @@ export type typesInteresses = {
     horarioFuncionamento:string;
     endereco:string;
     linkMaps:string;
-    texto: string;
 }

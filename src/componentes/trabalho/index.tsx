@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../../style/trabalho.css";
+import { typesInteresses } from "../../types/Interesses";
+import { api } from "../../api";
 
 const locaisDeTrabalho = [
   {
@@ -105,6 +107,23 @@ const locaisDeTrabalho = [
 
 function Trabalho() {
   const [termoBusca, setTermoBusca] = useState<string>("");
+
+  const [usuarios, setUsuarios] = useState<typesInteresses[]>([]);
+
+  useEffect(() => {
+    carregarInteresses();
+  }, []);
+
+  const carregarInteresses = async () => {
+    try {
+      const json = await api.carregarInterreses();
+      const dataAraay = Array.isArray(json) ? json : [json];
+
+      setUsuarios(dataAraay);
+    } catch (error) {
+      console.error("Erro ao carregar interesses:", error);
+    }
+  };
 
   const locaisFiltrados = locaisDeTrabalho.filter((local) =>
     local.nome.toLowerCase().includes(termoBusca.toLowerCase())

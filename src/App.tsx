@@ -15,6 +15,7 @@ import Pgeapoio from "./pages/Apoio";
 import Pgedocumentacao from "./pages/documentacao";
 import Interesses from "./componentes/interesses";
 import InteressesBg from "./requisicoes/interesses";
+import RequisicaoCadastro from "./requisicoes/cadastro";
 
 function App() {
   return (
@@ -33,7 +34,7 @@ function App() {
         <Route path='/documentacao' element={<Pgedocumentacao/>}></Route>
         <Route path='/casa' element={<Pgecasa/>}></Route>
         <Route path='/apoio' element={<Pgeapoio/>}></Route>
-        <Route path='/interessebg' element={<InteressesBg/>}></Route>
+        <Route path='/interessebg' element={<RequisicaoCadastro/>}></Route>
         
       </Routes>
     </div>

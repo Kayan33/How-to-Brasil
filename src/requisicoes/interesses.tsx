@@ -22,8 +22,13 @@ function InteressesBg() {
 
   return (
     <div>
-    
-    </div>
+    <h1>Interesses dos Usuários</h1>
+    <ul>
+      {usuarios.map((usuario, index) => (
+        <li key={index}>{usuario.nome}</li>
+      ))}
+    </ul>
+  </div>
   );
 }
 
