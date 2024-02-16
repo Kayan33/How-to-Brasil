@@ -52,7 +52,7 @@ function Interesses() {
         </div>
 
         <div className="interesse-img">
-          <img src="/slider/Slider1.png" alt="" />
+          <img src="/slider/Slider4.png" alt="" id="EducaImg"/>
 
           <h3>EDUCAÇÃO</h3>
           <p>
@@ -67,7 +67,7 @@ function Interesses() {
         </div>
 
         <div className="interesse-img">
-          <img src="/slider/Slider1.png" alt="" />
+          <img src="/slider/Slider5.png" alt="" />
 
           <h3>CASA</h3>
           <p>
@@ -82,7 +82,7 @@ function Interesses() {
         </div>
 
         <div className="interesse-img">
-          <img src="/slider/Slider1.png" alt="" />
+          <img src="/slider/Slider6.png" alt="" id="DocImg" />
 
           <h3>DOCUMENTAÇÃO</h3>
           <p>
