@@ -119,6 +119,10 @@ margin-right: 5px;
     color: #000;
 }
 
+.select{
+    display: flex;
+}
+
 
 
 

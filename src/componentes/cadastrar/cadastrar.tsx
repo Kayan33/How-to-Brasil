@@ -3,7 +3,7 @@ import "../../style/style.css";
 import { Link } from "react-router-dom";
 import React from "react";
 import { useState, useEffect } from "react";
-import { typeUsuario } from "../../types/usuarios";
+import { typeCadastro } from "../../types/cadastro";
 import { api } from "../../api";
 
 function Cadastro() {
@@ -37,26 +37,34 @@ function Cadastro() {
     SetConfirmacaoSenha(event.target.value);
   }
 
-  function handleinteresses(event: React.ChangeEvent<HTMLSelectElement>) {
+  function handleMigratorio(event: React.ChangeEvent<HTMLSelectElement>) {
     setstatusMigratorio(event.target.value);
   }
 
   function handleInteresses(event: React.ChangeEvent<HTMLSelectElement>) {
-    setstatusMigratorio(event.target.value);
+    setinteresses(event.target.value);
   }
 
-  const [usuarios, setUsuarios] = useState<typeUsuario[]>([]);
+  const [cadastro, setCadastro] = useState<typeCadastro[]>([]);
 
   useEffect(() => {}, []);
 
   const handleCadastro = async () => {
-    let json = await api.adicionarUsuario(nome, ultimoNome,statusMigratorio,interesses,email,senha);
+    let json = await api.adicionarCadastro(
+      nome,
+      ultimoNome,
+      statusMigratorio.toString(),
+      interesses.toString(),
+      email,
+      senha
+    );
     if (json.id) {
       alert("Post Adicionado com sucesso!");
-      setUsuarios((usuarios) => [...usuarios, json]);
+      setCadastro((cadastro) => [...cadastro, json]);
     } else {
       alert("Falha ao adicionar usuário");
     }
+    console.log(json);
   };
 
   return (
@@ -104,28 +112,27 @@ function Cadastro() {
           onChange={handleInputConfirmacaoSenha}
         />
         <div className="select">
-          <select value={statusMigratorio} onChange={handleinteresses}>
-            <option value="" disabled>
-              Status Migratório
+
+          <select value={statusMigratorio} onChange={handleMigratorio}>
+            <option disabled>Status Migratório</option>
+            <option value="Turista">Turista</option>
+            <option value="Estudante">Estudante</option>
+            <option value="Refugiado">Refugiado</option>
+            <option value="Asilado">Asilado</option>
+            <option value="Trabalhador Temporrário">
+              Trabalhador Temporário
             </option>
-            <option value="option1">Turista</option>
-            <option value="option2">Estudante</option>
-            <option value="option2">Refugiado</option>
-            <option value="option2">Asilado</option>
-            <option value="option2">Trabalhador Temporrário</option>
-            <option value="option2">Residente Permanente</option>
+            <option value="Residente Permanente">Residente Permanente</option>
           </select>
 
-          <select value={interesses} onChange={handleInteresses} multiple>
-            <option value="" disabled>
-              Status Migratório
-            </option>
-            <option value="option1">Turista</option>
-            <option value="option2">Estudante</option>
-            <option value="option2">Refugiado</option>
-            <option value="option2">Asilado</option>
-            <option value="option2">Trabalhador Temporrário</option>
-            <option value="option2">Residente Permanente</option>
+          <select value={interesses} onChange={handleInteresses}>
+            <option disabled>Interesses</option>
+            <option value="Saúde">Saúde</option>
+            <option value="trabalho">trabalho</option>
+            <option value="Refugiado">Apio comunitário</option>
+            <option value="Educação">Educação</option>
+            <option value="Casa">Casa</option>
+            <option value="Documentação">Documentação</option>
           </select>
         </div>
 

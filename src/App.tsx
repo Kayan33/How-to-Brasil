@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import { UsuarioLogadoProvider } from "./contexts/contextAuth";
 import Login from "./pages/Login";
 import Home from "./pages/home";
 import Saiba from "./pages/Saiba-mais";
@@ -13,13 +14,16 @@ import Pgeducacao from "./pages/educacao";
 import Pgecasa from "./pages/casa";
 import Pgeapoio from "./pages/Apoio";
 import Pgedocumentacao from "./pages/documentacao";
-import Interesses from "./componentes/interesses";
-import InteressesBg from "./requisicoes/interesses";
+
 import RequisicaoCadastro from "./requisicoes/cadastro";
+import InteressesBg from "./requisicoes/interesses";
 
 function App() {
   return (
     <div>
+
+      <UsuarioLogadoProvider>
+
       <Routes>
       <Route path='*' element={<Notfound/>}></Route>
         <Route path='/' element={<Home/>}></Route>
@@ -34,9 +38,11 @@ function App() {
         <Route path='/documentacao' element={<Pgedocumentacao/>}></Route>
         <Route path='/casa' element={<Pgecasa/>}></Route>
         <Route path='/apoio' element={<Pgeapoio/>}></Route>
-        <Route path='/interessebg' element={<RequisicaoCadastro/>}></Route>
+        <Route path='/interessebg' element={<InteressesBg/>}></Route>
         
       </Routes>
+      
+      </UsuarioLogadoProvider>
     </div>
   );
 }

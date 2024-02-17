@@ -1,4 +1,4 @@
-export type typeUsuario = {
+export type typeCadastro = {
     nome: String;
     ultimoNome: String;
     statusMigratorio: String;
