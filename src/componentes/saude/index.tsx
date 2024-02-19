@@ -20,7 +20,7 @@ const locaisDeTrabalho = [
       sabado: "12:00 - 16:00",
       domingo: "12:00 - 16:00",
     },
-    linkMaps: "https://www.google.com/",
+    linkMaps: "https://www.google.com.br/maps/search/UBS/@-22.3222341,-49.0716195,15z/data=!3m1!4b1?entry=ttu",
   },
   {
     nome: "Farmacia",
@@ -36,7 +36,7 @@ const locaisDeTrabalho = [
       sabado: "12:00 - 16:00",
       domingo: "12:00 - 16:00",
     },
-    linkMapa: "https://www.google.com/",
+    linkMapa: "https://www.google.com.br/maps/search/Farm%C3%A1cias/@-22.3222745,-49.0716195,15z/data=!3m1!4b1?entry=ttu",
   },
   {
     nome: "Posto de Saude",
@@ -52,7 +52,7 @@ const locaisDeTrabalho = [
       sabado: "12:00 - 16:00",
       domingo: "12:00 - 16:00",
     },
-    linkMapa: "https://www.google.com/",
+    linkMapa: "https://www.google.com.br/maps/search/postos+de+saude/@-22.3221938,-49.0716195,15z/data=!3m1!4b1?entry=ttu",
   },
   {
     nome: "UBS Bela Vista",
@@ -68,24 +68,7 @@ const locaisDeTrabalho = [
       sabado: "12:00 - 16:00",
       domingo: "12:00 - 16:00",
     },
-    linkMapa: "https://www.google.com/",
-  },
-
-  {
-    nome: "UBS Bela Vista",
-    endereco:
-      "R. Marçal de Arruda Campos, Quadra 4 - Centro, Bauru - SP, 17063-060",
-    contato: "(14) 99683-9244",
-    horarioFuncionamento: {
-      segunda: "12:00 - 22:00",
-      terca: "12:00 - 22:00",
-      quarta: "12:00 - 22:00",
-      quinta: "12:00 - 22:00",
-      sexta: "12:00 - 22:00",
-      sabado: "12:00 - 16:00",
-      domingo: "12:00 - 16:00",
-    },
-    linkMapa: "https://www.google.com/",
+    linkMapa: "https://www.google.com.br/maps/search/UBS/@-22.3222341,-49.0716195,15z/data=!3m1!4b1?entry=ttu",
   },
 
   {
@@ -102,7 +85,24 @@ const locaisDeTrabalho = [
       sabado: "12:00 - 16:00",
       domingo: "12:00 - 16:00",
     },
-    linkMapa: "https://www.google.com/",
+    linkMapa: "https://www.google.com.br/maps/search/UBS/@-22.3222341,-49.0716195,15z/data=!3m1!4b1?entry=ttu",
+  },
+
+  {
+    nome: "UBS Bela Vista",
+    endereco:
+      "R. Marçal de Arruda Campos, Quadra 4 - Centro, Bauru - SP, 17063-060",
+    contato: "(14) 99683-9244",
+    horarioFuncionamento: {
+      segunda: "12:00 - 22:00",
+      terca: "12:00 - 22:00",
+      quarta: "12:00 - 22:00",
+      quinta: "12:00 - 22:00",
+      sexta: "12:00 - 22:00",
+      sabado: "12:00 - 16:00",
+      domingo: "12:00 - 16:00",
+    },
+    linkMapa: "https://www.google.com.br/maps/search/UBS/@-22.3222341,-49.0716195,15z/data=!3m1!4b1?entry=ttu",
   },
 ];
 
