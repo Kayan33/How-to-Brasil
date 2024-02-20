@@ -1,5 +1,5 @@
 .trabalho-container {
-  padding: 80px 100px 94px 100px;
+  padding: 80px 41px 94px 141px;
   background: #EDF3FB;
 }
 
@@ -30,15 +30,15 @@
 }
 
 
-.trabalho-bg:has(.card:hover) .card:not(:hover) {
-  opacity: .6;
-  scale: .98;
-  
+.trabalho-bg .card {
+  transition: opacity 0.5s ease, transform 0.3s ease; 
 }
 
-.card:hover{
-  padding: 1rem;
+.trabalho-bg:has(.card:hover) .card:not(:hover) {
+  opacity: 0.6; 
+  transform: scale(0.98); 
 }
+
 
 
 
@@ -55,9 +55,12 @@
     rgba(0, 0, 0, 0) 100%
     );
     border-radius: 24px;
-    transition: all .2s;
-}
-
+    transition: transform 0.5s ease;
+  }
+  
+  .card:hover{
+    transform: scale(1.07);
+  }
 .card h3 {
   color: #1a1c19;
   font-size: 19px;

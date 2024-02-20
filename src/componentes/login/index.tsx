@@ -1,6 +1,6 @@
 import "../../style/stylelogin.css";
 import "../../style/style.css";
-import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import React, { useContext } from 'react';
 import {useState} from 'react';
 import { UsuarioLogadoContext } from "../../contexts/contextAuth";

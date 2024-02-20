@@ -1,6 +1,6 @@
 import "../../style/stylelogin.css";
 import "../../style/style.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import React, { useContext } from "react";
 import { useState, useEffect } from "react";
 import { typeCadastro } from "../../types/cadastro";
@@ -16,6 +16,8 @@ function Cadastro() {
   const [statusMigratorio, setstatusMigratorio] = useState("");
   const [interesses, setinteresses] = useState("");
   const UsuarioLogadoCtx = useContext(UsuarioLogadoContext);
+
+  const navigate = useNavigate ();
 
   function handleInputEmail(event: React.ChangeEvent<HTMLInputElement>) {
     SetEmail(event.target.value);
@@ -55,14 +57,15 @@ function Cadastro() {
     let json = await api.adicionarCadastro(
       nome,
       ultimoNome,
-      statusMigratorio.toString(),
-      interesses.toString(),
+      statusMigratorio,
+      interesses,
       email,
       senha
     );
     if (json.status) {
       alert("Cadastro feito com sucesso!");
       setCadastro((cadastro) => [...cadastro, json]);
+      navigate('/Login');
     } else {
       alert(json.message);
     }
@@ -114,9 +117,8 @@ function Cadastro() {
           onChange={handleInputConfirmacaoSenha}
         />
         <div className="select">
-
           <select value={statusMigratorio} onChange={handleMigratorio}>
-            <option disabled>Status Migratório</option>
+            <option disabled value="">Status Migratório</option>
             <option value="Turista">Turista</option>
             <option value="Estudante">Estudante</option>
             <option value="Refugiado">Refugiado</option>
@@ -128,7 +130,7 @@ function Cadastro() {
           </select>
 
           <select value={interesses} onChange={handleInteresses}>
-            <option disabled>Interesses</option>
+            <option disabled value="">Interesses</option>
             <option value="Saúde">Saúde</option>
             <option value="trabalho">trabalho</option>
             <option value="Refugiado">Apio comunitário</option>
@@ -142,8 +144,8 @@ function Cadastro() {
           Cadastrar
         </button>
         <div className="cadastre-se">
-          <p>Já tem conta? Faça seu </p>
-          <Link to="/Login">login.</Link>
+          <p>Já tem conta? Faça seu Login</p>
+          <Link to="/Login">Login</Link>
         </div>
       </div>
     </div>

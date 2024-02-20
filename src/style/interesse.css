@@ -1,5 +1,5 @@
 .interesse-container {
-  padding: 80px 100px 94px 100px;
+  padding: 80px 41px 94px 141px;
   background: #EDF3FB;
 }
 .interesse-container h1 {
@@ -28,6 +28,7 @@
     rgba(0, 0, 0, 0) 100%
   );
   border-radius: 24px;
+  transition: transform 0.5s ease;
 }
 
 .interesse-img h3 {
@@ -59,6 +60,11 @@
 
 .interesse-img .saiba-mais {
   margin-top: 15px;
+}
+
+.interesse-img:hover{
+  transform: scale(1.07);
+  
 }
 
 #EducaImg{
