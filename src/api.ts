@@ -9,8 +9,8 @@ export const api = {
   },
  
   adicionarCadastro: async (nome: String,ultimoNome: String, statusMigratorio: String,interesses: String,email: String,senha: String,) => {
-    try {
-      const response = await fetch("http://localhost:3001/usuarios", {
+    {
+      let response = await fetch("http://localhost:3001/usuarios", {
         method: 'POST',
         body: JSON.stringify({
           nome,
@@ -25,21 +25,19 @@ export const api = {
           'Content-Type': 'application/json' 
         }
       });
-      
-      const json = await response.json();
-      return json;
-    } catch (error) {
-      console.error('Erro ao adicionar usuário:', error);
-      throw error;
-    }
     
+      const json = await response.json();
+      console.log (json)
+      return json;
+    
+    }
   },
 
 
 
   fazerLogin: async (email: String,senha: String,) => {
-    try {
-      const response = await fetch("http://localhost:3001/usuarios/login", {
+    {
+      let response = await fetch("http://localhost:3001/usuarios/login", {
         method: 'POST',
         body: JSON.stringify({
           
@@ -53,14 +51,11 @@ export const api = {
       });
       
       const json = await response.json();
+      console.log(json);
       return json;
-    } catch (error) {
-      console.error('Erro ao adicionar usuário:', error);
-      throw error;
-    }
     
-  },
+    
+  }
 
 
-};
- 
+}}

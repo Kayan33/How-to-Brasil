@@ -10,6 +10,7 @@ import { typeLogin} from "../../types/login";
 
 
 function LogiN() {
+
 const [senha, Setsenha] = useState('');
 const [email, SetEmail] = useState('');
 const [login, setLogin] = useState<typeLogin[]>([]);
@@ -31,11 +32,6 @@ function handleInputEmail (event: React.ChangeEvent< HTMLInputElement >) {
 
 const UsuarioLogadoCtx = useContext(UsuarioLogadoContext);
 
-const AcessoDireto = () => {
-  UsuarioLogadoCtx?.setName(email);
-  navigate('/Usuario');
-}
-
 
 const handleLogin = async (email: string, senha: string) => {
   let json = await api.fazerLogin(
@@ -43,12 +39,14 @@ const handleLogin = async (email: string, senha: string) => {
     email,
     senha,
   );
-  if (json.id) {
+  
+  if (json.status) {
     alert("Login realizado com sucesso!");
     setLogin((login) => [...login, json]);
+    UsuarioLogadoCtx?. setName (email);
     navigate('/Usuario');
   } else {
-    alert("Falha ao fazer login");
+    alert(json.message);
   }
   console.log(json);
 };

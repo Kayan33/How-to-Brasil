@@ -1,10 +1,11 @@
 import "../../style/stylelogin.css";
 import "../../style/style.css";
 import { Link } from "react-router-dom";
-import React from "react";
+import React, { useContext } from "react";
 import { useState, useEffect } from "react";
 import { typeCadastro } from "../../types/cadastro";
 import { api } from "../../api";
+import { UsuarioLogadoContext } from "../../contexts/contextAuth";
 
 function Cadastro() {
   const [email, SetEmail] = useState("");
@@ -14,6 +15,7 @@ function Cadastro() {
   const [confirmacaosenha, SetConfirmacaoSenha] = useState("");
   const [statusMigratorio, setstatusMigratorio] = useState("");
   const [interesses, setinteresses] = useState("");
+  const UsuarioLogadoCtx = useContext(UsuarioLogadoContext);
 
   function handleInputEmail(event: React.ChangeEvent<HTMLInputElement>) {
     SetEmail(event.target.value);
@@ -58,11 +60,11 @@ function Cadastro() {
       email,
       senha
     );
-    if (json.id) {
-      alert("Post Adicionado com sucesso!");
+    if (json.status) {
+      alert("Cadastro feito com sucesso!");
       setCadastro((cadastro) => [...cadastro, json]);
     } else {
-      alert("Falha ao adicionar usuário");
+      alert(json.message);
     }
     console.log(json);
   };
