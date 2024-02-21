@@ -1,9 +1,9 @@
 .trabalho-container {
   padding: 80px 41px 94px 141px;
-  background: #EDF3FB;
+  background: #edf3fb;
 }
 
-.header-input{
+.header-input {
   text-align: center;
 }
 
@@ -11,15 +11,13 @@
   margin-top: 1rem;
   margin-bottom: 2rem;
   padding: 1rem 1.6rem;
-  border-radius: .8rem;
+  border-radius: 0.8rem;
   background-color: #444448;
   border: 0;
   width: 50%;
   color: white;
   font-size: 1.6rem;
 }
-
-
 
 .trabalho-bg {
   display: flex;
@@ -29,38 +27,37 @@
   flex-direction: row-reverse;
 }
 
-
 .trabalho-bg .card {
-  transition: opacity 0.5s ease, transform 0.3s ease; 
+  transition: opacity 0.5s ease, transform 0.3s ease;
 }
 
 .trabalho-bg:has(.card:hover) .card:not(:hover) {
-  opacity: 0.6; 
-  transform: scale(0.98); 
+  opacity: 0.6;
+  transform: scale(0.98);
 }
-
-
-
 
 .header-card {
   display: flex;
+  
   align-items: baseline;
 }
-
 
 .card {
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0.25) 0%,
     rgba(0, 0, 0, 0) 100%
-    );
-    border-radius: 24px;
-    transition: transform 0.5s ease;
-  }
-  
-  .card:hover{
-    transform: scale(1.07);
-  }
+  );
+  border-radius: 24px;
+  transition: transform 0.5s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.card:hover {
+  transform: scale(1.07);
+}
 .card h3 {
   color: #1a1c19;
   font-size: 19px;
@@ -69,7 +66,6 @@
   text-align: center;
 }
 
-
 .card p {
   color: #454843;
   font-size: 15px;
@@ -77,6 +73,7 @@
   font-weight: 400;
   max-width: 30ch;
   margin: 5px;
+  padding-left: 5px;
 }
 
 .card hr {
@@ -91,5 +88,28 @@
 }
 
 .card .saiba-mais {
-  margin-top: 15px;
+  margin: 10px;
+}
+.card h2 {
+  margin: 10px;
+}
+
+
+
+#foto-casa {
+  border-radius: 7px;
+  width: 425px;
+  height: 320px;
+}
+
+.detalhes-imovel{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-evenly;
+}
+
+.detalhes-valores{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
 }
