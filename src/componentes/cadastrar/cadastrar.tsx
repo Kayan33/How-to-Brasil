@@ -5,19 +5,21 @@ import React, { useContext } from "react";
 import { useState, useEffect } from "react";
 import { typeCadastro } from "../../types/cadastro";
 import { api } from "../../api";
-import { UsuarioLogadoContext } from "../../contexts/contextAuth";
 
 function Cadastro() {
   const [email, SetEmail] = useState("");
   const [nome, Setnome] = useState("");
   const [ultimoNome, SetultimoNome] = useState("");
   const [senha, SetSenha] = useState("");
-  const [confirmacaosenha, SetConfirmacaoSenha] = useState("");
+  const [confirmarSenha, SetConfirmarSenha] = useState("");
   const [statusMigratorio, setstatusMigratorio] = useState("");
   const [interesses, setinteresses] = useState("");
-  const UsuarioLogadoCtx = useContext(UsuarioLogadoContext);
 
-  const navigate = useNavigate ();
+  const [cadastro, setCadastro] = useState<typeCadastro[]>([]);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {}, []);
 
   function handleInputEmail(event: React.ChangeEvent<HTMLInputElement>) {
     SetEmail(event.target.value);
@@ -35,10 +37,10 @@ function Cadastro() {
     SetSenha(event.target.value);
   }
 
-  function handleInputConfirmacaoSenha(
+  function handleInputConfirmarSenha(
     event: React.ChangeEvent<HTMLInputElement>
   ) {
-    SetConfirmacaoSenha(event.target.value);
+    SetConfirmarSenha(event.target.value);
   }
 
   function handleMigratorio(event: React.ChangeEvent<HTMLSelectElement>) {
@@ -49,12 +51,13 @@ function Cadastro() {
     setinteresses(event.target.value);
   }
 
-  const [cadastro, setCadastro] = useState<typeCadastro[]>([]);
-
-  useEffect(() => {}, []);
-
   const handleCadastro = async () => {
-    let json = await api.adicionarCadastro(
+    if (senha !== confirmarSenha) {
+      alert("As senhas não são iguais. Por favor, verifique.");
+      return;
+    }
+
+    const json = await api.adicionarCadastro(
       nome,
       ultimoNome,
       statusMigratorio,
@@ -62,14 +65,14 @@ function Cadastro() {
       email,
       senha
     );
+
     if (json.status) {
       alert("Cadastro feito com sucesso!");
       setCadastro((cadastro) => [...cadastro, json]);
-      navigate('/Login');
+      navigate("/Login");
     } else {
       alert(json.message);
     }
-    console.log(json);
   };
 
   return (
@@ -113,12 +116,14 @@ function Cadastro() {
         <input
           type="password"
           placeholder="Confirmação de senha"
-          value={confirmacaosenha}
-          onChange={handleInputConfirmacaoSenha}
+          value={confirmarSenha}
+          onChange={handleInputConfirmarSenha}
         />
         <div className="select">
           <select value={statusMigratorio} onChange={handleMigratorio}>
-            <option disabled value="">Status Migratório</option>
+            <option disabled value="">
+              Status Migratório
+            </option>
             <option value="Turista">Turista</option>
             <option value="Estudante">Estudante</option>
             <option value="Refugiado">Refugiado</option>
@@ -130,7 +135,9 @@ function Cadastro() {
           </select>
 
           <select value={interesses} onChange={handleInteresses}>
-            <option disabled value="">Interesses</option>
+            <option disabled value="">
+              Interesses
+            </option>
             <option value="Saúde">Saúde</option>
             <option value="trabalho">trabalho</option>
             <option value="Refugiado">Apio comunitário</option>
