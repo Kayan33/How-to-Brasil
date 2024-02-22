@@ -14,6 +14,20 @@ export const api = {
 
     return json;
   },
+
+  carregarDocumentacao: async () => {
+    let response = await fetch("http://localhost:3001/documentacao");
+    let json = await response.json();
+
+    return json;
+  },
+
+  carregarTrabalho: async () => {
+    let response = await fetch("http://localhost:3001/trabalho");
+    let json = await response.json();
+
+    return json;
+  },
  
   adicionarCadastro: async (nome: String,ultimoNome: String, statusMigratorio: String,interesses: String,email: String,senha: String,) => {
     {

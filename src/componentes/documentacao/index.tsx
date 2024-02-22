@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import "../../style/trabalho.css";
 import { typesInteresses } from "../../types/Interesses";
 import { api } from "../../api";
+import { typeDocumento } from "../../types/documentacao";
 
 const locaisDeTrabalho = [
   {
@@ -108,7 +109,7 @@ const locaisDeTrabalho = [
 function Trabalho() {
   const [termoBusca, setTermoBusca] = useState<string>("");
 
-  const [usuarios, setUsuarios] = useState<typesInteresses[]>([]);
+  const [documento, setDocumento] = useState<typeDocumento[]>([]);
 
   useEffect(() => {
     carregarInteresses();
@@ -119,7 +120,7 @@ function Trabalho() {
       const json = await api.carregarInterreses();
       const dataAraay = Array.isArray(json) ? json : [json];
 
-      setUsuarios(dataAraay);
+      setDocumento(dataAraay);
     } catch (error) {
       console.error("Erro ao carregar interesses:", error);
     }
