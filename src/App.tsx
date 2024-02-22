@@ -15,8 +15,6 @@ import Pgecasa from "./pages/casa";
 import Pgeapoio from "./pages/Apoio";
 import Pgedocumentacao from "./pages/documentacao";
 
-import RequisicaoCadastro from "./requisicoes/cadastro";
-import InteressesBg from "./requisicoes/interesses";
 
 function App() {
   return (
@@ -38,7 +36,6 @@ function App() {
         <Route path='/documentacao' element={<Pgedocumentacao/>}></Route>
         <Route path='/casa' element={<Pgecasa/>}></Route>
         <Route path='/apoio' element={<Pgeapoio/>}></Route>
-        <Route path='/interessebg' element={<InteressesBg/>}></Route>
         
       </Routes>
       

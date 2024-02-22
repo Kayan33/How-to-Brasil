@@ -1,7 +1,11 @@
 export type typesMoradia = {
-    area: number;
+    tipos: number;
+    nome: string;
+    endereco: string;
+    linkCorrelatos: string;
+    area: string;
     quartos: number;
-    valor: number;
+    valor: string;
     banheiro: number;
     vagas: number;
     foto: string;

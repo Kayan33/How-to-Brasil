@@ -130,19 +130,37 @@ function Trabalho() {
   );
   return (
     <div className="trabalho-container">
-    <header className="header-input">
-      <h1>TRABALHO</h1>
-      <div className="input-wrapper">
-      <input
-          type="text"
-          value={termoBusca}
-          onChange={(ev) => setTermoBusca(ev.target.value)}
-          placeholder="Digite o nome do local"
-        />
-      </div>
-    </header>
+      <header className="header-input">
+        <h2>Educação</h2>
+        <div className="input-wrapper">
+          <div>
+            <input
+              type="text"
+              value={termoBusca}
+              onChange={(ev) => setTermoBusca(ev.target.value)}
+              placeholder="Digite o nome do local"
+            />
+          </div>
+          <div className="select-wrapper">
+            <select
+              value={termoBusca}
+              onChange={(ev) => setTermoBusca(ev.target.value)}
+            >
+              <option value="">Filtro</option>
+              <option value="Farmacia">Farmacia</option>
+              <option value="Posto de Saude">Posto de Saude</option>
+              <option value="Refugiado">Refugiado</option>
+              <option value="Asilado">Asilado</option>
+              <option value="Trabalhador Temporário">
+                Trabalhador Temporário
+              </option>
+              <option value="Residente Permanente">Residente Permanente</option>
+            </select>
+          </div>
+        </div>
+      </header>
 
-    <main className="trabalho-bg">
+      <main className="trabalho-bg">
         {locaisFiltrados.map((local, index) => (
           <ul className="card" key={index}>
             <h3>{local.nome}</h3>
@@ -174,9 +192,7 @@ function Trabalho() {
           </ul>
         ))}
       </main>
-  </div>
-
-    
+    </div>
   );
 }
 

@@ -5,26 +5,32 @@
 
 .header-input {
   text-align: center;
+  
 }
-
+.input-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
 .input-wrapper input {
   margin-top: 1rem;
   margin-bottom: 2rem;
   padding: 1rem 1.6rem;
-  border-radius: 0.8rem;
-  background-color: #444448;
+  border-radius: 2rem;
+  background-color: #454843;
   border: 0;
-  width: 50%;
   color: white;
-  font-size: 1.6rem;
+  font-size: 1.0rem;
 }
 
 .trabalho-bg {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  flex-direction: row;
   row-gap: 2rem;
-  flex-direction: row-reverse;
+  
 }
 
 .trabalho-bg .card {
@@ -112,4 +118,19 @@
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+}
+
+.select-wrapper {
+  width: 150px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.select-wrapper select {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }

@@ -120,7 +120,7 @@ function Cadastro() {
           onChange={handleInputConfirmarSenha}
         />
         <div className="select">
-          <select value={statusMigratorio} onChange={handleMigratorio}>
+          <select value={statusMigratorio} onChange={handleMigratorio}  >
             <option disabled value="">
               Status Migratório
             </option>

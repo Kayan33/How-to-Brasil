@@ -131,15 +131,33 @@ function Trabalho() {
   return (
     <div className="trabalho-container">
     <header className="header-input">
-      <h1>TRABALHO</h1>
-      <div className="input-wrapper">
-      <input
-          type="text"
-          value={termoBusca}
-          onChange={(ev) => setTermoBusca(ev.target.value)}
-          placeholder="Digite o nome do local"
-        />
-      </div>
+    <h2>Documentação</h2>
+        <div className="input-wrapper">
+          <div>
+            <input
+              type="text"
+              value={termoBusca}
+              onChange={(ev) => setTermoBusca(ev.target.value)}
+              placeholder="Digite o nome do local"
+            />
+          </div>
+          <div className="select-wrapper">
+            <select
+              value={termoBusca}
+              onChange={(ev) => setTermoBusca(ev.target.value)}
+            >
+              <option value="">Filtro</option>
+              <option value="Farmacia">Farmacia</option>
+              <option value="Posto de Saude">Posto de Saude</option>
+              <option value="Refugiado">Refugiado</option>
+              <option value="Asilado">Asilado</option>
+              <option value="Trabalhador Temporário">
+                Trabalhador Temporário
+              </option>
+              <option value="Residente Permanente">Residente Permanente</option>
+            </select>
+          </div>
+        </div>
     </header>
 
     <main className="trabalho-bg">

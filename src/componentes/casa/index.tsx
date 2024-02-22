@@ -1,126 +1,79 @@
-import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
-import "../../style/trabalho.css";
-import { typesInteresses } from "../../types/Interesses";
 import { api } from "../../api";
-
-const locaisDeTrabalho = [
-  {
-    nome: "Apartamento - Parque Bogota",
-    endereco: "Parque Bauru - Bauru",
-    area: "47m²",
-    quartos: 2,
-    valor: "R$ 600,00",
-    banheiro: 1,
-    foto: "https://i.im.ge/2024/02/22/g9vOdW.6677457054.jpg",
-    linkCorrelatos:
-      "https://www.imobiliariacentral.com/detalhes-imovel.php?cod_imovel=9942",
-  },
-  {
-    nome: "Apartamento - Spazio Beluno",
-    endereco: "Parque Uniao - Bauru",
-    area: "47m²",
-    quartos: 2,
-    valor: "R$ 600,00",
-    banheiro: 1,
-    vagas:1,
-    foto: "https://i.im.ge/2024/02/22/g9vgTP.6687959233.jpg",
-    linkCorrelatos:
-      "https://www.imobiliariacentral.com/detalhes-imovel.php?cod_imovel=8691",
-  },
-  {
-    nome: "Kitinete",
-    endereco: "Jardim Helena - Bauru",
-    area: "25m²",
-    quartos: 1,
-    valor: "R$ 600,00",
-    banheiro: 1,
-    vagas:1,
-    foto: "https://i.im.ge/2024/02/22/g9J1Bh.6687539123.jpg",
-    linkCorrelatos:
-      "https://www.imobiliariacentral.com/detalhes-imovel.php?cod_imovel=8691",
-  },
-  {
-    nome: "Apartamento - Parque Bogota",
-    endereco: "Parque Bauru - Bauru",
-    area: "47m²",
-    quartos: 2,
-    valor: "R$ 600,00",
-    banheiro: 1,
-    vagas:1,
-    foto: "https://i.im.ge/2024/02/21/g9g9ur.Design-sem-nome.jpg",
-    linkCorrelatos:
-      "https://www.imobiliariacentral.com/detalhes-imovel.php?cod_imovel=8691",
-  },
-
-  {
-    nome: "Apartamento - Parque Bogota",
-    endereco: "Parque Bauru - Bauru",
-    area: "47m²",
-    quartos: 2,
-    valor: "R$ 600,00",
-    banheiro: 1,
-    vagas:1,
-    foto: "https://i.im.ge/2024/02/21/g9g9ur.Design-sem-nome.jpg",
-    linkCorrelatos:
-      "https://www.imobiliariacentral.com/detalhes-imovel.php?cod_imovel=8691",
-  },
-
-  {
-    nome: "Apartamento - Parque Bogota",
-    endereco: "Parque Bauru - Bauru",
-    area: "47m²",
-    quartos: "",
-    valor: "R$ 600,00",
-    banheiro: 1,
-    vagas:1,
-    foto: "https://i.im.ge/2024/02/21/g9g9ur.Design-sem-nome.jpg",
-    linkCorrelatos:
-      "https://www.imobiliariacentral.com/detalhes-imovel.php?cod_imovel=8691",
-  },
-];
+import { typesMoradia } from "../../types/moradia";
+import "../../style/trabalho.css";
 
 function Trabalho() {
   const [termoBusca, setTermoBusca] = useState<string>("");
-
-  const [usuarios, setUsuarios] = useState<typesInteresses[]>([]);
+  const [ordem, setOrdem] = useState<string>("asc");
+  const [moradia, setMoradia] = useState<typesMoradia[]>([]);
 
   useEffect(() => {
-    carregarInteresses();
+    carregarMoradia();
   }, []);
 
-  const carregarInteresses = async () => {
+  const carregarMoradia = async () => {
     try {
-      const json = await api.carregarInterreses();
+      const json = await api.carregarMoradia();
       const dataAraay = Array.isArray(json) ? json : [json];
-
-      setUsuarios(dataAraay);
+      setMoradia(dataAraay);
     } catch (error) {
       console.error("Erro ao carregar interesses:", error);
     }
   };
 
-  const locaisFiltrados = locaisDeTrabalho.filter((local) =>
-    local.nome.toLowerCase().includes(termoBusca.toLowerCase())
+  const locaisFiltrados = moradia.filter(
+    (local) =>
+      local.nome.toLowerCase().includes(termoBusca.toLowerCase()) ||
+      local.valor.toLowerCase().includes(termoBusca.toLowerCase())
   );
+
+  const ordenarPorValor = (a: typesMoradia, b: typesMoradia) => {
+    const valorA = parseFloat(a.valor.replace(/[^\d.-]/g, ""));
+    const valorB = parseFloat(b.valor.replace(/[^\d.-]/g, ""));
+
+    if (ordem === "asc") {
+      return valorA - valorB;
+    } else {
+      return valorB - valorA;
+    }
+  };
+
+  const locaisOrdenados = [...locaisFiltrados].sort(ordenarPorValor);
+
   return (
     <div className="trabalho-container">
       <header className="header-input">
-        <h1>TRABALHO</h1>
+        <h2>Moradia </h2>
         <div className="input-wrapper">
-          <input
-            type="text"
-            value={termoBusca}
-            onChange={(ev) => setTermoBusca(ev.target.value)}
-            placeholder="Digite o nome do local"
-          />
+          <div>
+            <input
+              type="text"
+              value={termoBusca}
+              onChange={(ev) => setTermoBusca(ev.target.value)}
+              placeholder="Digite o nome do local"
+            />
+          </div>
+          <div className="select-wrapper">
+            <select value={ordem} onChange={(ev) => setOrdem(ev.target.value)}>
+              <option  value="">
+                Filtro
+              </option>
+              <option value="asc">Barato → Caro</option>
+              <option value="desc">Caro → Barato</option>
+            </select>
+          </div>
         </div>
       </header>
 
       <main className="trabalho-bg">
-        {locaisFiltrados.map((local, index) => (
+        {locaisOrdenados.map((local, index) => (
           <ul className="card" key={index}>
-            <img src={local.foto} alt={local.nome} id="foto-casa" />
+            <img
+              src={local.foto}
+              id="foto-casa"
+              alt={`Foto de ${local.nome}`}
+            />
 
             <li className="header-card">
               <h3>{local.nome}</h3>
@@ -158,9 +111,14 @@ function Trabalho() {
 
               <li>
                 {local.linkCorrelatos && (
-                  <a className="saiba-mais" href={local.linkCorrelatos} target="_blank">
-                  VER MAIS
-                </a>
+                  <a
+                    className="saiba-mais"
+                    href={local.linkCorrelatos}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    VER MAIS
+                  </a>
                 )}
               </li>
             </ul>

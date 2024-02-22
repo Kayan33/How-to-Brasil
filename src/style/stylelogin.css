@@ -121,7 +121,19 @@ margin-right: 5px;
 
 .select{
     display: flex;
+    gap: 1rem;
+    margin-bottom: 20px;
 }
+.select select{
+    width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+
 
 
 
