@@ -1,5 +1,5 @@
 export type typesInteresses = {
-    tipo:string;
+    tipo:number;
     nome:string;
     Numero:string;
     Horario:string;
