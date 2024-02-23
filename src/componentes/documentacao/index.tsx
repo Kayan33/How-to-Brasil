@@ -5,111 +5,24 @@ import { typesInteresses } from "../../types/Interesses";
 import { api } from "../../api";
 import { typeDocumento } from "../../types/documentacao";
 
-const locaisDeTrabalho = [
-  {
-    nome: "UBS Bela Vista",
-    endereco:
-      "R. Marçal de Arruda Campos, Quadra 4 - Centro, Bauru - SP, 17063-060",
-    telefone: "(14) 99683-9244",
-    horarioFuncionamento: {
-      segunda: "12:00 - 22:00",
-      terca: "12:00 - 22:00",
-      quarta: "12:00 - 22:00",
-      quinta: "12:00 - 22:00",
-      sexta: "12:00 - 22:00",
-      sabado: "12:00 - 16:00",
-      domingo: "12:00 - 16:00",
-    },
-    linkMapa: "https://www.google.com/",
-  },
-  {
-    nome: "Farmacia",
-    endereco:
-      "R. Marçal de Arruda Campos, Quadra 4 - Centro, Bauru - SP, 17063-060",
-    telefone: "(14) 99683-9244",
-    horarioFuncionamento: {
-      segunda: "12:00 - 22:00",
-      terca: "12:00 - 22:00",
-      quarta: "12:00 - 22:00",
-      quinta: "12:00 - 22:00",
-      sexta: "12:00 - 22:00",
-      sabado: "12:00 - 16:00",
-      domingo: "12:00 - 16:00",
-    },
-    linkMapa: "https://www.google.com/",
-  },
-  {
-    nome: "Posto de Saude",
-    endereco:
-      "R. Marçal de Arruda Campos, Quadra 4 - Centro, Bauru - SP, 17063-060",
-    telefone: "(14) 99683-9244",
-    horarioFuncionamento: {
-      segunda: "12:00 - 22:00",
-      terca: "12:00 - 22:00",
-      quarta: "12:00 - 22:00",
-      quinta: "12:00 - 22:00",
-      sexta: "12:00 - 22:00",
-      sabado: "12:00 - 16:00",
-      domingo: "12:00 - 16:00",
-    },
-    linkMapa: "https://www.google.com/",
-  },
-  {
-    nome: "UBS Bela Vista",
-    endereco:
-      "R. Marçal de Arruda Campos, Quadra 4 - Centro, Bauru - SP, 17063-060",
-    telefone: "(14) 99683-9244",
-    horarioFuncionamento: {
-      segunda: "12:00 - 22:00",
-      terca: "12:00 - 22:00",
-      quarta: "12:00 - 22:00",
-      quinta: "12:00 - 22:00",
-      sexta: "12:00 - 22:00",
-      sabado: "12:00 - 16:00",
-      domingo: "12:00 - 16:00",
-    },
-    linkMapa: "https://www.google.com/",
-  },
+const TEMPO_DE_ESPERA = 150;
 
-  {
-    nome: "UBS Bela Vista",
-    endereco:
-      "R. Marçal de Arruda Campos, Quadra 4 - Centro, Bauru - SP, 17063-060",
-    telefone: "(14) 99683-9244",
-    horarioFuncionamento: {
-      segunda: "12:00 - 22:00",
-      terca: "12:00 - 22:00",
-      quarta: "12:00 - 22:00",
-      quinta: "12:00 - 22:00",
-      sexta: "12:00 - 22:00",
-      sabado: "12:00 - 16:00",
-      domingo: "12:00 - 16:00",
-    },
-    linkMapa: "https://www.google.com/",
-  },
-
-  {
-    nome: "UBS Bela Vista",
-    endereco:
-      "R. Marçal de Arruda Campos, Quadra 4 - Centro, Bauru - SP, 17063-060",
-    telefone: "(14) 99683-9244",
-    horarioFuncionamento: {
-      segunda: "12:00 - 22:00",
-      terca: "12:00 - 22:00",
-      quarta: "12:00 - 22:00",
-      quinta: "12:00 - 22:00",
-      sexta: "12:00 - 22:00",
-      sabado: "12:00 - 16:00",
-      domingo: "12:00 - 16:00",
-    },
-    linkMapa: "https://www.google.com/",
-  },
-];
-
-function Trabalho() {
+function Documentacao() {
   const [termoBusca, setTermoBusca] = useState<string>("");
+  const [documentacao, setDocumentacao] = useState<typeDocumento[]>([]);
+  const [perguntaExpandida, setPerguntaExpandida] = useState<number | null>(
+    null
+  );
 
-  const [documento, setDocumento] = useState<typeDocumento[]>([]);
+  const handlePerguntaClick = (index: number) => {
+    if (perguntaExpandida === index) {
+      setPerguntaExpandida(null);
+    } else {
+      setTimeout(() => {
+        setPerguntaExpandida(index);
+      }, TEMPO_DE_ESPERA);
+    }
+  };
 
   useEffect(() => {
     carregarInteresses();
@@ -117,22 +30,22 @@ function Trabalho() {
 
   const carregarInteresses = async () => {
     try {
-      const json = await api.carregarInterreses();
+      const json = await api.carregarDocumentacao();
       const dataAraay = Array.isArray(json) ? json : [json];
-
-      setDocumento(dataAraay);
+      setDocumentacao(dataAraay);
     } catch (error) {
       console.error("Erro ao carregar interesses:", error);
     }
   };
 
-  const locaisFiltrados = locaisDeTrabalho.filter((local) =>
+  const locaisFiltrados = documentacao.filter((local) =>
     local.nome.toLowerCase().includes(termoBusca.toLowerCase())
   );
+
   return (
     <div className="trabalho-container">
-    <header className="header-input">
-    <h2>Documentação</h2>
+      <header className="header-input">
+        <h2>Documentação</h2>
         <div className="input-wrapper">
           <div>
             <input
@@ -159,44 +72,37 @@ function Trabalho() {
             </select>
           </div>
         </div>
-    </header>
+      </header>
 
-    <main className="trabalho-bg">
-        {locaisFiltrados.map((local, index) => (
-          <ul className="card" key={index}>
-            <h3>{local.nome}</h3>
-            <li className="header-card">
-              <h3>Endereço :</h3>
-              <p>{local.endereco}</p>
-            </li>
-            <li className="header-card">
-              <h3>Telefone :</h3>
-              <p>{local.telefone}</p>
-            </li>
-            <li className="header-card">
-              <h3>Horário de funcionamento :</h3>
-              <p>
-                {Object.entries(local.horarioFuncionamento).map(
-                  ([dia, horario]) => (
-                    <React.Fragment key={dia}>
-                      {`${dia}: ${horario}`}
-                      <br />
-                    </React.Fragment>
-                  )
-                )}
-              </p>
-            </li>
-            <hr />
-            <a href={local.linkMapa}>
-              <img src="maps.svg" alt="" />
-            </a>
-          </ul>
-        ))}
-      </main>
-  </div>
+      <div className="container-perguntas">
+        <h1>Perguntas frequentes</h1>
+        <ul className="container-peguntas-respostas">
+          {locaisFiltrados.map((local, index) => (
+            <li
+              key={index}
+              className={`pergunta ${
+                perguntaExpandida === index && "pergunta-expandida"
+              }`}
+              onClick={() => handlePerguntaClick(index)}
+            >
+              <div>
+                {local.nome}
+                <img src="mais.svg" alt="Mais" />
+              </div>
 
-    
+              {perguntaExpandida === index && (
+                <div className="resposta">
+                  {local.documentacao}
+                  {local.documentacao}
+                  <a href={local.linkGoverno as string}>Link para o governo</a>
+                </div>
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
   );
 }
 
-export default Trabalho;
+export default Documentacao;
