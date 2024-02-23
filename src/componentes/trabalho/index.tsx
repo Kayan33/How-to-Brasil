@@ -31,7 +31,7 @@ function Trabalho() {
   return (
     <div className="trabalho-container">
       <header className="header-input">
-      <h2>Moradia</h2>
+      <h2>Trabalho</h2>
         <div className="input-wrapper">
           <div>
             <input
@@ -64,10 +64,7 @@ function Trabalho() {
         {locaisFiltrados.map((local, index) => (
           <ul className="card" key={index}>
             <h3>{local.nome}</h3>
-            {/* <li className="header-card">
-              <h3>Endereço :</h3>
-              <p>{local.Numero}</p>
-            </li> */}
+            
             <li className="header-card">
               <h3>Telefone :</h3>
               <p>{local.Numero}</p>
@@ -75,14 +72,7 @@ function Trabalho() {
             <li className="header-card">
               <h3>Horário de funcionamento :</h3>
               <p>
-                {Object.entries(local.Horario).map(
-                  ([dia, horario]) => (
-                    <React.Fragment key={dia}>
-                      {`${dia}: ${horario}`}
-                      <br />
-                    </React.Fragment>
-                  )
-                )}
+                {local.Horario}
               </p>
             </li>
             <hr />

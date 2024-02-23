@@ -5,111 +5,10 @@ import "../../style/trabalho.css";
 import { typesInteresses } from "../../types/Interesses";
 import { api } from "../../api";
 
-const locaisDeTrabalho = [
-  {
-    nome: "UBS Bela Vista",
-    endereco:
-      "R. Marçal de Arruda Campos, Quadra 4 - Centro, Bauru - SP, 17063-060",
-    contato: "(14) 99683-9244",
-    horarioFuncionamento: {
-      segunda: "12:00 - 22:00",
-      terca: "12:00 - 22:00",
-      quarta: "12:00 - 22:00",
-      quinta: "12:00 - 22:00",
-      sexta: "12:00 - 22:00",
-      sabado: "12:00 - 16:00",
-      domingo: "12:00 - 16:00",
-    },
-    linkMaps: "https://www.google.com.br/maps/search/UBS/@-22.3222341,-49.0716195,15z/data=!3m1!4b1?entry=ttu",
-  },
-  {
-    nome: "Farmacia",
-    endereco:
-      "R. Marçal de Arruda Campos, Quadra 4 - Centro, Bauru - SP, 17063-060",
-    contato: "(14) 99683-9244",
-    horarioFuncionamento: {
-      segunda: "12:00 - 22:00",
-      terca: "12:00 - 22:00",
-      quarta: "12:00 - 22:00",
-      quinta: "12:00 - 22:00",
-      sexta: "12:00 - 22:00",
-      sabado: "12:00 - 16:00",
-      domingo: "12:00 - 16:00",
-    },
-    linkMapa: "https://www.google.com.br/maps/search/Farm%C3%A1cias/@-22.3222745,-49.0716195,15z/data=!3m1!4b1?entry=ttu",
-  },
-  {
-    nome: "Posto de Saude",
-    endereco:
-      "R. Marçal de Arruda Campos, Quadra 4 - Centro, Bauru - SP, 17063-060",
-    contato: "(14) 99683-9244",
-    horarioFuncionamento: {
-      segunda: "12:00 - 22:00",
-      terca: "12:00 - 22:00",
-      quarta: "12:00 - 22:00",
-      quinta: "12:00 - 22:00",
-      sexta: "12:00 - 22:00",
-      sabado: "12:00 - 16:00",
-      domingo: "12:00 - 16:00",
-    },
-    linkMapa: "https://www.google.com.br/maps/search/postos+de+saude/@-22.3221938,-49.0716195,15z/data=!3m1!4b1?entry=ttu",
-  },
-  {
-    nome: "UBS Bela Vista",
-    endereco:
-      "R. Marçal de Arruda Campos, Quadra 4 - Centro, Bauru - SP, 17063-060",
-    contato: "(14) 99683-9244",
-    horarioFuncionamento: {
-      segunda: "12:00 - 22:00",
-      terca: "12:00 - 22:00",
-      quarta: "12:00 - 22:00",
-      quinta: "12:00 - 22:00",
-      sexta: "12:00 - 22:00",
-      sabado: "12:00 - 16:00",
-      domingo: "12:00 - 16:00",
-    },
-    linkMapa: "https://www.google.com.br/maps/search/UBS/@-22.3222341,-49.0716195,15z/data=!3m1!4b1?entry=ttu",
-  },
-
-  {
-    nome: "UBS Bela Vista",
-    endereco:
-      "R. Marçal de Arruda Campos, Quadra 4 - Centro, Bauru - SP, 17063-060",
-    contato: "(14) 99683-9244",
-    horarioFuncionamento: {
-      segunda: "12:00 - 22:00",
-      terca: "12:00 - 22:00",
-      quarta: "12:00 - 22:00",
-      quinta: "12:00 - 22:00",
-      sexta: "12:00 - 22:00",
-      sabado: "12:00 - 16:00",
-      domingo: "12:00 - 16:00",
-    },
-    linkMapa: "https://www.google.com.br/maps/search/UBS/@-22.3222341,-49.0716195,15z/data=!3m1!4b1?entry=ttu",
-  },
-
-  {
-    nome: "UBS Bela Vista",
-    endereco:
-      "R. Marçal de Arruda Campos, Quadra 4 - Centro, Bauru - SP, 17063-060",
-    contato: "(14) 99683-9244",
-    horarioFuncionamento: {
-      segunda: "12:00 - 22:00",
-      terca: "12:00 - 22:00",
-      quarta: "12:00 - 22:00",
-      quinta: "12:00 - 22:00",
-      sexta: "12:00 - 22:00",
-      sabado: "12:00 - 16:00",
-      domingo: "12:00 - 16:00",
-    },
-    linkMapa: "https://www.google.com.br/maps/search/UBS/@-22.3222341,-49.0716195,15z/data=!3m1!4b1?entry=ttu",
-  },
-];
-
-function Trabalho() {
+function Saude() {
   const [termoBusca, setTermoBusca] = useState<string>("");
 
-  const [usuarios, setUsuarios] = useState<typesInteresses[]>([]);
+  const [saude, setSaude] = useState<typesInteresses[]>([]);
 
   useEffect(() => {
     carregarInteresses();
@@ -117,23 +16,23 @@ function Trabalho() {
 
   const carregarInteresses = async () => {
     try {
-      const json = await api.carregarInterreses();
+      const json = await api.carregarSaude();
       const dataAraay = Array.isArray(json) ? json : [json];
 
-      setUsuarios(dataAraay);
+      setSaude(dataAraay);
     } catch (error) {
       console.error("Erro ao carregar interesses:", error);
     }
   };
 
 
-  const locaisFiltrados = locaisDeTrabalho.filter((local) =>
+  const locaisFiltrados = saude.filter((local) =>
     local.nome.toLowerCase().includes(termoBusca.toLowerCase())
   );
   return (
     <div className="trabalho-container">
     <header className="header-input">
-    <h2>Saude</h2>
+    <h2>Saúde</h2>
         <div className="input-wrapper">
           <div>
             <input
@@ -167,28 +66,17 @@ function Trabalho() {
           <ul className="card" key={index}>
             <h3>{local.nome}</h3>
             <li className="header-card">
-              <h3>Endereço :</h3>
-              <p>{local.endereco}</p>
-            </li>
-            <li className="header-card">
-              <h3>contato :</h3>
-              <p>{local.contato}</p>
+              <h3>Telefone :</h3>
+              <p>{local.Numero}</p>
             </li>
             <li className="header-card">
               <h3>Horário de funcionamento :</h3>
               <p>
-                {Object.entries(local.horarioFuncionamento).map(
-                  ([dia, horario]) => (
-                    <React.Fragment key={dia}>
-                      {`${dia}: ${horario}`}
-                      <br />
-                    </React.Fragment>
-                  )
-                )}
+                {local.Horario}
               </p>
             </li>
             <hr />
-            <a href={local.linkMapa}>
+            <a href={local.LinkMaps}>
               <img src="maps.svg" alt="" />
             </a>
           </ul>
@@ -200,4 +88,4 @@ function Trabalho() {
   );
 }
 
-export default Trabalho;
+export default Saude;

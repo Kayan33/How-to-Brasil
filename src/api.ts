@@ -1,12 +1,32 @@
 import { title } from "process";
 
 export const api = {
+  carregarSaude: async () => {
+    let response = await fetch("http://localhost:3001/interesses/1");
+    let json = await response.json();
+
+    return json;
+  },
+  carregarEducacao: async () => {
+    let response = await fetch("http://localhost:3001/interesses/2");
+    let json = await response.json();
+
+    return json;
+  },
+  carregarApoio: async () => {
+    let response = await fetch("http://localhost:3001/interesses/3");
+    let json = await response.json();
+
+    return json;
+  },
+
   carregarInterreses: async () => {
     let response = await fetch("http://localhost:3001/interesses/");
     let json = await response.json();
 
     return json;
   },
+
 
   carregarMoradia: async () => {
     let response = await fetch("http://localhost:3001/moradia");
