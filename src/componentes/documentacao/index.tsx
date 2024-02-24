@@ -44,38 +44,9 @@ function Documentacao() {
 
   return (
     <div className="trabalho-container">
-      <header className="header-input">
-        <h2>Documentação</h2>
-        <div className="input-wrapper">
-          <div>
-            <input
-              type="text"
-              value={termoBusca}
-              onChange={(ev) => setTermoBusca(ev.target.value)}
-              placeholder="Digite o nome do local"
-            />
-          </div>
-          <div className="select-wrapper">
-            <select
-              value={termoBusca}
-              onChange={(ev) => setTermoBusca(ev.target.value)}
-            >
-              <option value="">Filtro</option>
-              <option value="Farmacia">Farmacia</option>
-              <option value="Posto de Saude">Posto de Saude</option>
-              <option value="Refugiado">Refugiado</option>
-              <option value="Asilado">Asilado</option>
-              <option value="Trabalhador Temporário">
-                Trabalhador Temporário
-              </option>
-              <option value="Residente Permanente">Residente Permanente</option>
-            </select>
-          </div>
-        </div>
-      </header>
 
       <div className="container-perguntas">
-        <h1>Perguntas frequentes</h1>
+        <h1>Documentação</h1>
         <ul className="container-peguntas-respostas">
           {locaisFiltrados.map((local, index) => (
             <li
@@ -92,8 +63,7 @@ function Documentacao() {
 
               {perguntaExpandida === index && (
                 <div className="resposta">
-                  {local.documentacao}
-                  {local.documentacao}
+                <p>{local.documentacao}</p> 
                   <a href={local.linkGoverno as string}>Link para o governo</a>
                 </div>
               )}

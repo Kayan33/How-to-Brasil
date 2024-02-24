@@ -1,6 +1,7 @@
 .trabalho-container {
   padding: 80px 41px 94px 141px;
   background: #edf3fb;
+  min-height: 100vh;
 }
 
 .header-input {
@@ -44,7 +45,6 @@
 
 .header-card {
   display: flex;
-  
   align-items: baseline;
 }
 
@@ -57,6 +57,7 @@
   border-radius: 24px;
   transition: transform 0.5s ease;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 420px;
 }
 
 
