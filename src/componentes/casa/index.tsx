@@ -4,7 +4,6 @@ import { typesMoradia } from "../../types/moradia";
 import "../../style/trabalho.css";
 
 function Trabalho() {
-  const [termoBusca, setTermoBusca] = useState<string>("");
   const [ordem, setOrdem] = useState<string>("asc");
   const [moradia, setMoradia] = useState<typesMoradia[]>([]);
 
@@ -22,12 +21,6 @@ function Trabalho() {
     }
   };
 
-  const locaisFiltrados = moradia.filter(
-    (local) =>
-      local.nome.toLowerCase().includes(termoBusca.toLowerCase()) ||
-      local.valor.toLowerCase().includes(termoBusca.toLowerCase())
-  );
-
   const ordenarPorValor = (a: typesMoradia, b: typesMoradia) => {
     const valorA = parseFloat(a.valor.replace(/[^\d.-]/g, ""));
     const valorB = parseFloat(b.valor.replace(/[^\d.-]/g, ""));
@@ -39,26 +32,16 @@ function Trabalho() {
     }
   };
 
-  const locaisOrdenados = [...locaisFiltrados].sort(ordenarPorValor);
+  const locaisOrdenados = [...moradia].sort(ordenarPorValor);
 
   return (
     <div className="trabalho-container">
       <header className="header-input">
         <h2>Moradia </h2>
+        <h2>Abrigamento</h2>
         <div className="input-wrapper">
-          <div>
-            <input
-              type="text"
-              value={termoBusca}
-              onChange={(ev) => setTermoBusca(ev.target.value)}
-              placeholder="Digite o nome do local"
-            />
-          </div>
           <div className="select-wrapper">
             <select value={ordem} onChange={(ev) => setOrdem(ev.target.value)}>
-              <option  value="">
-                Filtro
-              </option>
               <option value="asc">Barato → Caro</option>
               <option value="desc">Caro → Barato</option>
             </select>
@@ -74,7 +57,6 @@ function Trabalho() {
               id="foto-casa"
               alt={`Foto de ${local.nome}`}
             />
-
             <li className="header-card">
               <h3>{local.nome}</h3>
             </li>
@@ -87,12 +69,10 @@ function Trabalho() {
                 <h3>area</h3>
                 <p>{local.area}</p>
               </li>
-
               <li>
                 <h3>Quartos</h3>
                 <p>{local.quartos}</p>
               </li>
-
               <li>
                 <h3>Banheiro</h3>
                 <p>{local.banheiro}</p>
@@ -102,15 +82,13 @@ function Trabalho() {
                 <p>{local.vagas}</p>
               </li>
             </li>
-
             <hr />
             <ul className="detalhes-valores">
               <li>
                 <h2>{local.valor}</h2>
               </li>
-
-              <li>
-                {local.linkCorrelatos && (
+              {local.linkCorrelatos && (
+                <li>
                   <a
                     className="saiba-mais"
                     href={local.linkCorrelatos}
@@ -119,8 +97,8 @@ function Trabalho() {
                   >
                     VER MAIS
                   </a>
-                )}
-              </li>
+                </li>
+              )}
             </ul>
           </ul>
         ))}

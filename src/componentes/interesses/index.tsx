@@ -46,7 +46,7 @@ function Interesses() {
             imigrantes.
           </p>
           <hr />
-          <Link className="saiba-mais" to="/Apio">
+          <Link className="saiba-mais" to="/apoio">
             VER MAIS
           </Link>
         </div>
@@ -61,7 +61,7 @@ function Interesses() {
             focada em ensino médio e técnico, e por fim a esfera federal, normalmente voltada para ensino superior.
           </p>
           <hr />
-          <Link className="saiba-mais" to="/Educação">
+          <Link className="saiba-mais" to="/educacao">
             VER MAIS
           </Link>
         </div>
@@ -76,7 +76,7 @@ function Interesses() {
              pré-determinados com custo abaixo da média de mercado.
           </p>
           <hr />
-          <Link className="saiba-mais" to="Casa">
+          <Link className="saiba-mais" to="/casa">
             VER MAIS
           </Link>
         </div>
@@ -92,7 +92,7 @@ function Interesses() {
              tirar duvidas a respeito deste assunto.
           </p>
           <hr />
-          <Link className="saiba-mais" to="/Documentação">
+          <Link className="saiba-mais" to="/documentacao">
             VER MAIS
           </Link>
         </div>

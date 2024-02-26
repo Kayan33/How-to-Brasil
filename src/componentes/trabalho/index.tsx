@@ -16,7 +16,7 @@ function Trabalho() {
 
   const carregarInteresses = async () => {
     try {
-      const json = await api.carregarInterreses();
+      const json = await api.carregarTrabalho();
       const dataAraay = Array.isArray(json) ? json : [json];
       setLocaisDeTrabalho(dataAraay);
     } catch (error) {

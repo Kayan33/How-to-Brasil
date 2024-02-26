@@ -4,10 +4,7 @@
   min-height: 100vh;
 }
 
-.header-input {
-  text-align: center;
-  
-}
+
 .input-wrapper{
   display: flex;
   flex-wrap: wrap;

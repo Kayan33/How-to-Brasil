@@ -17,7 +17,7 @@ function Menu() {
   return (
     <div className="bg-Dashboard">
       <header className="perfl">
-        <Link className="logo" to="">
+        <Link className="logo" to="/Usuario">
           How to <br />
           Brasil
         </Link>

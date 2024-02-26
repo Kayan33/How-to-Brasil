@@ -77,7 +77,7 @@ img {
 
 .informacao-bg {
   display: flex;
-  margin: 54px 100px 100px 100px;
+  padding: 54px 100px 100px 100px;
 }
 .informacao-bg::before {
   content: "";
@@ -130,9 +130,6 @@ img {
   margin-bottom: 52px;
 }
 
-.informacao a {
-  margin-left: 150px;
-}
 
 .saiba-mais {
   color: #f6f6f6;
@@ -146,13 +143,38 @@ img {
   display: inline-block;
 }
 @media (max-width: 800px) {
+  .informacao-bg{
+    padding: 0px 50px 50px 50px;
+  }
   .informacao h1::before {
     content: none; 
-    display: none; /* Ocultando o pseudo-elemento */
+    display: none; 
+  }
+  .informacao h1 {
+    font-size: 35px; 
+  }
+  
+  .informacao-bg::before {
+    content: none; 
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .informacao h1::before {
+    content: none; 
+    display: none; 
   }
   .informacao-bg::before {
     content: none; 
     display: none;
+  }
+  .informacao h1 {
+    font-size: 27px; 
+  }
+  .informacao p {
+    font-size: 14px; 
+    margin-bottom: 25px;
   }
 }
 /* corpo02 */
@@ -221,7 +243,7 @@ img {
     margin-bottom: 30px;
   }
   .guia-bg {
-    padding: 0px 50px 94px 50px;
+    padding: 30px 50px 94px 50px;
     background: #edfdf2;
   }
 }
@@ -283,6 +305,17 @@ img {
   margin-bottom: 20px;
   }
   .sobre p {
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width:500px){
+  .sobre h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    }
+  .sobre p {
+    font-size: 14px;
     margin-bottom: 25px;
   }
 }
