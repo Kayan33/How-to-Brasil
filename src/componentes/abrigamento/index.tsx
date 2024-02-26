@@ -6,7 +6,7 @@ import { typeDocumento } from "../../types/documentacao";
 
 const TEMPO_DE_ESPERA = 150;
 
-function Documentacao() {
+function Abrigamento() {
   const [termoBusca, setTermoBusca] = useState<string>("");
   const [documentacao, setDocumentacao] = useState<typeDocumento[]>([]);
   const [perguntaExpandida, setPerguntaExpandida] = useState<number | null>(
@@ -43,9 +43,14 @@ function Documentacao() {
 
   return (
     <div className="trabalho-container">
-
       <div className="container-perguntas">
-        <h1>Documentação</h1>
+        <div className="header-nome">
+          <h2>Abrigamento </h2>
+
+          <Link className="header-link-trabalho " to="/casa">
+            Casa
+          </Link>
+        </div>
         <ul className="container-peguntas-respostas">
           {locaisFiltrados.map((local, index) => (
             <li
@@ -62,7 +67,7 @@ function Documentacao() {
 
               {perguntaExpandida === index && (
                 <div className="resposta">
-                <p>{local.documentacao}</p> 
+                  <p>{local.documentacao}</p>
                   <a href={local.linkGoverno as string}>Link para o governo</a>
                 </div>
               )}
@@ -74,4 +79,4 @@ function Documentacao() {
   );
 }
 
-export default Documentacao;
+export default Abrigamento;

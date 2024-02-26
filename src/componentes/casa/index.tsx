@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { api } from "../../api";
 import { typesMoradia } from "../../types/moradia";
 import "../../style/trabalho.css";
+import { Link } from "react-router-dom";
 
 function Trabalho() {
   const [ordem, setOrdem] = useState<string>("asc");
@@ -37,8 +38,18 @@ function Trabalho() {
   return (
     <div className="trabalho-container">
       <header className="header-input">
-        <h2>Moradia </h2>
-        <h2>Abrigamento</h2>
+        <div className="header-nome">
+
+        <h2>Casa </h2>
+       
+       
+
+        <Link className="header-link-trabalho " to="/abrigamento">
+          Abrigamento
+        </Link>
+        
+        </div>
+
         <div className="input-wrapper">
           <div className="select-wrapper">
             <select value={ordem} onChange={(ev) => setOrdem(ev.target.value)}>

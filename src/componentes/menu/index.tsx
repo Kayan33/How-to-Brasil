@@ -10,7 +10,7 @@ function Menu() {
     { icon: "/dashboard/educacao.svg", label: "Educação", link: "/educacao" },
     { icon: "/dashboard/documentacao.svg", label: "Documentação", link: "/documentacao" },
     { icon: "/dashboard/casa.svg", label: "Casa", link: "/casa" },
-    { icon: "/dashboard/apoio.svg", label: "Apoio", link: "/apoio" },
+    { icon: "/dashboard/apoio.svg", label: "Apoio", link: "/apoio",},
     { icon: "/dashboard/saude.svg", label: "Saúde", link: "/saude" },
   ];
 

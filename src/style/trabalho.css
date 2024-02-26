@@ -4,6 +4,43 @@
   min-height: 100vh;
 }
 
+.header-nome h2{
+font-size: 25px;
+position: relative;
+}
+.header-nome h2::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -7px;
+  width: 4px;
+  height: 25px;
+  background-color: #3179d7;
+}
+
+.header-link-trabalho{
+  font-size: 25px;
+  color: #000;
+  font-size: 32px;
+  position: relative;
+}
+.header-link-trabalho::after {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 0px;
+  background: #3179d7;
+  margin-top: -2px;
+  transition: 0.8s;
+  position: absolute;
+}
+.header-link-trabalho:hover:after {
+  width: 100%;
+}
+
+.header-link-trabalho:hover {
+  color: #3179d7;
+}
 
 .input-wrapper{
   display: flex;
