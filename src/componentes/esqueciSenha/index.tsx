@@ -1,27 +1,53 @@
 import "../../style/stylelogin.css";
 import "../../style/style.css";
-import { Link, useParams } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
-import {useState} from 'react';
+import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
+import { useContext, useState } from 'react';
 import React from 'react';
-
+import { api } from "../../api";
+import { typeLogin } from "../../types/login";
+import { UsuarioLogadoContext } from "../../contexts/contextAuth";
 
 
 function EsqueciSenha() {
-const [email, SetEmail] = useState('');
-
-function handleInputEmail (event: React.ChangeEvent< HTMLInputElement >) {
-
-  SetEmail(event.target.value);
-  
-}
-
+  const [email, SetEmail] = useState('');
+  const [senha, SetSenha] = useState('');
+  const [trocaSenha, setTrocaSenha] = useState<typeLogin[]>([]);
 
   const navigate = useNavigate();
-  const params = useParams();
-  function handleClick() {
-    navigate("/Cadastrar");
+
+
+  function handleInputEmail(event: React.ChangeEvent<HTMLInputElement>) {
+
+    SetEmail(event.target.value);
+
   }
+  function handleInputSenha(event: React.ChangeEvent<HTMLInputElement>) {
+
+    SetSenha(event.target.value);
+
+  }
+
+  const UsuarioLogadoCtx = useContext(UsuarioLogadoContext);
+
+
+
+  const handTrocaSenha = async () => {
+    let json = await api.TrocaSenha(
+      email,
+      senha,
+    );
+
+
+    if (json.status) {
+      alert("Login realizado com sucesso!");
+      setTrocaSenha((login) => [...login, json]);
+      UsuarioLogadoCtx?.setName(email);
+      navigate('/Usuario');
+    } else {
+      alert(json.message);
+    }
+    console.log(json);
+  };
 
   return (
     <div className="divlogin">
@@ -31,29 +57,28 @@ function handleInputEmail (event: React.ChangeEvent< HTMLInputElement >) {
         </Link>
 
         <p className="acesso">
-          
+
           <strong>Esqueceu a senha?</strong>
         </p>
-        <p className="acesso1">Informe seu email cadastrado para receber instruções de redefinição de senha. </p>
+        <p className="acesso1">Informe seu email cadastrado para localizar e redefinir sua senha. </p>
 
-        <input type="email" placeholder="email@email.com.br"  value={email} onChange={handleInputEmail} />
+        <input type="email" placeholder="email@email.com.br" value={email} onChange={handleInputEmail} />
+        <input type="password" placeholder="Senha" value={senha} onChange={handleInputSenha} />
+        <br />
 
-            <br/>
-
-        <Link className="entrar" to="/Cadastrar">
+        <button className="entrar" onClick={handTrocaSenha}>
           Entrar
-        </Link>
+        </button>
 
-            <br/>
+        <br />
 
-        <div className="ou">
-          <hr />  <p>ou</p>   <hr />
-        </div>
 
-        
+
+
+
 
         <div className="cadastre-se">
-          <p> Retorne para </p>
+          <p> Retornar para </p>
           <Link to="/Login">Login</Link>
         </div>
 

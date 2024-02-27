@@ -97,6 +97,38 @@ export const api = {
     
     
   }
+  
+
+  
 
 
-}}
+},
+
+TrocaSenha: async (email: String,senha: String,) => {
+  {
+    let response = await fetch("http://localhost:3001/usuarios/trocaSenha", {
+      method: 'POST',
+      body: JSON.stringify({
+        
+        email,
+        senha,
+
+      }),
+      headers: {
+        'Content-Type': 'application/json' 
+      }
+    });
+    
+    const json = await response.json();
+    console.log(json);
+    return json;
+  
+  
+}
+
+
+
+
+
+},
+}
