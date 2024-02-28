@@ -33,7 +33,13 @@ function Educacao() {
   return (
     <div className="trabalho-container">
       <header className="header-input">
-        <h2>Educação</h2>
+      <div className="header-nome">
+          <h2>Educação </h2>
+
+          <Link className="header-link-trabalho " to="/duvidaeducacao">
+            Dúvidas Educação
+          </Link>
+        </div>
         <div className="input-wrapper">
           <div>
             <input

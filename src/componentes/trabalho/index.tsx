@@ -31,7 +31,13 @@ function Trabalho() {
   return (
     <div className="trabalho-container">
       <header className="header-input">
-      <h2>Trabalho</h2>
+      <div className="header-nome">
+          <h2>Trabalho </h2>
+
+          <Link className="header-link-trabalho " to="/duvidatrabalho">
+            Dúvidas Trabalho
+          </Link>
+        </div>
         <div className="input-wrapper">
           <div>
             <input

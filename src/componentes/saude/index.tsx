@@ -25,14 +25,19 @@ function Saude() {
     }
   };
 
-
   const locaisFiltrados = saude.filter((local) =>
     local.nome.toLowerCase().includes(termoBusca.toLowerCase())
   );
   return (
     <div className="trabalho-container">
-    <header className="header-input">
-    <h2>Saúde</h2>
+      <header className="header-input">
+        <div className="header-nome">
+          <h2>Saúde </h2>
+
+          <Link className="header-link-trabalho " to="/abrigamento">
+            Dúvidas Saúde
+          </Link>
+        </div>
         <div className="input-wrapper">
           <div>
             <input
@@ -59,9 +64,9 @@ function Saude() {
             </select>
           </div>
         </div>
-    </header>
+      </header>
 
-    <main className="trabalho-bg">
+      <main className="trabalho-bg">
         {locaisFiltrados.map((local, index) => (
           <ul className="card" key={index}>
             <h3>{local.nome}</h3>
@@ -71,9 +76,7 @@ function Saude() {
             </li>
             <li className="header-card">
               <h3>Horário de funcionamento :</h3>
-              <p>
-                {local.Horario}
-              </p>
+              <p>{local.Horario}</p>
             </li>
             <hr />
             <a href={local.LinkMaps}>
@@ -82,9 +85,7 @@ function Saude() {
           </ul>
         ))}
       </main>
-  </div>
-
-    
+    </div>
   );
 }
 

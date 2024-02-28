@@ -32,7 +32,13 @@ function Apoio() {
   return (
     <div className="trabalho-container">
     <header className="header-input">
-    <h2>Apoio</h2>
+    <div className="header-nome">
+          <h2>Apoio </h2>
+
+          <Link className="header-link-trabalho " to="/duvidaapoio">
+            Dúvidas Apoio
+          </Link>
+        </div>
         <div className="input-wrapper">
           <div>
             <input
