@@ -6,6 +6,7 @@ function Menu() {
   const location = useLocation();
 
   const menuItems = [
+    { icon: "/dashboard/data.svg", label: "Usuario", link: "/Usuario" },
     { icon: "/dashboard/trabalho.svg", label: "Trabalho", link: "/trabalho" },
     { icon: "/dashboard/educacao.svg", label: "Educação", link: "/educacao" },
     { icon: "/dashboard/documentacao.svg", label: "Documentação", link: "/documentacao" },
