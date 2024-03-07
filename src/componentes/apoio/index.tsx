@@ -35,7 +35,7 @@ function Apoio() {
     <div className="header-nome">
           <h2>Apoio </h2>
 
-          <Link className="header-link-trabalho " to="/duvidaapoio">
+          <Link className="header-link-trabalho " to="/duvidasapoio">
             Dúvidas Apoio
           </Link>
         </div>

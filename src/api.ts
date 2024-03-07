@@ -16,17 +16,11 @@ export const api = {
   carregarApoio: async () => {
     let response = await fetch("http://localhost:3001/interesses/3");
     let json = await response.json();
-
+    
     return json;
   },
-
-  carregarInterreses: async () => {
-    let response = await fetch("http://localhost:3001/interesses/");
-    let json = await response.json();
-
-    return json;
-  },
-
+  
+  
 
   carregarMoradia: async () => {
     let response = await fetch("http://localhost:3001/moradia");
@@ -48,6 +42,7 @@ export const api = {
 
     return json;
   },
+
  
   adicionarCadastro: async (nome: String,ultimoNome: String, statusMigratorio: String,interesses: String,email: String,senha: String,) => {
     {

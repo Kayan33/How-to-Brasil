@@ -15,6 +15,9 @@ import Pgecasa from "./pages/casa";
 import Pgeapoio from "./pages/Apoio";
 import Pgedocumentacao from "./pages/documentacao";
 import PgAbrigamento from "./pages/abrigo";
+import PgDuvidasSaude from "./pages/duvidapgssaude";
+import PgDuvidasApoio from "./pages/duvidaspgapoio";
+import PgDuvidasEducacao from "./pages/duvidaspgeducacao";
 
 
 function App() {
@@ -38,6 +41,9 @@ function App() {
         <Route path='/casa' element={<Pgecasa/>}></Route>
         <Route path='/apoio' element={<Pgeapoio/>}></Route>
         <Route path='/abrigamento' element={<PgAbrigamento/>}></Route>
+        <Route path='/duvidassaude' element={<PgDuvidasSaude/>}></Route>
+        <Route path='/duvidasapoio' element={<PgDuvidasApoio/>}></Route>
+        <Route path='/duvidaseducacao' element={<PgDuvidasEducacao/>}></Route>
 
         
       </Routes>

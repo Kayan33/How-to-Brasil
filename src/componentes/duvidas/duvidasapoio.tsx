@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import "../../style/trabalho.css";
 import { api } from "../../api";
-import { typesMoradia } from "../../types/moradia";
+import { typesInteresses } from "../../types/Interesses";
 
 const TEMPO_DE_ESPERA = 150;
 
-function Abrigamento() {
+function DuvidasApio() {
   const [termoBusca, setTermoBusca] = useState<string>("");
-  const [documentacao, setDocumentacao] = useState<typesMoradia[]>([]);
+  const [documentacao, setDocumentacao] = useState<typesInteresses[]>([]);
   const [perguntaExpandida, setPerguntaExpandida] = useState<number | null>(
     null
   );
@@ -29,7 +29,7 @@ function Abrigamento() {
 
   const carregarInteresses = async () => {
     try {
-      const json = await api.carregarMoradia();
+      const json = await api.carregarApoio();
       const dataAraay = Array.isArray(json) ? json : [json];
       setDocumentacao(dataAraay);
     } catch (error) {
@@ -45,10 +45,10 @@ function Abrigamento() {
     <div className="trabalho-container">
       <div className="container-perguntas">
         <div className="header-nome">
-          <h2>Abrigamento </h2>
+          <h2>Dúvidas Apoio </h2>
 
-          <Link className="header-link-trabalho " to="/casa">
-            Casa
+          <Link className="header-link-trabalho " to="/apoio">
+          Apoio
           </Link>
         </div>
         <ul className="container-peguntas-respostas">
@@ -78,4 +78,4 @@ function Abrigamento() {
   );
 }
 
-export default Abrigamento;
+export default DuvidasApio;

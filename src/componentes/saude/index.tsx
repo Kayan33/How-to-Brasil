@@ -34,7 +34,7 @@ function Saude() {
         <div className="header-nome">
           <h2>Saúde </h2>
 
-          <Link className="header-link-trabalho " to="/abrigamento">
+          <Link className="header-link-trabalho " to="/duvidassaude">
             Dúvidas Saúde
           </Link>
         </div>

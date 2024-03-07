@@ -9,4 +9,6 @@ export type typesMoradia = {
     banheiro: number;
     vagas: number;
     foto: string;
+  interacao: number;
+  subInteracao: number;
 }
