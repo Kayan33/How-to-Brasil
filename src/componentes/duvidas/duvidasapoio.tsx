@@ -8,7 +8,7 @@ const TEMPO_DE_ESPERA = 150;
 
 function DuvidasApio() {
   const [termoBusca, setTermoBusca] = useState<string>("");
-  const [documentacao, setDocumentacao] = useState<typesInteresses[]>([]);
+  const [apoio, setapoio] = useState<typesInteresses[]>([]);
   const [perguntaExpandida, setPerguntaExpandida] = useState<number | null>(
     null
   );
@@ -31,15 +31,13 @@ function DuvidasApio() {
     try {
       const json = await api.carregarApoio();
       const dataAraay = Array.isArray(json) ? json : [json];
-      setDocumentacao(dataAraay);
+      setapoio(dataAraay);
     } catch (error) {
       console.error("Erro ao carregar interesses:", error);
     }
   };
 
-  const locaisFiltrados = documentacao.filter((local) =>
-    local.nome.toLowerCase().includes(termoBusca.toLowerCase())
-  );
+
 
   return (
     <div className="trabalho-container">
@@ -52,7 +50,7 @@ function DuvidasApio() {
           </Link>
         </div>
         <ul className="container-peguntas-respostas">
-          {locaisFiltrados.map((local, index) => (
+          {apoio.map((local, index) => (
             <li
               key={index}
               className={`pergunta ${

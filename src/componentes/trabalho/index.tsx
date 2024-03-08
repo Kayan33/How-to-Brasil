@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import "../../style/trabalho.css";
-import { typesInteresses } from "../../types/Interesses";
 import { api } from "../../api";
+import { typesTrabalho } from "../../types/trabalho";
 
 
 
 function Trabalho() {
   const [termoBusca, setTermoBusca] = useState<string>("");
-  const [locaisDeTrabalho, setLocaisDeTrabalho] = useState<typesInteresses[]>([]);
+  const [locaisDeTrabalho, setLocaisDeTrabalho] = useState<typesTrabalho[]>([]);
 
   useEffect(() => {
     carregarInteresses();
@@ -25,7 +25,7 @@ function Trabalho() {
   };
 
   const locaisFiltrados = locaisDeTrabalho.filter((local) =>
-    local.nome.toLowerCase().includes(termoBusca.toLowerCase())
+    local.trabalho.toLowerCase().includes(termoBusca.toLowerCase())
   );
 
   return (
@@ -34,7 +34,7 @@ function Trabalho() {
       <div className="header-nome">
           <h2>Trabalho </h2>
 
-          <Link className="header-link-trabalho " to="/duvidatrabalho">
+          <Link className="header-link-trabalho " to="/duvidastrabalho">
             Dúvidas Trabalho
           </Link>
         </div>
@@ -69,20 +69,20 @@ function Trabalho() {
       <main className="trabalho-bg">
         {locaisFiltrados.map((local, index) => (
           <ul className="card" key={index}>
-            <h3>{local.nome}</h3>
+            <h3>{local.trabalho}</h3>
             
             <li className="header-card">
-              <h3>Telefone :</h3>
-              <p>{local.Numero}</p>
+              <h3>Requisitos :</h3>
+              <p>{local.preRequisitos}</p>
             </li>
             <li className="header-card">
-              <h3>Horário de funcionamento :</h3>
+              <h3>salário:</h3>
               <p>
-                {local.Horario}
+                {local.salario}
               </p>
             </li>
             <hr />
-            <a href={local.LinkMaps}>
+            <a href={local.siteEmpresa}>
               <img src="maps.svg" alt="" />
             </a>
           </ul>

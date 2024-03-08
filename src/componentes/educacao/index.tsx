@@ -80,7 +80,7 @@ function Educacao() {
             <li className="header-card">
               <h3>Horário de funcionamento :</h3>
               <p>
-                {local.Numero}
+                {local.Horario}
               </p>
             </li>
             <hr />

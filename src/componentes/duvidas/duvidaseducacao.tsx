@@ -8,7 +8,7 @@ const TEMPO_DE_ESPERA = 150;
 
 function DuvidasEducacao() {
   const [termoBusca, setTermoBusca] = useState<string>("");
-  const [documentacao, setDocumentacao] = useState<typesInteresses[]>([]);
+  const [educacao, setEducacao] = useState<typesInteresses[]>([]);
   const [perguntaExpandida, setPerguntaExpandida] = useState<number | null>(
     null
   );
@@ -31,15 +31,11 @@ function DuvidasEducacao() {
     try {
       const json = await api.carregarEducacao();
       const dataAraay = Array.isArray(json) ? json : [json];
-      setDocumentacao(dataAraay);
+      setEducacao(dataAraay);
     } catch (error) {
       console.error("Erro ao carregar interesses:", error);
     }
   };
-
-  const locaisFiltrados = documentacao.filter((local) =>
-    local.nome.toLowerCase().includes(termoBusca.toLowerCase())
-  );
 
   return (
     <div className="trabalho-container">
@@ -52,7 +48,7 @@ function DuvidasEducacao() {
           </Link>
         </div>
         <ul className="container-peguntas-respostas">
-          {locaisFiltrados.map((local, index) => (
+          {educacao.map((local, index) => (
             <li
               key={index}
               className={`pergunta ${

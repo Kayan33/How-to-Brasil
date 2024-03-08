@@ -18,6 +18,7 @@ import PgAbrigamento from "./pages/abrigo";
 import PgDuvidasSaude from "./pages/duvidapgssaude";
 import PgDuvidasApoio from "./pages/duvidaspgapoio";
 import PgDuvidasEducacao from "./pages/duvidaspgeducacao";
+import PgDuvidasTrabalho from "./pages/duvidaspgtrabalho";
 
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
         <Route path='/duvidassaude' element={<PgDuvidasSaude/>}></Route>
         <Route path='/duvidasapoio' element={<PgDuvidasApoio/>}></Route>
         <Route path='/duvidaseducacao' element={<PgDuvidasEducacao/>}></Route>
+        <Route path='/duvidastrabalho' element={<PgDuvidasTrabalho/>}></Route>
 
         
       </Routes>

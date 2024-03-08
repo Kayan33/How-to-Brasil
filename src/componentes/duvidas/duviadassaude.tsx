@@ -7,8 +7,7 @@ import { typesInteresses } from "../../types/Interesses";
 const TEMPO_DE_ESPERA = 150;
 
 function DuvidasSaude() {
-  const [termoBusca, setTermoBusca] = useState<string>("");
-  const [documentacao, setDocumentacao] = useState<typesInteresses[]>([]);
+  const [saude, setSaude] = useState<typesInteresses[]>([]);
   const [perguntaExpandida, setPerguntaExpandida] = useState<number | null>(
     null
   );
@@ -31,15 +30,13 @@ function DuvidasSaude() {
     try {
       const json = await api.carregarSaude();
       const dataAraay = Array.isArray(json) ? json : [json];
-      setDocumentacao(dataAraay);
+      setSaude(dataAraay);
     } catch (error) {
       console.error("Erro ao carregar interesses:", error);
     }
   };
 
-  const locaisFiltrados = documentacao.filter((local) =>
-    local.nome.toLowerCase().includes(termoBusca.toLowerCase())
-  );
+  
 
   return (
     <div className="trabalho-container">
@@ -52,7 +49,7 @@ function DuvidasSaude() {
           </Link>
         </div>
         <ul className="container-peguntas-respostas">
-          {locaisFiltrados.map((local, index) => (
+          {saude.map((local, index) => (
             <li
               key={index}
               className={`pergunta ${

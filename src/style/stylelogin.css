@@ -1,150 +1,132 @@
-*{
-    text-decoration: none;
-    list-style: none;
+* {
+  text-decoration: none;
+  list-style: none;
 }
 
-
-
-
-
-.divlogin{
-background-image: url(../../public/thay-pellerin.png);
-display: flex;
-flex-direction: column;
-align-items: flex-end;
-background-position: center bottom;
-background-repeat: no-repeat;
-height: 100vh;
-overflow-x: hidden;
-
+.divlogin {
+  background-image: url(../../public/thay-pellerin.png);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
-.divlogin1{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: white;
-    padding: 20px;
-    max-width: 400px;
-    height: 1024px;
+.divlogin1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+  max-width: 400px;
+  height: 1024px;
 }
-.divlogin1 .logo{
-    margin-bottom: 45px;
-    align-self: center;
-}
-
-.acesso{
-    color: #262420;
-    font-family: Arial;
-    font-size: 24px;
-font-weight: 700;
-margin-bottom: 17px;
-
+.divlogin1 .logo {
+  margin-bottom: 45px;
+  align-self: center;
 }
 
-.acesso1{
-color: #262420;
-font-family: Arial;
-font-size: 14px;
-font-weight: 400;
-margin-bottom: 32px;
+.acesso {
+  color: #262420;
+  font-family: Arial;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 17px;
 }
 
+.acesso1 {
+  color: #262420;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 32px;
+}
 
-
-.divlogin1 input{
-    background: #F2F2F2;
-    margin-bottom: 16px;
-    border: 1px solid #817D75;
-    padding: 15px 15px;
-    border-radius: 5px;
-    font-size: 17px;
-    width: 330px;
-
+.divlogin1 input {
+  background: #f2f2f2;
+  margin-bottom: 16px;
+  border: 1px solid #817d75;
+  padding: 15px 15px;
+  border-radius: 5px;
+  font-size: 17px;
+  width: 330px;
 }
 
 ::placeholder {
-    color: #888888; 
-    font-size: 17px;  
-  }
-  
+  color: #888888;
+  font-size: 17px;
+}
+
 input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-margin-right: 5px;
-
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
 }
-.conectado_esqueci{
-    display: flex;
-    align-items: center;
-    margin-bottom: 28px;
-    
+.conectado_esqueci {
+  display: flex;
+  align-items: center;
+  margin-bottom: 28px;
 }
-.conectado_esqueci label{
-    color: #262420;
-    font-size: 14px;
-    margin-right: 90px;
+.conectado_esqueci label {
+  color: #262420;
+  font-size: 14px;
+  margin-right: 90px;
 }
 
-.conectado_esqueci a{
-    color: #5731FF;
-    font-size: 14px;
-    text-decoration:underline;
-   
+.conectado_esqueci a {
+  color: #5731ff;
+  font-size: 14px;
+  text-decoration: underline;
 }
 
-.entrar{
-    padding: 17px 140px 17px 150px;
-    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.25);
-    background-color: #4CAF50; /* Cor de fundo verde */
-  border: none; /* Sem borda */
-  color: white; /* Texto branco */
-  text-align: center; /* Alinhar texto ao centro */
-  text-decoration: none; /* Sem decoração de texto */
-  display: inline-block; /* Exibir como bloco */
-  font-size: 16px; /* Tamanho da fonte */
-  margin: 4px 2px; /* Margem externa */
-  cursor: pointer; /* Cursor do mouse */
-  border-radius: 8px; /* Borda arredondada */
-    }
-
-    .entrar:hover {
-        background-color: #45a049; /* Cor de fundo verde mais escura quando passar o mouse */
-      }
-
-.cadastre-se{
-    display: flex;
-    align-self: center;
-    gap: 12px;
-    margin-bottom: 46px;
+.entrar {
+  padding: 17px 140px 17px 150px;
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.25);
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
 }
 
-.cadastre-se a{
-    text-decoration: underline;
-    color: #5731FF;
+.entrar:hover {
+  background-color: #45a049;
 }
 
-.cadastre-se a:hover{
-    color: #000;
+.cadastre-se {
+  display: flex;
+  align-self: center;
+  gap: 12px;
+  margin-bottom: 46px;
 }
 
-.select{
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 20px;
+.cadastre-se a {
+  text-decoration: underline;
+  color: #5731ff;
 }
-.select select{
-    width: 100%;
+
+.cadastre-se a:hover {
+  color: #000;
+}
+
+.select {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 20px;
+}
+.select select {
+  width: 100%;
   padding: 10px;
   border: none;
   background-color: transparent;
   cursor: pointer;
   border: 1px solid #ccc;
 }
-
-
-
-
-
-
