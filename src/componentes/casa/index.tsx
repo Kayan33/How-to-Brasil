@@ -12,6 +12,10 @@ function Trabalho() {
     carregarMoradia();
   }, []);
 
+  useEffect(() => {
+    ordenarMoradia();
+  }, [ordem, moradia]);
+
   const carregarMoradia = async () => {
     try {
       const json = await api.carregarMoradia();
@@ -22,7 +26,16 @@ function Trabalho() {
     }
   };
 
-
+  const ordenarMoradia = () => {
+    const moradiasOrdenadas = [...moradia].sort((a, b) => {
+      if (ordem === "asc") {
+        return a.valor - b.valor;
+      } else {
+        return b.valor - a.valor;
+      }
+    });
+    setMoradia(moradiasOrdenadas);
+  };
 
   const formatarValor = (valorEmCentavos: number) => {
     const valorEmReais = (valorEmCentavos / 100).toFixed(2);
@@ -33,17 +46,11 @@ function Trabalho() {
     <div className="trabalho-container">
       <header className="header-input">
         <div className="header-nome">
-
-        <h2>Casa </h2>
-       
-       
-
-        <Link className="header-link-trabalho " to="/abrigamento">
-          Abrigamento
-        </Link>
-        
+          <h2>Casa </h2>
+          <Link className="header-link-trabalho " to="/abrigamento">
+            Abrigamento
+          </Link>
         </div>
-
         <div className="input-wrapper">
           <div className="select-wrapper">
             <select value={ordem} onChange={(ev) => setOrdem(ev.target.value)}>
