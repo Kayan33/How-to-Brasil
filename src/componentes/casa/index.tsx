@@ -22,18 +22,12 @@ function Trabalho() {
     }
   };
 
-  const ordenarPorValor = (a: typesMoradia, b: typesMoradia) => {
-    const valorA = parseFloat(a.valor.replace(/[^\d.-]/g, ""));
-    const valorB = parseFloat(b.valor.replace(/[^\d.-]/g, ""));
 
-    if (ordem === "asc") {
-      return valorA - valorB;
-    } else {
-      return valorB - valorA;
-    }
+
+  const formatarValor = (valorEmCentavos: number) => {
+    const valorEmReais = (valorEmCentavos / 100).toFixed(2);
+    return `R$ ${valorEmReais}`;
   };
-
-  const locaisOrdenados = [...moradia].sort(ordenarPorValor);
 
   return (
     <div className="trabalho-container">
@@ -61,7 +55,7 @@ function Trabalho() {
       </header>
 
       <main className="trabalho-bg">
-        {locaisOrdenados.map((local, index) => (
+        {moradia.map((local, index) => (
           <ul className="card" key={index}>
             <img
               src={local.foto}
@@ -96,7 +90,7 @@ function Trabalho() {
             <hr />
             <ul className="detalhes-valores">
               <li>
-                <h2>{local.valor}</h2>
+                <h2>{formatarValor(local.valor)}</h2>
               </li>
               {local.linkCorrelatos && (
                 <li>
