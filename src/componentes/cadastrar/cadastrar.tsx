@@ -66,7 +66,7 @@ function Cadastro() {
       senha
     );
 
-    if (json.status) {
+    if (json.status =  200) {
       alert("Cadastro feito com sucesso!");
       setCadastro((cadastro) => [...cadastro, json]);
       navigate("/Login");
