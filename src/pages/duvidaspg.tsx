@@ -3,10 +3,9 @@ import { useContext } from "react";
 import Menu from "../componentes/menu";
 import { UsuarioLogadoContext } from "../contexts/contextAuth";
 import "../style/usuario.css";
-import DuvidasEducacao from "../componentes/duvidas/duvidaseducacao";
+import DuvidasSaude from "../componentes/duvidas";
 
-function PgDuvidasEducacao
-() {
+function PgDuvidas() {
 
   const UsuarioLogadoCtx = useContext(UsuarioLogadoContext);
   return (
@@ -25,7 +24,7 @@ function PgDuvidasEducacao
         <Menu />
       </div>
       <div >
-        <DuvidasEducacao/>
+        <DuvidasSaude/>
       </div>
       </>
       }
@@ -35,5 +34,4 @@ function PgDuvidasEducacao
   );
 }
 
-export default PgDuvidasEducacao
-;
+export default PgDuvidas;

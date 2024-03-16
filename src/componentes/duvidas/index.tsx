@@ -2,13 +2,12 @@ import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import "../../style/trabalho.css";
 import { api } from "../../api";
-import { typesInteresses } from "../../types/Interesses";
+import { typesDuvidas } from "../../types/duvidas";
 
 const TEMPO_DE_ESPERA = 150;
 
-function DuvidasEducacao() {
-  const [termoBusca, setTermoBusca] = useState<string>("");
-  const [educacao, setEducacao] = useState<typesInteresses[]>([]);
+function Duvidas() {
+  const [saude, setSaude] = useState<typesDuvidas[]>([]);
   const [perguntaExpandida, setPerguntaExpandida] = useState<number | null>(
     null
   );
@@ -29,26 +28,22 @@ function DuvidasEducacao() {
 
   const carregarInteresses = async () => {
     try {
-      const json = await api.carregarEducacao();
+      const json = await api.carregarDuvidas();
       const dataAraay = Array.isArray(json) ? json : [json];
-      setEducacao(dataAraay);
+      setSaude(dataAraay);
     } catch (error) {
       console.error("Erro ao carregar interesses:", error);
     }
   };
 
+  
+
   return (
     <div className="trabalho-container">
       <div className="container-perguntas">
-        <div className="header-nome">
-          <h2>Dúvidas Educação </h2>
-
-          <Link className="header-link-trabalho " to="/educacao">
-          Educação
-          </Link>
-        </div>
+        
         <ul className="container-peguntas-respostas">
-          {educacao.map((local, index) => (
+          {saude.map((local, index) => (
             <li
               key={index}
               className={`pergunta ${
@@ -74,4 +69,4 @@ function DuvidasEducacao() {
   );
 }
 
-export default DuvidasEducacao;
+export default Duvidas;

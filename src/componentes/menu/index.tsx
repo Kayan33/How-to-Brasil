@@ -13,6 +13,7 @@ function Menu() {
     { icon: "/dashboard/casa.svg", label: "Casa", link: "/casa" },
     { icon: "/dashboard/apoio.svg", label: "Apoio", link: "/apoio",},
     { icon: "/dashboard/saude.svg", label: "Saúde", link: "/saude" },
+    { icon: "/dashboard/duvidas.svg", label: "dúvidas", link: "/duvidas" },
   ];
 
   return (

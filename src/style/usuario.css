@@ -26,7 +26,7 @@
 .menu-item {
   display: flex;
   align-items: center;
-  margin-top: 35px;
+  margin-top: 30px;
 }
 
 .menu-item:active {

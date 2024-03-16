@@ -34,9 +34,7 @@ function Trabalho() {
       <div className="header-nome">
           <h2>Trabalho </h2>
 
-          <Link className="header-link-trabalho " to="/duvidastrabalho">
-            Dúvidas Trabalho
-          </Link>
+          
         </div>
         <div className="input-wrapper">
           <div>

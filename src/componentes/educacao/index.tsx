@@ -36,9 +36,7 @@ function Educacao() {
       <div className="header-nome">
           <h2>Educação </h2>
 
-          <Link className="header-link-trabalho " to="/duvidaseducacao">
-            Dúvidas Educação
-          </Link>
+          
         </div>
         <div className="input-wrapper">
           <div>
