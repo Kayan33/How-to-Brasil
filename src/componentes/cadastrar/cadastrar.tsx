@@ -12,42 +12,26 @@ function Cadastro() {
   const [ultimoNome, SetultimoNome] = useState("");
   const [senha, SetSenha] = useState("");
   const [confirmarSenha, SetConfirmarSenha] = useState("");
-  const [statusMigratorio, setstatusMigratorio] = useState<string[]>([]);
+  const [statusMigratorio, setstatusMigratorio] = useState("");
   const [interesses, setinteresses] = useState<string[]>([]);
 
   const [cadastro, setCadastro] = useState<typeCadastro[]>([]);
 
   const navigate = useNavigate();
 
-
-  
-  const handleInputStatusMigratorio = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputInteresses = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
     const { name, checked } = event.target;
 
     if (checked) {
-        // Se marcado, adiciona à lista
-        setstatusMigratorio((prevStatusMigratorio) => [...prevStatusMigratorio, name]);
-    } else {
-        // Se desmarcado, remove da lista
-        setstatusMigratorio((prevMigratorio) => prevMigratorio.filter((item) => item !== name));
-    }
-}
-
-
-
-  
-const handleInputInteresses = (event: React.ChangeEvent<HTMLInputElement>) => {
-  const { name, checked } = event.target;
-
-  if (checked) {
-      // Se marcado, adiciona à lista
       setinteresses((prevInteresses) => [...prevInteresses, name]);
-  } else {
-      // Se desmarcado, remove da lista
-      setinteresses((prevInteresses) => prevInteresses.filter((item) => item !== name));
-  }
-}
-
+    } else {
+      setinteresses((prevInteresses) =>
+        prevInteresses.filter((item) => item !== name)
+      );
+    }
+  };
 
   useEffect(() => {}, []);
 
@@ -72,7 +56,9 @@ const handleInputInteresses = (event: React.ChangeEvent<HTMLInputElement>) => {
   ) {
     SetConfirmarSenha(event.target.value);
   }
-
+  function handleMigratorio(event: React.ChangeEvent<HTMLSelectElement>) {
+    setstatusMigratorio(event.target.value);
+  }
 
   const handleCadastro = async () => {
     if (senha !== confirmarSenha) {
@@ -89,7 +75,7 @@ const handleInputInteresses = (event: React.ChangeEvent<HTMLInputElement>) => {
       senha
     );
 
-    if (json.status =  200) {
+    if ((json.status = 200)) {
       alert("Cadastro feito com sucesso!");
       setCadastro((cadastro) => [...cadastro, json]);
       navigate("/Login");
@@ -144,50 +130,59 @@ const handleInputInteresses = (event: React.ChangeEvent<HTMLInputElement>) => {
         />
 
         <div className="select">
-          
+          <select value={statusMigratorio} onChange={handleMigratorio}>
+            <option disabled value="">
               Status Migratório
+            </option>
+            <option value="Turista">Turista</option>
+            <option value="Estudante">Estudante</option>
+            <option value="Refugiado">Refugiado</option>
+            <option value="Asilado">Asilado</option>
+            <option value="Trabalhador Temporrário">
+              Trabalhador Temporário
+            </option>
+            <option value="Residente Permanente">Residente Permanente</option>
+          </select>
 
-              <input className='checkbox' type="checkbox" name='Turista' onChange={handleInputStatusMigratorio} />
-                <label> Turista </label>
-           
-              <input className='checkbox' type="checkbox" name='Estudante' onChange={handleInputStatusMigratorio} />
-                <label> Estudante </label>
-            
-              <input className='checkbox' type="checkbox" name='Refugiado' onChange={handleInputStatusMigratorio} />
-                <label> Refugiado </label>
-
-              <input className='checkbox' type="checkbox" name='Asilado' onChange={handleInputStatusMigratorio} />
-                <label> Asilado </label>
-
-              <input className='checkbox' type="checkbox" name='Trabalhador Temporario' onChange={handleInputStatusMigratorio} />
-                <label> Trabalhador Temporário </label>
-
-              <input className='checkbox' type="checkbox" name='Residente Permanente' onChange={handleInputStatusMigratorio} />
-                <label> Residente Permanente </label>
-          
-
-          
-              Interesses
-            
-              <input className='checkbox' type="checkbox" name='Saúde' onChange={handleInputInteresses} />
-                <label> Saúde </label>
-
-              <input className='checkbox' type="checkbox" name='Trabalho' onChange={handleInputInteresses} />
-                <label> Trabalho </label>
-
-              <input className='checkbox' type="checkbox" name='Refugiado' onChange={handleInputInteresses} />
-                <label> Apoio Comunitário </label>
-
-              <input className='checkbox' type="checkbox" name='Educação' onChange={handleInputInteresses} />
-                <label> Educação </label>
-
-              <input className='checkbox' type="checkbox" name='Casa' onChange={handleInputInteresses} />
-                <label> Casa </label>
-
-              <input className='checkbox' type="checkbox" name='Documentação' onChange={handleInputInteresses} />
-                <label> Documentação </label>
-        
         </div>
+          <div className="checkbox-wrapper">
+            <label> Saúde </label>
+            <input
+              className="checkbox"
+              type="checkbox"
+              name="Trabalho"
+              onChange={handleInputInteresses}
+            />
+            <label> Trabalho </label>
+            <input
+              className="checkbox"
+              type="checkbox"
+              name="Refugiado"
+              onChange={handleInputInteresses}
+            />
+            <label> Apoio Comunitário </label>
+            <input
+              className="checkbox"
+              type="checkbox"
+              name="Educação"
+              onChange={handleInputInteresses}
+            />
+            <label> Educação </label>
+            <input
+              className="checkbox"
+              type="checkbox"
+              name="Casa"
+              onChange={handleInputInteresses}
+            />
+            <label> Casa </label>
+            <input
+              className="checkbox"
+              type="checkbox"
+              name="Documentação"
+              onChange={handleInputInteresses}
+            />
+            <label> Documentação </label>
+          </div>
 
         <button className="entrar" onClick={handleCadastro}>
           Cadastrar
