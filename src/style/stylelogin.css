@@ -55,6 +55,17 @@
   width: 330px;
 }
 
+.envio input[type="email"] {
+  background: #f2f2f2;
+  margin-left: 2%;
+  border: 1px solid #817d75;
+  padding: 0.5rem; 
+  border-radius: 5px;
+  font-size: 1.5rem;
+  width: 15%; 
+  box-sizing: border-box;
+}
+
 ::placeholder {
   color: #888888;
   font-size: 17px;

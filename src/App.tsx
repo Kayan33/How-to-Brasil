@@ -17,6 +17,7 @@ import Pgedocumentacao from "./pages/documentacao";
 import PgAbrigamento from "./pages/abrigo";
 import PgDuvidasSaude from "./pages/duvidaspg";
 import PgDuvidas from "./pages/duvidaspg";
+import Adminsaude from "./pages/dmsaude";
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
         <Route path='/apoio' element={<Pgeapoio/>}></Route>
         <Route path='/abrigamento' element={<PgAbrigamento/>}></Route>
         <Route path='/duvidas' element={<PgDuvidas/>}></Route>
+        <Route path='/adminsaude' element={<Adminsaude/>}></Route>
 
         
       </Routes>
