@@ -24,5 +24,18 @@ export const Adminapi = {
     }
   },
 
+  deleteInteresse: async (id: string) => {
+    let response = await fetch(`http://localhost:3001/interesses/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json' 
+      }
+    });
+  
+    const json = await response.json();
+    console.log(json);
+    return json;
+  }
+   
 
 }

@@ -3,6 +3,9 @@
   background: #edf3fb;
   min-height: 100vh;
 }
+.header-input{
+  margin-bottom: 50px;
+}
 
 .header-nome h2{
 font-size: 25px;
@@ -91,6 +94,7 @@ position: relative;
   transition: transform 0.5s ease;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 420px;
+  position: relative;
 }
 
 
@@ -125,6 +129,13 @@ position: relative;
 
 .card img {
   border-radius: 7px;
+}
+
+.remove{
+  position: absolute;
+  top: -10px;
+  right: -9px;
+  cursor: pointer;
 }
 
 .card .saiba-mais {
@@ -170,11 +181,3 @@ position: relative;
 }
 /* admin */
 
-.categoria-interesse{
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.categoria-interesse h5{
-  margin-left: 20px;
-}

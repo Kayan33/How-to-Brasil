@@ -3,9 +3,9 @@ import { useContext } from "react";
 import Menu from "../componentes/menu";
 import { UsuarioLogadoContext } from "../contexts/contextAuth";
 import "../style/usuario.css";
-import DmInteresses from "../componentes/adminInteresses";
+import DnSaude from "../componentes/adminsaude";
 
-function AdminInteresses() {
+function AdminSaude() {
   const UsuarioLogadoCtx = useContext(UsuarioLogadoContext);
   return (
     <div className="divusuario">
@@ -21,7 +21,7 @@ function AdminInteresses() {
         <Menu />
       </div>
       <div >
-        <DmInteresses/>
+        <DnSaude/>
       </div>
       
 
@@ -29,4 +29,4 @@ function AdminInteresses() {
   );
 }
 
-export default AdminInteresses;
+export default AdminSaude;
