@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react";
 import "../../style/trabalho.css";
 import { typesInteresses } from "../../types/Interesses";
+
 import { Adminapi } from "../../adminapi";
 import { api } from "../../api";
 
-const DnSaude: React.FC = () => {
+const DnApoio: React.FC = () => {
   const [tipos, Settipos] = useState<number>(0);
   const [nome, SetNome] = useState("");
   const [Numero, SetNumero] = useState("");
   const [Horario, SetHorario] = useState("");
   const [LinkMaps, SetLinkMaps] = useState("");
-  const [adminsaude, setAdminsaude] = useState<typesInteresses[]>([]);
+  const [adminApoio, setAdminApoio] = useState<typesInteresses[]>([]);
 
   const handleInputTipos = (event: React.ChangeEvent<HTMLInputElement>) => {
     Settipos(parseInt(event.target.value));
@@ -46,7 +47,7 @@ const DnSaude: React.FC = () => {
       LinkMaps
     );
 
-    setAdminsaude((cadastro) => [...cadastro, json]);
+    setAdminApoio((cadastro) => [...cadastro, json]);
 
     SetNome("");
     SetNumero("");
@@ -62,10 +63,10 @@ const DnSaude: React.FC = () => {
 
   const carregarInteresses = async () => {
     try {
-      const json = await api.carregarSaude();
+      const json = await api.carregarApoio();
       const dataAraay = Array.isArray(json) ? json : [json];
 
-      setAdminsaude(dataAraay);
+      setAdminApoio(dataAraay);
     } catch (error) {
       console.error("Erro ao carregar interesses:", error);
     }
@@ -77,11 +78,11 @@ const DnSaude: React.FC = () => {
       const json = await Adminapi.deleteInteresse(id);
       const dataAraay = Array.isArray(json) ? json : [json];
 
-      const updatedInteresses = adminsaude.filter(
+      const updatedInteresses = adminApoio.filter(
         (inter) => inter.id !== id
       );
 
-      setAdminsaude(updatedInteresses);
+      setAdminApoio(updatedInteresses);
       if (json.status) {
       } else {
         alert(json.message);
@@ -95,9 +96,9 @@ const DnSaude: React.FC = () => {
     <div className="trabalho-container">
       <header className="header-input">
         <div className="header-nome">
-          <h2>Interesses </h2>
+          <h2>Admin Apoio </h2>
 
-          <h5>saude=1</h5>
+          <h5>Apoio=3</h5>
 
           <div className="input-wrapper">
             <input
@@ -131,8 +132,8 @@ const DnSaude: React.FC = () => {
               placeholder="Tipo"
               value={tipos}
               onChange={handleInputTipos}
-              min="1"
-              max="1"
+              min="3"
+              max="3"
             />
 
             <button className="s" onClick={handleInteresse}>
@@ -143,7 +144,7 @@ const DnSaude: React.FC = () => {
       </header>
 
       <main className="trabalho-bg">
-        {adminsaude.map((local, index) => (
+        {adminApoio.map((local, index) => (
           <ul className="card" key={index}>
             <img
               src="/remouve.svg"
@@ -173,4 +174,4 @@ const DnSaude: React.FC = () => {
   );
 };
 
-export default DnSaude;
+export default DnApoio;
