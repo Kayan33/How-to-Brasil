@@ -52,13 +52,13 @@ function Duvidas() {
               onClick={() => handlePerguntaClick(index)}
             >
               <div>
-                {local.interacao}
+                {local.pergunta}
                 <img src="mais.svg" alt="Mais" />
               </div>
 
               {perguntaExpandida === index && (
                 <div className="resposta">
-                  <p>{local.subInteracao}</p>
+                  <p>{local.resposta}</p>
                 </div>
               )}
             </li>

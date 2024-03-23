@@ -1,4 +1,4 @@
 export type typesDuvidas = {
-    interacao:string;
-    subInteracao:string;
+    pergunta:string;
+    resposta:string;
 }
