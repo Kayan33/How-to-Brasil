@@ -3,7 +3,7 @@ import "../style/style.css";
 function Notfound() {
     return (
   <div>
-<h1>notfound</h1>
+<h1>Página não encontrada</h1>
   
   
   
