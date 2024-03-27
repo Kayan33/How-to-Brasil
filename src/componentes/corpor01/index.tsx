@@ -10,12 +10,12 @@ function Corpo01() {
           tela
         </h1>
         <p>
-          A HOW TOW BRAZIL é focada auxiliar imigrantes recém-chegados no Brasil
-          a se adaptarem legalmente e a identificar pontos públicos essenciais
-          em suas localizações. O nosso objetivo é fornecer informações cruciais
-          para quem está chegando no Brazil como, documentos necessários,
-          direitos e deveres, serviços de saúde, educação, transporte e outras
-          informações úteis para facilitar a integração dos imigrantes.
+        Bem-vindo ao HowToBrasil!
+
+Navegar por um novo país pode ser desafiador, mas não precisa ser uma jornada solitária. No HowToBrasil, estamos aqui para tornar sua transição para o Brasil mais suave, mais informada e mais empoderada do que nunca. <br />
+
+Imagine ter todas as informações necessárias para iniciar sua nova vida no Brasil ao alcance de um clique. Aqui, você encontrará um guia abrangente e confiável para ajudá-lo em pontos cruciais nesta nova jornada. <br />
+
         </p>
         
         <Link className="saiba-mais" to="Cadastrar">

@@ -18,8 +18,8 @@ function Corpo02() {
           trigger:".guia-tudo",
           scrub:true,
           
-          start:"top 1000px",
-          end:"bottom 250px"
+          start:"top 900px",
+          end:"bottom 600px"
         }
       })
       .fromTo("#model-1",{
@@ -82,11 +82,11 @@ function Corpo02() {
           <div className="guia-img">
             <img src="/documentacao.svg" alt="" />
           </div>
-          <h3>Documentação e Regularização</h3>
+          <h3>Documentação</h3>
           <p>
-            Você deve ter todos os documentos necessários para entrar e
-            permanecer no Brasil legalmente. Isso inclui vistos, autorizações de
-            trabalho e qualquer outra documentação relevante.
+          Simplificamos o processo burocrático, fornecendo orientações detalhadas sobre obtenção de vistos, 
+          registro civil, CPF (Cadastro de Pessoas Físicas), carteira de motorista e outros documentos essenciais para viver 
+          legalmente no Brasil.
           </p>
         </div>
 
@@ -94,11 +94,10 @@ function Corpo02() {
           <div className="guia-img">
             <img src="/casa.svg" alt="" />
           </div>
-          <h3>Moradia e Meios de Transporte</h3>
+          <h3>Moradia</h3>
           <p>
-            Procure um lugar para morar, considerando a proximidade do local de
-            trabalho, escolas (se tiver filhos) e serviços essenciais. Entenda
-            também as opções de transporte público e privado na região.
+          Descubra dicas práticas para encontrar moradia no Brasil, desde aluguel até compra de imóveis. Oferecemos orientações sobre os 
+          diferentes tipos de moradia disponíveis e áreas acessíveis.
           </p>
         </div>
 
@@ -106,10 +105,10 @@ function Corpo02() {
           <div className="guia-img">
             <img src="/trabalho.svg" alt="" />
           </div>
-          <h3>Buscar Emprego ou Educação</h3>
+          <h3>Trabalho</h3>
           <p>
-            Se você ainda não tiver emprego, comece a procurar oportunidades que
-            se alinhem com suas habilidades e interesses.
+          Navegue pelo mercado de trabalho brasileiro com confiança. Oferecemos orientações sobre vagas de emprego
+          e requesitos pedidos para cada uma.
           </p>
         </div>
 
@@ -119,9 +118,8 @@ function Corpo02() {
           </div>
           <h3>Saúde</h3>
           <p>
-            Familiarize-se com o sistema de saúde local e comprove-se de ter um
-            plano de saúde adequado. Faça exames médicos regulares e mantenha-se
-            informado sobre os serviços médicos disponíveis em sua área.
+          Explore informações sobre o sistema de saúde brasileiro, incluindo como acessar serviços médicos, 
+          encontrar hospitais e clínicas de confiança.
           </p>
         </div>
 
@@ -129,11 +127,10 @@ function Corpo02() {
           <div className="guia-img">
             <img src="/apoio.svg" alt="" />
           </div>
-          <h3>Busque Apoio Comunitário</h3>
+          <h3>Apoio Comunitário</h3>
           <p>
-            Conecte-se com a comunidade local e outros imigrantes, seja através
-            de grupos online, eventos locais ou instituições de apoio a
-            imigrantes.
+          Conecte-se com outras pessoas que compartilham sua experiência de imigração. Descubra grupos de apoio locais, 
+          eventos comunitários e recursos para ajudá-lo a se integrar à comunidade e construir uma rede de suporte sólida.
           </p>
         </div>
 
@@ -143,8 +140,8 @@ function Corpo02() {
           </div>
           <h3>Educação</h3>
           <p>
-            Se você tiver filhos em idade escolar, pesquise sobre as opções
-            educacionais disponíveis e matriculas em uma escola.
+          Invista no seu desenvolvimento educacional. Explore opções de escolas, universidades e cursos de idiomas, 
+          além de programas de educação continuada e certificações que podem impulsionar sua carreira e abrir novas oportunidades.
           </p>
         </div>
       </div>
