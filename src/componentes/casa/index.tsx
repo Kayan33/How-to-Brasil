@@ -54,8 +54,8 @@ function Trabalho() {
         <div className="input-wrapper">
           <div className="select-wrapper">
             <select value={ordem} onChange={(ev) => setOrdem(ev.target.value)}>
-              <option value="asc">Barato → Caro</option>
-              <option value="desc">Caro → Barato</option>
+              <option value="asc">Menor valor → Maior valor</option>
+              <option value="desc">Maior valor → Menor valor</option>
             </select>
           </div>
         </div>
