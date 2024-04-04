@@ -1,7 +1,7 @@
 import "../../style/stylelogin.css";
 import "../../style/style.css";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import {useState} from 'react';
 import { UsuarioLogadoContext } from "../../contexts/contextAuth";
 import { api } from "../../api";
@@ -14,8 +14,11 @@ function LogiN() {
 const [senha, Setsenha] = useState('');
 const [email, SetEmail] = useState('');
 const [login, setLogin] = useState<typeLogin[]>([]);
+const [loading, setLoading] = useState(false);
 
 const navigate = useNavigate ();
+
+useEffect(() => {} , []);
 
 
 function handleInputSenha (event: React.ChangeEvent< HTMLInputElement >) {
@@ -34,28 +37,41 @@ const UsuarioLogadoCtx = useContext(UsuarioLogadoContext);
 
 
 const handleLogin = async (email: string, senha: string) => {
-  let json = await api.fazerLogin(
-    
+  setLoading(true);
+  let json = await api.fazerLogin(    
     email,
     senha,
   );
   
   if (json.status) {
+    setLoading(false);
     alert("Login realizado com sucesso!");
     setLogin((login) => [...login, json]);
     UsuarioLogadoCtx?. setName (email);
     navigate('/Usuario');
   } else {
+    setLoading(false);
     alert(json.message);
   }
   console.log(json);
+  
 };
 
 const handleButtonClicked = () => {
   handleLogin(email, senha)
 };
   return (
+
     <div className="divlogin">
+
+
+      {loading && 
+        <div> Carregando conteúdo ... </div>
+      }
+
+      
+    {!loading && 
+     
       <div className="divlogin1">
         <Link className="logo" to="/">
           How to brasil
@@ -89,6 +105,10 @@ const handleButtonClicked = () => {
 
     
       </div>
+    }
+    
+    
+
     </div>
   );
 }
