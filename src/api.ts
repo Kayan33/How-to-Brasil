@@ -53,7 +53,7 @@ export const api = {
  
   adicionarCadastro: async (nome: String,ultimoNome: String, statusMigratorio: String,interesses: String,email: String,senha: String,) => {
     {
-      let response = await fetch("http://localhost:3001/usuarios", {
+      let response = await fetch("http://localhost:3001/usuario", {
         method: 'POST',
         body: JSON.stringify({
           nome,
@@ -80,7 +80,7 @@ export const api = {
 
   fazerLogin: async (email: String,senha: String,) => {
     {
-      let response = await fetch("http://localhost:3001/usuarios/login", {
+      let response = await fetch("http://localhost:3001/usuario/login", {
         method: 'POST',
         body: JSON.stringify({
           
@@ -108,7 +108,7 @@ export const api = {
 
 TrocaSenha: async (email: String,senha: String,) => {
   {
-    let response = await fetch("http://localhost:3001/usuarios/troca-senha", {
+    let response = await fetch("http://localhost:3001/usuario/troca-senha", {
       method: 'POST',
       body: JSON.stringify({
         

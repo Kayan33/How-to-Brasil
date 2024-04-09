@@ -43,7 +43,7 @@ const handleLogin = async (email: string, senha: string) => {
     senha,
   );
   
-  if (json.status) {
+  if (json.return [1]) {
     setLoading(false);
     alert("Login realizado com sucesso!");
     setLogin((login) => [...login, json]);
