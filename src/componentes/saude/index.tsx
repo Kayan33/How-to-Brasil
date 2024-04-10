@@ -70,14 +70,14 @@ function Saude() {
             <h3>{local.nome}</h3>
             <li className="header-card">
               <h3>Telefone :</h3>
-              <p>{local.Numero}</p>
+              <p>{local.numero}</p>
             </li>
             <li className="header-card">
               <h3>Horário de funcionamento :</h3>
-              <p>{local.Horario}</p>
+              <p>{local.horario}</p>
             </li>
             <hr />
-            <a href={local.LinkMaps}>
+            <a href={local.linkMaps}>
               <img src="maps.svg" alt="" />
             </a>
           </ul>

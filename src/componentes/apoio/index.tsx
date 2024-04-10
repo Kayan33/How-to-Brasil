@@ -72,16 +72,16 @@ function Apoio() {
             
             <li className="header-card">
               <h3>Telefone :</h3>
-              <p>{local.Horario}</p>
+              <p>{local.numero}</p>
             </li>
             <li className="header-card">
               <h3>Horário de funcionamento :</h3>
               <p>
-                {local.Horario}
+                {local.horario}
               </p>
             </li>
             <hr />
-            <a href={local.LinkMaps}>
+            <a href={local.linkMaps}>
               <img src="maps.svg" alt="" />
             </a>
           </ul>

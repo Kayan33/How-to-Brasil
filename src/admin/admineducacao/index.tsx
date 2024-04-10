@@ -8,9 +8,9 @@ import { api } from "../../api";
 const DnEducacao: React.FC = () => {
   const [tipos, Settipos] = useState<number>(0);
   const [nome, SetNome] = useState("");
-  const [Numero, SetNumero] = useState("");
-  const [Horario, SetHorario] = useState("");
-  const [LinkMaps, SetLinkMaps] = useState("");
+  const [numero, SetNumero] = useState("");
+  const [horario, SetHorario] = useState("");
+  const [linkMaps, SetLinkMaps] = useState("");
   const [adminEducacao, setAdminEducacao] = useState<typesInteresses[]>([]);
 
   const handleInputTipos = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -42,9 +42,9 @@ const DnEducacao: React.FC = () => {
     const json = await Adminapi.adicionarInteresses(
       tipos,
       nome,
-      Numero,
-      Horario,
-      LinkMaps
+      numero,
+      horario,
+      linkMaps
     );
 
     setAdminEducacao((cadastro) => [...cadastro, json]);
@@ -110,20 +110,20 @@ const DnEducacao: React.FC = () => {
             <input
               type="text"
               placeholder="telefone"
-              value={Numero}
+              value={numero}
               onChange={handleInputNumero}
             />
             <input
               type="text"
               placeholder="Link Maps"
-              value={LinkMaps}
+              value={linkMaps}
               onChange={handleInputLink}
             />
 
             <input
               type="text"
               placeholder="Horaio"
-              value={Horario}
+              value={horario}
               onChange={handleInputHorario}
             />
 
@@ -157,14 +157,14 @@ const DnEducacao: React.FC = () => {
 
             <li className="header-card">
               <h3>Telefone :</h3>
-              <p>{local.Numero}</p>
+              <p>{local.numero}</p>
             </li>
             <li className="header-card">
               <h3>Horário de funcionamento :</h3>
-              <p>{local.Horario}</p>
+              <p>{local.horario}</p>
             </li>
             <hr />
-            <a href={local.LinkMaps}>
+            <a href={local.linkMaps}>
               <img src="maps.svg" alt="" />
             </a>
           </ul>
