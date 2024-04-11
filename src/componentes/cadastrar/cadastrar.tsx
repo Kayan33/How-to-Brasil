@@ -182,6 +182,12 @@ function Cadastro() {
               onChange={handleInputInteresses}
             />
             <label> Documentação </label>
+            <input
+              className="checkbox"
+              type="checkbox"
+              name="Documentação"
+              onChange={handleInputInteresses}
+            />
           </div>
 
         <button className="entrar" onClick={handleCadastro}>
