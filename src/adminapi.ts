@@ -1,15 +1,15 @@
 export const Adminapi = {
   
-  adicionarInteresses: async (tipos:number,nome: String,Numero: String, Horario: String,LinkMaps: String,) => {
+  adicionarInteresses: async (tipos:number,nome: String,numero: String, horario: String,linkMaps: String,) => {
     {
       let response = await fetch("https://apihowtobrasil-1-kegn.onrender.com/interesses", {
         method: 'POST',
         body: JSON.stringify({
           tipos,
           nome,
-          Numero,
-          Horario,
-          LinkMaps,
+          numero,
+          horario,
+          linkMaps,
 
         }),
         headers: {
