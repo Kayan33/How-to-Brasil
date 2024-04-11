@@ -2,7 +2,7 @@ export const Adminapi = {
   
   adicionarInteresses: async (tipos:number,nome: String,Numero: String, Horario: String,LinkMaps: String,) => {
     {
-      let response = await fetch("http://localhost:3001/interesses", {
+      let response = await fetch("https://apihowtobrasil-1-kegn.onrender.com/interesses", {
         method: 'POST',
         body: JSON.stringify({
           tipos,
@@ -25,7 +25,7 @@ export const Adminapi = {
   },
 
   deleteInteresse: async (id: string) => {
-    let response = await fetch(`http://localhost:3001/interesses/${id}`, {
+    let response = await fetch(`https://apihowtobrasil-1-kegn.onrender.com/interesses/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json' 
