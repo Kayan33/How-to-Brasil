@@ -74,7 +74,7 @@ const handleButtonClicked = () => {
      
       <div className="divlogin1">
         <Link className="logo" to="/">
-          How to brasil
+        <img src="/HowtoBrazil-reto.svg" alt="" />
         </Link>
 
         <p className="acesso">
@@ -87,11 +87,6 @@ const handleButtonClicked = () => {
 
         <input type="password" placeholder="Senha" value={senha} onChange={handleInputSenha} />
 
-        <div className="conectado_esqueci">
-          <input type="checkbox" />
-          <label>Mantenha-me conectado</label>
-          <Link to="/EsqueciSenha">Esqueci minha senha</Link>
-        </div>
 
         <button className="entrar" onClick={ handleButtonClicked }>
           Entrar
@@ -102,6 +97,10 @@ const handleButtonClicked = () => {
           <Link to="/Cadastrar">Cadastre-se</Link>
         </div>
         
+        <div className="conectado_esqueci">
+          
+          <Link to="/EsqueciSenha">Esqueci minha senha</Link>
+        </div>
 
     
       </div>

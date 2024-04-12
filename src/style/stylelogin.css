@@ -22,7 +22,7 @@
   background-color: white;
   padding: 20px;
   max-width: 400px;
-  height: 1024px;
+  height: 1000px;
 }
 .divlogin1 .logo {
   margin-bottom: 45px;
@@ -90,7 +90,6 @@ input[type="checkbox"] {
 .conectado_esqueci {
   display: flex;
   align-items: center;
-  margin-bottom: 28px;
 }
 .conectado_esqueci label {
   color: #262420;
@@ -120,14 +119,14 @@ input[type="checkbox"] {
 }
 
 .entrar:hover {
-  background-color: #45a049;
+  background-color: #09A599;
 }
 
 .cadastre-se {
   display: flex;
   align-self: center;
   gap: 12px;
-  margin-bottom: 46px;
+  margin-bottom: 20px;
 }
 
 .cadastre-se a {

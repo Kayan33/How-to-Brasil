@@ -5,7 +5,7 @@ function Sobre() {
   return (
     <div className="sobre-bg" id="Sobre">
       <div className="sobre">
-        <h1>Sobre <span>HOW TO BRASIL</span></h1>
+        <h1>Sobre <img src="/HowtoBrazil-reto.svg" alt="" /></h1>
         <p>
         No <strong>HowToBrasil</strong>, acreditamos que informação é poder. Estamos comprometidos em capacitá-lo com os conhecimentos e recursos necessários para prosperar no Brasil.
 

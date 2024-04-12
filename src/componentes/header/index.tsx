@@ -6,8 +6,7 @@ function Header() {
     <header className="header">
       <nav className="header-introdução">
         <Link className="logo" to="">
-          How to <br />
-          Brasil
+          <img src="/HowtoBrazil.svg" alt="" />
         </Link>
         <ul className="header-link">
           <li>

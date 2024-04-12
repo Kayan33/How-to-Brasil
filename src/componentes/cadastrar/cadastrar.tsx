@@ -88,7 +88,7 @@ function Cadastro() {
     <div className="divlogin">
       <div className="divlogin1">
         <Link className="logo" to="/">
-          How to brasil
+        <img src="/HowtoBrazil-reto.svg" alt="" />
         </Link>
 
         <p className="acesso">

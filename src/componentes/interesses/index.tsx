@@ -8,7 +8,7 @@ function Interesses() {
       <h1>INTERESSES</h1>
       <div className="interesse-bg">
         <div className="interesse-img">
-          <img src="/slider/Slider1.png" alt="" />
+          <img src="/Slider1.png" alt="" />
 
           <h3>SAÚDE</h3>
           <p>
@@ -23,7 +23,7 @@ function Interesses() {
         </div>
 
         <div className="interesse-img">
-          <img src="/slider/Slider2.png" alt="" />
+          <img src="/Slider2.png" alt="" />
 
           <h3>TRABALHO</h3>
           <p>
@@ -37,7 +37,7 @@ function Interesses() {
         </div>
 
         <div className="interesse-img">
-          <img src="/slider/Slider3.png" alt="" />
+          <img src="/Slider3.png" alt="" />
 
           <h3>APOIO COMUNITÁRIO</h3>
           <p>
@@ -52,7 +52,7 @@ function Interesses() {
         </div>
 
         <div className="interesse-img">
-          <img src="/slider/Slider4.png" alt="" id="EducaImg"/>
+          <img src="/Slider4.png" alt="" id="EducaImg"/>
 
           <h3>EDUCAÇÃO</h3>
           <p>
@@ -67,7 +67,7 @@ function Interesses() {
         </div>
 
         <div className="interesse-img">
-          <img src="/slider/Slider5.png" alt="" />
+          <img src="/Slider5.png" alt="" />
 
           <h3>CASA</h3>
           <p>
@@ -82,7 +82,7 @@ function Interesses() {
         </div>
 
         <div className="interesse-img">
-          <img src="/slider/Slider6.png" alt="" id="DocImg" />
+          <img src="/Slider6.png" alt="" id="DocImg" />
 
           <h3>DOCUMENTAÇÃO</h3>
           <p>
