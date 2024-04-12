@@ -145,33 +145,44 @@ function Cadastro() {
           </select>
 
         </div>
+        <div></div>
           <div className="checkbox-wrapper">
-            <label> Saúde </label>
-            <input
+          <input
               className="checkbox"
               type="checkbox"
               name="Trabalho"
               onChange={handleInputInteresses}
             />
-            <label> Trabalho </label>
+
+            <label> Saúde </label>
             <input
               className="checkbox"
               type="checkbox"
               name="Refugiado"
               onChange={handleInputInteresses}
             />
-            <label> Apoio Comunitário </label>
+
+            <label> Trabalho </label>
             <input
               className="checkbox"
               type="checkbox"
               name="Educação"
               onChange={handleInputInteresses}
-            />
-            <label> Educação </label>
+              />
+            <label> Apoio Comunitário </label>
+
             <input
               className="checkbox"
               type="checkbox"
               name="Casa"
+              onChange={handleInputInteresses}
+            />
+            <label> Educação </label>
+
+            <input
+              className="checkbox"
+              type="checkbox"
+              name="Documentação"
               onChange={handleInputInteresses}
             />
             <label> Casa </label>
@@ -182,12 +193,6 @@ function Cadastro() {
               onChange={handleInputInteresses}
             />
             <label> Documentação </label>
-            <input
-              className="checkbox"
-              type="checkbox"
-              name="Documentação"
-              onChange={handleInputInteresses}
-            />
           </div>
 
         <button className="entrar" onClick={handleCadastro}>
