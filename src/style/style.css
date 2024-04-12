@@ -211,6 +211,9 @@ img {
   border-radius: 24px;
 }
 .guia-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 63px;
   width: 63px;
   background: no-repeat url("../../public/fundo.svg");

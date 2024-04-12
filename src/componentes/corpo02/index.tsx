@@ -3,6 +3,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLayoutEffect, useRef } from "react";
 
 import "../../style/style.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBook, faBriefcase, faHeartPulse, faHouse, faUserGraduate, faUsers } from "@fortawesome/free-solid-svg-icons";
 
 function Corpo02() {
   
@@ -80,7 +82,7 @@ function Corpo02() {
       <div className="guia" ref={el} >
         <div className="guia-tudo" id="model-1">
           <div className="guia-img">
-            <img src="/documentacao.svg" alt="" />
+            <FontAwesomeIcon icon={faBook} size="2x"/>
           </div>
           <h3>Documentação</h3>
           <p>
@@ -92,7 +94,7 @@ function Corpo02() {
 
         <div className="guia-tudo" id="model-2">
           <div className="guia-img">
-            <img src="/casa.svg" alt="" />
+          <FontAwesomeIcon icon={faHouse} size="2x"/>
           </div>
           <h3>Moradia</h3>
           <p>
@@ -103,7 +105,7 @@ function Corpo02() {
 
         <div className="guia-tudo" id="model-3">
           <div className="guia-img">
-            <img src="/trabalho.svg" alt="" />
+          <FontAwesomeIcon icon={faBriefcase} size="2x"/>
           </div>
           <h3>Trabalho</h3>
           <p>
@@ -114,7 +116,7 @@ function Corpo02() {
 
         <div className="guia-tudo" id="model-4"  >
           <div className="guia-img">
-            <img src="/saude.svg" alt="" />
+          <FontAwesomeIcon icon={faHeartPulse} beat size="2x"/>
           </div>
           <h3>Saúde</h3>
           <p>
@@ -125,7 +127,7 @@ function Corpo02() {
 
         <div className="guia-tudo" id="model-5">
           <div className="guia-img">
-            <img src="/apoio.svg" alt="" />
+          <FontAwesomeIcon icon={faUsers} size="2x"/>
           </div>
           <h3>Apoio Comunitário</h3>
           <p>
@@ -136,7 +138,7 @@ function Corpo02() {
 
         <div className="guia-tudo" id="model-6">
           <div className="guia-img">
-            <img src="/educacao.svg" alt="" />
+          <FontAwesomeIcon icon={faUserGraduate} size="2x"/>
           </div>
           <h3>Educação</h3>
           <p>
