@@ -128,7 +128,7 @@ function Cadastro() {
           value={confirmarSenha}
           onChange={handleInputConfirmarSenha}
         />
-
+       <div className="subcadastro">
         <div className="select">
           <select value={statusMigratorio} onChange={handleMigratorio}>
             <option disabled value="">
@@ -201,6 +201,7 @@ function Cadastro() {
         <div className="cadastre-se">
           <p>Já tem conta? Faça seu Login</p>
           <Link to="/Login">Login</Link>
+          </div>
         </div>
       </div>
     </div>
