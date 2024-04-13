@@ -51,14 +51,9 @@ function Saude() {
               onChange={(ev) => setTermoBusca(ev.target.value)}
             >
               <option value="">Filtro</option>
-              <option value="Farmacia">Farmacia</option>
-              <option value="Posto de Saude">Posto de Saude</option>
-              <option value="Refugiado">Refugiado</option>
-              <option value="Asilado">Asilado</option>
-              <option value="Trabalhador Temporário">
-                Trabalhador Temporário
-              </option>
-              <option value="Residente Permanente">Residente Permanente</option>
+              <option value="Núcleo">Núcleo</option>
+              <option value="UBS">Posto de Saude</option>
+              <option value="UPA">UPA</option>
             </select>
           </div>
         </div>
