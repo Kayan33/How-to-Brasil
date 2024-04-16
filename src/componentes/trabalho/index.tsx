@@ -79,6 +79,12 @@ function Trabalho() {
                 {local.salario}
               </p>
             </li>
+            <li className="header-card">
+              <h3>Descrição:</h3>
+              <p>
+                {local.descricao}
+              </p>
+            </li>
             <hr />
             <a href={local.siteEmpresa}>
               <img src="maps.svg" alt="" />

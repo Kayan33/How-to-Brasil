@@ -53,13 +53,13 @@ function Documentacao() {
               onClick={() => handlePerguntaClick(index)}
             >
               <div>
-                {local.nome}
+                {local.documento}
                 <img src="mais.svg" alt="Mais" />
               </div>
-
+              
               {perguntaExpandida === index && (
                 <div className="resposta">
-                <p>{local.documentacao}</p> 
+                <p>{local.descricao}</p> 
                   <a href={local.linkGoverno as string}>Link para o governo</a>
                 </div>
               )}
