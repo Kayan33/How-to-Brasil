@@ -78,14 +78,14 @@ export const api = {
 
 
 
-  fazerLogin: async (email: String,senha: String,) => {
+  fazerLogin: async (email: String,senha: String) => {
     {
       let response = await fetch("https://apihowtobrasil-1-kegn.onrender.com/usuario/login", {
         method: 'POST',
         body: JSON.stringify({
           
           email,
-          senha,
+          senha
 
         }),
         headers: {
