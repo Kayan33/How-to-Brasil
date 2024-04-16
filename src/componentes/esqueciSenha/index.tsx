@@ -32,7 +32,7 @@ function EsqueciSenha() {
     if (json.status = 200) {
       alert("Login realizado com sucesso!");
       setTrocaSenha((login) => [...login, json]);
-      UsuarioLogadoCtx?.setName(email);
+      UsuarioLogadoCtx?.setNmae(email);
       navigate("/Usuario");
     } else {
       alert(json.message);

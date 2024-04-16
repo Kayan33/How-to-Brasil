@@ -40,14 +40,17 @@ const handleLogin = async (email: string, senha: string) => {
   setLoading(true);
   let json = await api.fazerLogin(    
     email,
-    senha,
+    senha
   );
   
-  if (json.return [1]) {
+  if (json.return [0]) {
     setLoading(false);
     alert("Login realizado com sucesso!");
     setLogin((login) => [...login, json]);
-    UsuarioLogadoCtx?. setName (email);
+    UsuarioLogadoCtx?.setNmae (email);
+    UsuarioLogadoCtx?.setNome (json.return[0].nome);
+    UsuarioLogadoCtx?.setUltimoNome (json.return[0].ultimoNome);
+
     navigate('/Usuario');
   } else {
     setLoading(false);

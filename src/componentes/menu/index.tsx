@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
 import {faUser, faBriefcase, faUserGraduate, faBook, faHouse, faUsers, faQuestion, faChevronRight, faRightToBracket, faChartLine, faHeartPulse, } from "@fortawesome/free-solid-svg-icons"; // Import the faUser icon
 import "../../style/usuario.css";
+import { UsuarioLogadoContext } from "../../contexts/contextAuth";
 
 const Menu: React.FC = () => {
   const location = useLocation();
   const [activeIndex, setActiveIndex] = useState<number>(-1);
+  
+  const UsuarioLogadoCtx = useContext(UsuarioLogadoContext);
 
   const menuItems = [
     { icon: <FontAwesomeIcon icon={faChartLine} size="xl" />, label: "Usuario", link: "/Usuario" },  
@@ -31,13 +34,14 @@ const Menu: React.FC = () => {
   }, [location.pathname, menuItems]);
 
   return (
+    
     <nav id="sidebar" className={isSidebarOpen ? 'open-sidebar' : ''}>
       <div id="sidebar_content">
         <div id="user">
         <FontAwesomeIcon icon={faUser} size="xl" />
           <p id="user_infos">
-            <span className="item-description">Nome</span>
-            <span className="item-description">Sobrenome</span>
+            <span className="item-description">{UsuarioLogadoCtx?.nome}</span>
+            <span className="item-description">{UsuarioLogadoCtx?.ultimoNome}</span>
           </p>
         </div>
 
