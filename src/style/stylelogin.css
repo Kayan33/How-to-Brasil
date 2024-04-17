@@ -121,3 +121,20 @@
   text-decoration: underline;
   color: #5731ff;
 }
+
+.select {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+.select select {
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+
+

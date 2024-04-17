@@ -14,6 +14,7 @@ function Cadastro() {
   const [confirmarSenha, SetConfirmarSenha] = useState("");
   const [statusMigratorio, setstatusMigratorio] = useState("");
   const [interesses, setinteresses] = useState<string[]>([]);
+  const [loading, setLoading] = useState(false);
 
   const [cadastro, setCadastro] = useState<typeCadastro[]>([]);
 
@@ -76,78 +77,103 @@ function Cadastro() {
     );
 
     if ((json.status = 200)) {
+      setLoading(false);
       alert("Cadastro feito com sucesso!");
       setCadastro((cadastro) => [...cadastro, json]);
       navigate("/Login");
     } else {
+      setLoading(false);
       alert(json.message);
     }
   };
 
   return (
-    <div className="divlogin">
-      <div className="divlogin1">
-        <Link className="logo" to="/">
-        <img src="/HowtoBrazil-reto.svg" alt="" />
-        </Link>
+    <>
+      <div className="login-container">
+        {loading && <div> Carregando conteúdo ... </div>}
 
-        <p className="acesso">
-          <strong>cadastre-se</strong>
-        </p>
-        <p className="acesso1">Insira seu e-mail e senha para fazer login. </p>
-
-        <input
-          type="email"
-          placeholder="email@email.com.br"
-          value={email}
-          onChange={handleInputEmail}
-        />
-        <input
-          type="text"
-          placeholder="Primeiro nome"
-          value={nome}
-          onChange={handleInputnome}
-        />
-        <input
-          type="text"
-          placeholder="Último nome"
-          value={ultimoNome}
-          onChange={handleInputultimoNome}
-        />
-
-        <input
-          type="password"
-          placeholder="Senha"
-          value={senha}
-          onChange={handleInputSenha}
-        />
-
-        <input
-          type="password"
-          placeholder="Confirmação de senha"
-          value={confirmarSenha}
-          onChange={handleInputConfirmarSenha}
-        />
-       <div className="subcadastro">
-        <div className="select">
-          <select value={statusMigratorio} onChange={handleMigratorio}>
-            <option disabled value="">
-              Status Migratório
-            </option>
-            <option value="Turista">Turista</option>
-            <option value="Estudante">Estudante</option>
-            <option value="Refugiado">Refugiado</option>
-            <option value="Asilado">Asilado</option>
-            <option value="Trabalhador Temporrário">
-              Trabalhador Temporário
-            </option>
-            <option value="Residente Permanente">Residente Permanente</option>
-          </select>
-
-        </div>
-        <div></div>
-          <div className="checkbox-wrapper">
-          <input
+        {!loading && (
+          <>
+            <div className="login-banner"></div>
+            <div className="divlogin1">
+              <Link className="logo" to="/">
+                <img src="/HowtoBrazil-reto.svg" alt="" />
+              </Link>
+              <div className="titulo">
+                <div className="titulo-primario">
+                  <p className="acesso">
+                    <strong>Acesso</strong>
+                  </p>
+                  <p className="acesso1">
+                    Insira seu e-mail e senha para fazer login.{" "}
+                  </p>
+                </div>
+              </div>
+              <div className="form-login">
+                <div className="div-form">
+                  <input
+                    className="input"
+                    type="email"
+                    placeholder="email@email.com.br"
+                    value={email}
+                    onChange={handleInputEmail}
+                  />
+                </div>
+                <div className="div-form">
+                  <input
+                    className="input"
+                    type="text"
+                    placeholder="Primeiro nome"
+                    value={nome}
+                    onChange={handleInputnome}
+                  />
+                </div>
+                <div className="div-form">
+                  <input
+                    className="input"
+                    type="text"
+                    placeholder="Último nome"
+                    value={ultimoNome}
+                    onChange={handleInputultimoNome}
+                  />
+                </div>
+                <div className="div-form">
+                  <input
+                    className="input"
+                    type="password"
+                    placeholder="Senha"
+                    value={senha}
+                    onChange={handleInputSenha}
+                  />
+                </div>
+                <div className="div-form">
+                  <input
+                    className="input"
+                    type="password"
+                    placeholder="Confirmação de senha"
+                    value={confirmarSenha}
+                    onChange={handleInputConfirmarSenha}
+                  />
+                </div>
+                <div className="select">
+                  <select value={statusMigratorio} onChange={handleMigratorio}>
+                    <option disabled value="">
+                      Status Migratório
+                    </option>
+                    <option value="Turista">Turista</option>
+                    <option value="Estudante">Estudante</option>
+                    <option value="Refugiado">Refugiado</option>
+                    <option value="Asilado">Asilado</option>
+                    <option value="Trabalhador Temporrário">
+                      Trabalhador Temporário
+                    </option>
+                    <option value="Residente Permanente">
+                      Residente Permanente
+                    </option>
+                  </select>
+                </div>
+                <div className="checkbox-wrapper">
+            <input
               className="checkbox"
               type="checkbox"
               name="Trabalho"
@@ -168,7 +194,7 @@ function Cadastro() {
               type="checkbox"
               name="Educação"
               onChange={handleInputInteresses}
-              />
+            />
             <label> Apoio Comunitário </label>
 
             <input
@@ -195,16 +221,23 @@ function Cadastro() {
             <label> Documentação </label>
           </div>
 
-        <button className="entrar" onClick={handleCadastro}>
-          Cadastrar
-        </button>
-        <div className="cadastre-se">
-          <p>Já tem conta? Faça seu Login</p>
-          <Link to="/Login">Login</Link>
-          </div>
+                <div>
+                  <button className="entrar" onClick={handleCadastro}>
+                    Entrar
+                  </button>
+                </div>
+
+                <div className="cadastre-se">
+            <p>Já tem conta?</p>
+            <Link to="/Login">Login</Link>
+          
         </div>
+              </div>
+            </div>
+          </>
+        )}
       </div>
-    </div>
+    </>
   );
 }
 export default Cadastro;
