@@ -86,9 +86,16 @@ function Trabalho() {
               </p>
             </li>
             <hr />
-            <a href={local.siteEmpresa}>
-              <img src="maps.svg" alt="" />
-            </a>
+            <li>
+                <a
+                  className="saiba-mais"
+                  href={local.siteEmpresa}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  VER MAIS
+                </a>
+              </li>
           </ul>
         ))}
       </main>

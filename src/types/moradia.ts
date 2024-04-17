@@ -1,9 +1,9 @@
 export type typesMoradia = {
     tipos: number;
     moradia: string;
-    linkCorrelatos: string;
+    linkCorrelato: string;
     quartos: number;
-    valor: number;
+    valor: string;
     banheiro: number;
     vagas: number;
   interacao: number;

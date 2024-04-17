@@ -14,7 +14,6 @@ import Pgeducacao from "./pages/educacao";
 import Pgecasa from "./pages/casa";
 import Pgeapoio from "./pages/Apoio";
 import Pgedocumentacao from "./pages/documentacao";
-import PgAbrigamento from "./pages/abrigo";
 import PgDuvidas from "./pages/duvidaspg";
 import AdminSaude from "./pages/admin/adminsaude";
 import AdminApoio from "./pages/admin/adminapoio";
@@ -41,7 +40,6 @@ function App() {
         <Route path='/documentacao' element={<Pgedocumentacao/>}></Route>
         <Route path='/casa' element={<Pgecasa/>}></Route>
         <Route path='/apoio' element={<Pgeapoio/>}></Route>
-        <Route path='/abrigamento' element={<PgAbrigamento/>}></Route>
         <Route path='/duvidas' element={<PgDuvidas/>}></Route>
         <Route path='/adminsaude' element={<AdminSaude/>}></Route>
         <Route path='/adminapoio' element={<AdminApoio/>}></Route>

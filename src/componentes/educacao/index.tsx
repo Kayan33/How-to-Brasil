@@ -85,6 +85,7 @@ function Educacao() {
             <a href={local.linkMaps}>
               <img src="maps.svg" alt="" />
             </a>
+            
           </ul>
         ))}
       </main>
