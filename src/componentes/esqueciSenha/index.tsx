@@ -11,6 +11,7 @@ function EsqueciSenha() {
   const [email, SetEmail] = useState("");
   const [senha, SetSenha] = useState("");
   const [trocaSenha, setTrocaSenha] = useState<typeLogin[]>([]);
+  const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
 
@@ -30,11 +31,13 @@ function EsqueciSenha() {
        );
 
     if (json.status = 200) {
+      setLoading(false)
       alert("Login realizado com sucesso!");
       setTrocaSenha((login) => [...login, json]);
       UsuarioLogadoCtx?.setNmae(email);
       navigate("/Usuario");
     } else {
+      setLoading(false)
       alert(json.message);
     }
     console.log(json);
@@ -44,45 +47,63 @@ function EsqueciSenha() {
     handTrocaSenha(email, senha)
   };
   return (
-    <div className="divlogin">
-      <div className="divlogin1">
-        <Link className="logo" to="/">
-          How to brasil
-        </Link>
+    <>
+      <div className="login-container">
+        {loading && <div> Carregando conteúdo ... </div>}
 
-        <p className="acesso">
-          <strong>Esqueceu a senha?</strong>
-        </p>
-        <p className="acesso1">
-          Informe seu email cadastrado para localizar e redefinir sua senha.{" "}
-        </p>
+        {!loading && (
+          <>
+            <div className="login-banner"></div>
+            <div className="divlogin1">
+              <Link className="logo" to="/">
+                <img src="/HowtoBrazil-reto.svg" alt="" />
+              </Link>
+              <div className="titulo">
+                <div className="titulo-primario">
+                  <p className="acesso">
+                    <strong>Esqueceu a senha</strong>
+                  </p>
+                  <p className="acesso1">
+                  Informe seu email cadastrado para localizar e redefinir sua senha.
+                  </p>
+                </div>
+              </div>
+              <div className="form-login">
+                <div className="div-form">
+                  <input
+                    className="input"
+                    type="email"
+                    placeholder="email@email.com.br"
+                    value={email}
+                    onChange={handleInputEmail}
+                  />
+                </div>
+                <div className="div-form">
+                  <input
+                    className="input"
+                    type="password"
+                    placeholder="Senha"
+                    value={senha}
+                    onChange={handleInputSenha}
+                  />
+                </div>
+                
+                <div>
+                  <button className="entrar" onClick={handleButtonClicked}>
+                    Entrar
+                  </button>
+                </div>
 
-        <input
-          type="email"
-          placeholder="email@email.com.br"
-          value={email}
-          onChange={handleInputEmail}
-        />
-        <input
-          type="password"
-          placeholder="Senha"
-          value={senha}
-          onChange={handleInputSenha}
-        />
-        <br />
-
-        <button className="entrar" onClick={handleButtonClicked}>
-          Entrar
-        </button>
-
-        <br />
-
-        <div className="cadastre-se">
-          <p> Retornar para </p>
+                <div className="cadastre-se">
+          <p> Retornar para</p>
           <Link to="/Login">Login</Link>
         </div>
+              </div>
+            </div>
+          </>
+        )}
       </div>
-    </div>
+    </>
   );
 }
 export default EsqueciSenha;
