@@ -64,23 +64,16 @@ function Trabalho() {
       <main className="trabalho-bg">
         {moradia.map((local, index) => (
           <ul className="card" key={index}>
-            <img
+            {/* <img
               src={local.foto}
               id="foto-casa"
               alt={`Foto de ${local.nome}`}
-            />
+            /> */}
             <li className="header-card">
-              <h3>{local.nome}</h3>
-            </li>
-            <li className="header-card">
-              <p>{local.endereco}</p>
+              <h3>{local.moradia}</h3>
             </li>
             <hr />
             <li className="detalhes-imovel">
-              <li>
-                <h3>area</h3>
-                <p>{local.area}</p>
-              </li>
               <li>
                 <h3>Quartos</h3>
                 <p>{local.quartos}</p>

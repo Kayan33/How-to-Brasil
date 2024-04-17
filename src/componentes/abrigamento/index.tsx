@@ -38,7 +38,7 @@ function Abrigamento() {
   };
 
   const locaisFiltrados = documentacao.filter((local) =>
-    local.nome.toLowerCase().includes(termoBusca.toLowerCase())
+    local.moradia.toLowerCase().includes(termoBusca.toLowerCase())
   );
 
   return (
