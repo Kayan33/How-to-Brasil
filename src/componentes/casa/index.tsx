@@ -47,7 +47,7 @@ function Trabalho() {
               alt={`Foto de ${local.nome}`}
             /> */}
             <li className="header-card">
-              <h3>{local.moradia}</h3>
+              <h3>{local.nome}</h3>
             </li>
             <hr />
             <li className="detalhes-imovel">
