@@ -4,5 +4,6 @@ export type typesInteresses = {
     nome:string;
     numero:string;
     horario:string;
+    descricao: string;
     linkMaps:string;
 }

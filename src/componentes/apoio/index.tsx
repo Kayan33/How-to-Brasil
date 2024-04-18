@@ -76,9 +76,11 @@ function Apoio() {
             </li>
             <li className="header-card">
               <h3>Horário de funcionamento :</h3>
-              <p>
-                {local.horario}
-              </p>
+              <p>{local.horario}</p>
+            </li>
+            <li className="header-card">
+              <h3>Descrição :</h3>
+              <p>{local.descricao}</p>
             </li>
             <hr />
             <a href={local.linkMaps}>
