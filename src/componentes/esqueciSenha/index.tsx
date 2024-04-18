@@ -34,7 +34,7 @@ function EsqueciSenha() {
       setLoading(false)
       alert("Login realizado com sucesso!");
       setTrocaSenha((login) => [...login, json]);
-      UsuarioLogadoCtx?.setNmae(email);
+      UsuarioLogadoCtx?.setName(email);
       navigate("/Usuario");
     } else {
       setLoading(false)

@@ -2,7 +2,7 @@ import { ReactNode, createContext, useState, useEffect } from "react";
 
 type ContextType = {
   name: string;
-  setNmae: (n: string) => void;
+  setName: (n: string) => void;
   nome: string;
   setNome: (n: string) => void;
   ultimoNome:string;
@@ -16,9 +16,9 @@ export const UsuarioLogadoProvider = ({
 }: {
   children: ReactNode;
 }) => {
-  const [name, setNmae] = useState(() => {
-    const storedsetNmae = localStorage.getItem("ContextsetNmae");
-    return storedsetNmae ? storedsetNmae : "";
+  const [name, setName] = useState(() => {
+    const storedsetName = localStorage.getItem("ContextsetName");
+    return storedsetName ? storedsetName : "";
   });
 
   const [nome, setNome] = useState(() => {
@@ -44,7 +44,7 @@ export const UsuarioLogadoProvider = ({
   }, [name,nome,ultimoNome]);
 
   return (
-    <UsuarioLogadoContext.Provider value={{ name, nome,ultimoNome, setNmae, setNome,setUltimoNome }}>
+    <UsuarioLogadoContext.Provider value={{ name, nome,ultimoNome, setName, setNome,setUltimoNome }}>
       {children}
     </UsuarioLogadoContext.Provider>
   );

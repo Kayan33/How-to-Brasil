@@ -6,6 +6,7 @@ import { useState } from "react";
 import { UsuarioLogadoContext } from "../../contexts/contextAuth";
 import { api } from "../../api";
 import { typeLogin } from "../../types/login";
+import LoadingSpinner from "../loadin";
 
 function LogiN() {
   const [senha, Setsenha] = useState("");
@@ -33,9 +34,8 @@ function LogiN() {
 
     if (json.return) {
       setLoading(false);
-      alert("Login realizado com sucesso!");
       setLogin((login) => [...login, json]);
-      UsuarioLogadoCtx?.setNmae(email);
+      UsuarioLogadoCtx?.setName(email);
       UsuarioLogadoCtx?.setNome(json.return[0].nome);
       UsuarioLogadoCtx?.setUltimoNome(json.return[0].ultimoNome);
 
@@ -53,7 +53,7 @@ function LogiN() {
   return (
     <>
       <div className="login-container">
-        {loading && <div> Carregando conteúdo ... </div>}
+        {loading && <LoadingSpinner loading={loading} />}
 
         {!loading && (
           <>

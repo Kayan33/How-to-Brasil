@@ -5,6 +5,7 @@ import React, { useContext } from "react";
 import { useState, useEffect } from "react";
 import { typeCadastro } from "../../types/cadastro";
 import { api } from "../../api";
+import LoadingSpinner from "../loadin";
 
 function Cadastro() {
   const [email, SetEmail] = useState("");
@@ -66,7 +67,7 @@ function Cadastro() {
       alert("As senhas não são iguais. Por favor, verifique.");
       return;
     }
-
+    setLoading(true);
     const json = await api.adicionarCadastro(
       nome,
       ultimoNome,
@@ -76,7 +77,7 @@ function Cadastro() {
       senha
     );
 
-    if ((json.return)) {
+    if (json.return) {
       setLoading(false);
       alert("Cadastro feito com sucesso!");
       setCadastro((cadastro) => [...cadastro, json]);
@@ -90,7 +91,7 @@ function Cadastro() {
   return (
     <>
       <div className="login-container">
-        {loading && <div> Carregando conteúdo ... </div>}
+        {loading && <LoadingSpinner loading={loading} />}
 
         {!loading && (
           <>
@@ -173,53 +174,53 @@ function Cadastro() {
                   </select>
                 </div>
                 <div className="checkbox-wrapper">
-            <input
-              className="checkbox"
-              type="checkbox"
-              name="Trabalho"
-              onChange={handleInputInteresses}
-            />
+                  <input
+                    className="checkbox"
+                    type="checkbox"
+                    name="Trabalho"
+                    onChange={handleInputInteresses}
+                  />
 
-            <label> Saúde </label>
-            <input
-              className="checkbox"
-              type="checkbox"
-              name="Refugiado"
-              onChange={handleInputInteresses}
-            />
+                  <label> Saúde </label>
+                  <input
+                    className="checkbox"
+                    type="checkbox"
+                    name="Refugiado"
+                    onChange={handleInputInteresses}
+                  />
 
-            <label> Trabalho </label>
-            <input
-              className="checkbox"
-              type="checkbox"
-              name="Educação"
-              onChange={handleInputInteresses}
-            />
-            <label> Apoio Comunitário </label>
+                  <label> Trabalho </label>
+                  <input
+                    className="checkbox"
+                    type="checkbox"
+                    name="Educação"
+                    onChange={handleInputInteresses}
+                  />
+                  <label> Apoio Comunitário </label>
 
-            <input
-              className="checkbox"
-              type="checkbox"
-              name="Casa"
-              onChange={handleInputInteresses}
-            />
-            <label> Educação </label>
+                  <input
+                    className="checkbox"
+                    type="checkbox"
+                    name="Casa"
+                    onChange={handleInputInteresses}
+                  />
+                  <label> Educação </label>
 
-            <input
-              className="checkbox"
-              type="checkbox"
-              name="Documentação"
-              onChange={handleInputInteresses}
-            />
-            <label> Casa </label>
-            <input
-              className="checkbox"
-              type="checkbox"
-              name="Documentação"
-              onChange={handleInputInteresses}
-            />
-            <label> Documentação </label>
-          </div>
+                  <input
+                    className="checkbox"
+                    type="checkbox"
+                    name="Documentação"
+                    onChange={handleInputInteresses}
+                  />
+                  <label> Casa </label>
+                  <input
+                    className="checkbox"
+                    type="checkbox"
+                    name="Documentação"
+                    onChange={handleInputInteresses}
+                  />
+                  <label> Documentação </label>
+                </div>
 
                 <div>
                   <button className="entrar" onClick={handleCadastro}>
@@ -228,10 +229,9 @@ function Cadastro() {
                 </div>
 
                 <div className="cadastre-se">
-            <p>Já tem conta?</p>
-            <Link to="/Login">Login</Link>
-          
-        </div>
+                  <p>Já tem conta?</p>
+                  <Link to="/Login">Login</Link>
+                </div>
               </div>
             </div>
           </>
