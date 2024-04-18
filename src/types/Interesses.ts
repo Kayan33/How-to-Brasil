@@ -7,4 +7,6 @@ export type typesInteresses = {
     descricao: string;
     linkMaps:string;
     linkCorrelato:string;
+    destinationLat:string;
+    destinationLon:string;
 }
