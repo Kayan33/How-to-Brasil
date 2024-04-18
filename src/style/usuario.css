@@ -40,7 +40,7 @@
 
 #user_infos span:last-child {
   color: #6b6b6b;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 #side_items {
@@ -141,6 +141,9 @@
 #sidebar.open-sidebar .item-description {
   width: 150px;
   height: auto;
+}
+#user .item-description{
+  font-size: 20px;
 }
 
 #sidebar.open-sidebar .side-item a {
