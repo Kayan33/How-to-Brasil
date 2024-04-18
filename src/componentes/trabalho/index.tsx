@@ -7,7 +7,6 @@ import { typesTrabalho } from "../../types/trabalho";
 
 
 function Trabalho() {
-  const [termoBusca, setTermoBusca] = useState<string>("");
   const [locaisDeTrabalho, setLocaisDeTrabalho] = useState<typesTrabalho[]>([]);
 
   useEffect(() => {
@@ -24,9 +23,7 @@ function Trabalho() {
     }
   };
 
-  const locaisFiltrados = locaisDeTrabalho.filter((local) =>
-    local.trabalho.toLowerCase().includes(termoBusca.toLowerCase())
-  );
+  
 
   return (
     <div className="trabalho-container">
@@ -36,36 +33,10 @@ function Trabalho() {
 
           
         </div>
-        <div className="input-wrapper">
-          <div>
-            <input
-              type="text"
-              value={termoBusca}
-              onChange={(ev) => setTermoBusca(ev.target.value)}
-              placeholder="Digite o nome do local"
-            />
-          </div>
-          <div className="select-wrapper">
-            <select
-              value={termoBusca}
-              onChange={(ev) => setTermoBusca(ev.target.value)}
-            >
-              <option value="">Filtro</option>
-              <option value="Farmacia">Farmacia</option>
-              <option value="Posto de Saude">Posto de Saude</option>
-              <option value="Refugiado">Refugiado</option>
-              <option value="Asilado">Asilado</option>
-              <option value="Trabalhador Temporário">
-                Trabalhador Temporário
-              </option>
-              <option value="Residente Permanente">Residente Permanente</option>
-            </select>
-          </div>
-        </div>
       </header>
 
       <main className="trabalho-bg">
-        {locaisFiltrados.map((local, index) => (
+        {locaisDeTrabalho.map((local, index) => (
           <ul className="card" key={index}>
             <h3>{local.trabalho}</h3>
             

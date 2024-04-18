@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import "../../style/trabalho.css";
 import { api } from "../../api";
-import { typesDuvidas } from "../../types/duvidas";
+import { typeDocumento } from "../../types/documentacao";
 
 const TEMPO_DE_ESPERA = 150;
 
 function Duvidas() {
-  const [saude, setSaude] = useState<typesDuvidas[]>([]);
+  const [saude, setSaude] = useState<typeDocumento[]>([]);
   const [perguntaExpandida, setPerguntaExpandida] = useState<number | null>(
     null
   );
@@ -52,13 +52,14 @@ function Duvidas() {
               onClick={() => handlePerguntaClick(index)}
             >
               <div>
-                {local.pergunta}
+                {local.documento}
                 <img src="mais.svg" alt="Mais" />
               </div>
 
               {perguntaExpandida === index && (
                 <div className="resposta">
-                  <p>{local.resposta}</p>
+                  <p>{local.descricao}</p>
+                  <a href={local.linkGoverno as string}>Link</a>
                 </div>
               )}
             </li>

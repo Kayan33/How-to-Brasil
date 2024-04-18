@@ -12,9 +12,7 @@ function Trabalho() {
     carregarMoradia();
   }, []);
 
-  useEffect(() => {
-
-  }, [ordem, moradia])
+  useEffect(() => {}, [ordem, moradia]);
 
   const carregarMoradia = async () => {
     try {
@@ -26,16 +24,12 @@ function Trabalho() {
     }
   };
 
-
-
-
   return (
     <div className="trabalho-container">
       <header className="header-input">
         <div className="header-nome">
           <h2>Casa </h2>
         </div>
-
       </header>
 
       <main className="trabalho-bg">
@@ -80,7 +74,6 @@ function Trabalho() {
                   VER MAIS
                 </a>
               </li>
-
             </ul>
           </ul>
         ))}

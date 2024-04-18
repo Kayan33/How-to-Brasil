@@ -76,7 +76,7 @@ function Cadastro() {
       senha
     );
 
-    if ((json.status = 200)) {
+    if ((json.return)) {
       setLoading(false);
       alert("Cadastro feito com sucesso!");
       setCadastro((cadastro) => [...cadastro, json]);

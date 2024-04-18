@@ -6,4 +6,5 @@ export type typesInteresses = {
     horario:string;
     descricao: string;
     linkMaps:string;
+    linkCorrelato:string;
 }

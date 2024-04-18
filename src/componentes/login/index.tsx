@@ -31,7 +31,7 @@ function LogiN() {
     setLoading(true);
     let json = await api.fazerLogin(email, senha);
 
-    if (json.return[1]) {
+    if (json.return) {
       setLoading(false);
       alert("Login realizado com sucesso!");
       setLogin((login) => [...login, json]);

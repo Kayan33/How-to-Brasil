@@ -59,7 +59,8 @@ function Documentacao() {
               
               {perguntaExpandida === index && (
                 <div className="resposta">
-                <p>{local.descricao}</p> 
+                  
+                <p>{local.descricao}</p>            
                   <a href={local.linkGoverno as string}>Link para o governo</a>
                 </div>
               )}
