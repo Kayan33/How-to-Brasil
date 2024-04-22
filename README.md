@@ -25,3 +25,4 @@ Este projeto foi desenvolvido por:
 - [Kayan Pereira](https://www.linkedin.com/in/kayan-pereira-99a328282/)
 - [Gabriel Zardetti Barboza](https://www.linkedin.com/in/gabriel-zardetti-barboza-bb20462ba/)
 - [Gabriel Faria](https://github.com/GabrielFaria8)
+
