@@ -33,5 +33,7 @@ $ npm run dev
 ```
 ### Este projeto foi desenvolvido por:
 <a href="https://www.linkedin.com/in/kayan-pereira-99a328282/">Kayan Pereira</a>
+<br />
 <a href="https://www.linkedin.com/in/gabriel-zardetti-barboza-bb20462ba/">Gabriel Zardetti</a>
+<br />
 <a href="https://github.com/GabrielFaria8">Gabriel Faria</a>
