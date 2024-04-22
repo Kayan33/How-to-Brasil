@@ -4,6 +4,13 @@
 
 How TO Brasil é um guia para imigrantes recém chegados no Brasil. Nosso objetivo é oferecer suporte e orientação em áreas vitais como saúde, trabalho, educação, documentação, moradia e recursos comunitários, visando facilitar a transição e integração de imigrantes na sociedade brasileira.
 
+## Visual do Projeto
+
+Aqui está uma captura de tela do projeto:
+
+![Visual do Projeto](./public/fotoprojeto.png)
+
+
 ## Tecnologias Utilizadas 🛠
 
 Este projeto utiliza as seguintes tecnologias:
