@@ -6,7 +6,12 @@ How TO Brasil é um guia para imigrantes recém chegados no Brasil. Nosso objeti
 
 ## Tecnologias Utilizadas 🛠
 
-- [Liste aqui as tecnologias utilizadas no seu projeto.]
+Este projeto utiliza as seguintes tecnologias:
+
+- [React](https://reactjs.org/) 
+- [TypeScript](https://www.typescriptlang.org/) 
+
+
 
 ## Execução local
 
